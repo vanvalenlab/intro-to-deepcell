@@ -1,4 +1,4 @@
-# Interactive Tutorials and Introduction to DeepCell
+# Introduction to DeepCell through Interactive Tutorials
 
 This material is designed to cover three specific areas: Unix and Python Basics, Image Analysis in Python, Introduction to Deep Learning and Overview of DeepCell.
 
