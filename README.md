@@ -8,13 +8,16 @@ This material is designed to cover three specific areas: Unix and Python Basics,
 [Install git](https://www.atlassian.com/git/tutorials/install-git) and set up your own [GitHub account](https://github.com/).
 
 ### Python3
-...
+* Installation instructions [for MacOS](https://docs.python-guide.org/starting/install3/osx/)
+* Installation instructions [for Linux](https://docs.python-guide.org/starting/install3/linux/)
+* Installation instructions [for Windows](https://docs.python-guide.org/starting/install3/win/)
+* Windows uses may also be interested in [Anaconda](https://www.anaconda.com/distribution/)
 
 ### Docker
 While not immediately necessary, the Van Valen Lab uses Docker extensively, and it will be helpful to have it [installed on your machine](https://docs.docker.com/install/).
 
 ### Windows Specific:
-Most Windows machines do not come with a built-in SSH tool. Many like to use a downloadable client such as [PuTTY](https://putty.org/), [FileZilla](https://filezilla-project.org/), and [Anaconda](https://www.anaconda.com/distribution/).
+Most Windows machines do not come with a built-in SSH tool. Many like to use a downloadable client such as [PuTTY](https://putty.org/), [FileZilla](https://filezilla-project.org/).
 
 
 ## Material
