@@ -22,7 +22,10 @@ This material is designed to cover three specific areas: Unix and Python Basics,
 While not immediately necessary, the Van Valen Lab uses Docker extensively, and it will be helpful to have it [installed on your machine](https://docs.docker.com/install/).
 
 ### FIJI
-* [FIJI](https://imagej.net/Fiji/Downloads#Installation) is an open source image viewer and editor from the NIH.
+[FIJI](https://imagej.net/Fiji/Downloads#Installation) is an open source image viewer and editor from the NIH.
+
+### Your preferred code editor
+There are many to choose from, our favorites include [Atom](https://atom.io/), [VSCode](https://code.visualstudio.com/), and [Sublime Text](https://www.sublimetext.com/).
 
 ### For Windows Users:
 Most Windows machines do not come with a built-in SSH tool. Many like to use a downloadable client such as [PuTTY](https://putty.org/), [FileZilla](https://filezilla-project.org/).
