@@ -13,8 +13,16 @@ This material is designed to cover three specific areas: Unix and Python Basics,
 * Installation instructions [for Windows](https://docs.python-guide.org/starting/install3/win/)
 * Windows uses may also be interested in [Anaconda](https://www.anaconda.com/distribution/)
 
+### Pip (Python package manager)
+* Installation instructions [for MacOS](https://stackoverflow.com/questions/17271319/how-do-i-install-pip-on-macos-or-os-x)
+* Installation instructions [for Linux](https://itsfoss.com/install-pip-ubuntu/)
+* (Pip should come bundled with pip on Windows, whether you install using Anaconda or not.)
+
 ### Docker
 While not immediately necessary, the Van Valen Lab uses Docker extensively, and it will be helpful to have it [installed on your machine](https://docs.docker.com/install/).
+
+### FIJI
+* [All platforms](https://imagej.net/Fiji/Downloads#Installation)
 
 ### Windows Specific:
 Most Windows machines do not come with a built-in SSH tool. Many like to use a downloadable client such as [PuTTY](https://putty.org/), [FileZilla](https://filezilla-project.org/).
@@ -29,6 +37,12 @@ This repo currently holds:
 * An introduction to deep learning and the DeepCell library
 
 You can follow the iPython notebooks on github or clone and execute it locally.
+
+For some text-only explanations, look here:
+[docker tutorial](./docs/Docker.md)
+[Git tutorial](./docs/Git.md)
+[Unix tutorial](./docs/Unix.md)
+
 
 ### Acknowledgements
 These notebooks and tutorials build on and include material from earlier work:
