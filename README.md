@@ -38,6 +38,12 @@ This repo currently holds:
 
 You can follow the iPython notebooks on github or clone and execute it locally.
 
+For some text-only explanations, look here:
+[docker tutorial](./docs/Docker.md)
+[Git tutorial](./docs/Git.md)
+[Unix tutorial](./docs/Unix.md)
+
+
 ### Acknowledgements
 These notebooks and tutorials build on and include material from earlier work:
 * The basic Python tutorial (including numpy, matplotlib, and some of the file handling) comes largely from work by Volodymyr Kuleshov and Isaac Caswell on the CS231n Python tutorial by Justin Johnson (http://cs231n.github.io/python-numpy-tutorial/).
