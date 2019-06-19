@@ -41,3 +41,5 @@ Readability is a core goal of Python code. Readable code makes it easier for new
 10. **Lint and Test your code often!**
 
     Consider writing your tests first (Test Driven Development)​. This helps to reduce future work and prevents broken code from entering the code base.
+
+Please also review the Best of the [Best Practices (BBOP) Guide to Python](https://gist.github.com/sloria/7001839).

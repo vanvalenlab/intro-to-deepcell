@@ -41,6 +41,7 @@ This repo currently holds several tutorials and notebooks:
 * [Basic Python, Numpy, and Scipy exercises](./Python-101.ipynb)
 * [Intro to Python image processing for live cell imaging](./Image-Processing.ipynb)
 * [Intro to deep learning with tensorflow](./Neural-Networks.ipynb)
+* [Python Best Practices](./docs/Python-Style-Guide.md)
 
 You can follow the iPython notebooks on github or clone and execute it locally.
 
