@@ -39,9 +39,9 @@ This repo currently holds:
 You can follow the iPython notebooks on github or clone and execute it locally.
 
 For some text-only explanations, look here:
-[docker tutorial](./docs/Docker.md)
-[Git tutorial](./docs/Git.md)
-[Unix tutorial](./docs/Unix.md)
+* [docker tutorial](./docs/Docker.md)
+* [Git tutorial](./docs/Git.md)
+* [Unix tutorial](./docs/Unix.md)
 
 
 ### Acknowledgements
