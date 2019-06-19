@@ -1,0 +1,8 @@
+ipywidgets
+matplotlib
+numpy
+pandas
+scikit-learn
+scikit-image
+scipy
+tensorflow
