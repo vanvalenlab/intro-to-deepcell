@@ -35,7 +35,7 @@ Most Windows machines do not come with a built-in SSH tool. Many like to use a d
 
 This repo currently holds several tutorials and notebooks:
 
-* [Intro to Unix]((./docs/Unix.md))
+* [Intro to Unix](./docs/Unix.md)
 * [Intro to Docker](./docs/Docker.md)
 * [Intro to Git](./docs/Git.md)
 * [Basic Python, Numpy, and Scipy exercises](./Python-101.ipynb)
