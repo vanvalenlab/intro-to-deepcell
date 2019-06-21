@@ -1,22 +1,24 @@
-# Docker tutorial
+# Introduction to Containers and Docker
 
-Docker is what you would get if your computer had a baby computer and that baby computer came preconfigured with SSH.
+Containers allow software to run reliably when moved from one computing environment to another. Containers are:
 
-### Step 0: Logging into a lab server
+* Isolated from each other
 
-Hey! You wanna login to one of the Van Valen Lab's state-of-the-art, GPU-enabled servers? Well, regardless of how you answered, you should probably do that now. The command to do so is:  
-```bash
-ssh -X -p 5078 [your_username]@[machine_ip_address]
-```
+* Bundle their own software, libraries, and configuration files.
 
-### Step 1:  The Dockerfile
+* Run by a single OS and thus more lightweight than traditional VMs.
+
+Docker is an industry standard open-source software that builds and runs containers. This tutorial will introduce the `Dockerfile`, building Docker images, and running Docker containers.
+
+## The Dockerfile
 
 A Dockerfile is a script that the `docker` program uses to create a Docker image. A Docker image is a snapshot of an operating system. (Think like someone copied your entire hard drive and saved it as a single file -- that's a Docker image.)
 
 Let's look at a simple example Dockerfile:
 
 ```docker
-FROM tensorflow/tensorflow:1.11.0-gpu-py3
+# The base image Docker starts from
+FROM python:3.7
 
 # Copy the requirements.txt and install the dependencies
 # This pattern prevents the dependencies being re-installed
@@ -33,7 +35,7 @@ CMD bash
 The Dockerfile starts with a line declaring the base image. This base image is downloaded and further altered by the remaining steps of the Dockerfile.
 
 ```docker
-FROM tensorflow/tensorflow:1.11.0-gpu-py3
+FROM python:3.7
 ```
 
 Next, we copy over `requirements.txt`, a file that declares and defines all the 3rd party dependencies used in the application, and installs them with pip:
@@ -56,47 +58,58 @@ Finally, we define the single process the Docker container will run:
 CMD bash
 ```
 
-### Step 2: Building a Docker image
+## Building a Docker image
 
-Now that we have a Dockerfile, a script describing a Docker image, we can build the Docker image itself, which will be nothing more than an entire file system, neatly stored as a single file.
+Now that we have a `Dockerfile` we can build the Docker image itself, which will be nothing more than an entire file system, neatly stored as a single file.
 
-From within the `deepcell-tf` folder, build the Docker image by executing:  
+From within the `intro-to-deepcell` folder, build the Docker image by executing:
+
 ```bash
-docker build -t [your_username]/deepcell-tf:0.1 .
+docker build -t vanvalenlab/intro-to-deepcell:myname .
 ```
 
-Which is roughly translated as:
-```bash
-docker build -t $DOCKER_REPOSITORY/$DOCKER_IMAGE:$DOCKER_TAG .
-```
-Explanations follow.
+* `docker build` is the command to build a Docker image.
 
-`docker build` is the command to build a Docker image.
+* `-t vanvalenlab/intro-to-deepcell:myname` names the new image `vanvalenlab/intro-to-deepcell:0.1`. Image names should follow the form `$DOCKER_REPOSITORY/$DOCKER_IMAGE:$DOCKER_TAG`.
 
-`-t [your_username]/deepcell-tf:0.1` names your Docker image `[your_username]/deepcell-tf` and gives it a version number of `0.1`.
+* The final argument `.` is the build context. Docker uses this context to find a `Dockerfile` to build. Additionally, the `Dockerfile` can be directly specified with `-f Dockerfile.custom`.
 
-The `.` at the end tells `docker build` where to look for a Docker file. `.` represents the current directory in  all Unix systems (Linux and Macs).
-
-So, you're telling `docker build` to use the Dockerfile in the current directory to build a Docker image, which it should name `[your_username]/deepcell-tf` and assign a version number of `0.1` to.
-
-
-To verify that everything went according to plan, execute
+To verify your new image is built, check for your docker name and tag in the output of:
 ```bash
 docker images
 ```
-to view all Docker images. You should see one with your name and version number.
 
-### Step 3: Launching a Docker container
+## Running a docker container
 
-A Docker image is an entire operating system, including its entire filesystem, wrapped up in a single file. Now, we're going to breathe life into this dull file by running it inside a container, creating a completely isolated operating system running on your computer.
+A Docker image is an entire operating system, including its entire filesystem, wrapped up in a single file. Now, we're going to breathe life into this file by running it as a container, creating a completely isolated operating system running on your computer.
 
-To do this, execute:  
+#### Run an image
+
 ```bash
-NV_GPU='[assigned_GPU_number]' nvidia-docker run -i -t -v [volume_location]:[mount_location] [dockerfile_location]
+docker run -i -t vanvalenlab/intro-to-deepcell:myname
 ```
 
-You should now be inside the Docker container. This is essentially a completely separate computer inside your computer. Anything that happens in magical Docker land stays in Docker land and doesn't affect your permanent filesystem.
+* The `-i` and `-t` flags are important for interacting with the docker container.  Without them, the container will run, but you will not see any output.
 
-### Additional Resources
+You should now be inside the Docker container, a completely isolated software environment running on top of your computer.
+
+#### Port Forwarding
+
+Docker containers are inherently isolated, but applications can be exposed via `port forwarding`. Use the optional run parameter `--port <HOST_PORT>:<CONTAINER_PORT>`.
+
+```bash
+# For example, to expose jupyter's default port to traffic
+docker run -it -p 8888:8888 vanvalenlab/intro-to-deepcell:myname
+```
+
+#### Mounting Volumes
+
+Data from the host machine can be mounted into a docker container using optional run parameter `--volume <DATA_PATH>:<CONTAINER_MOUNT_PATH>`.
+
+```bash
+docker run -it -v /host/machine/data:/data vanvalenlab/intro-to-deepcell:myname
+```
+
+## Additional Resources
 
 [Here is another useful cheatsheet](https://github.com/wsargent/docker-cheat-sheet) for the many Docker commands and how to use them
