@@ -15,19 +15,19 @@ This material is intended to help users become acclimated with the [DeepCell](ht
 * Intro to Python image processing for live cell imaging
 * Intro to deep learning with tensorflow
 
-Ready-made predictions on real data: DeepCell.org
+[Ready-made predictions on real data: DeepCell.org](./deepcell_dot_org)
 
-* [Introduction to DeepCell.org](./deepcell_dot_org)
-* [Plugging in to DeepCell.org with ImageJ](./deepcell_dot_org)
+* Introduction to DeepCell.org
+* Plugging in to DeepCell.org with ImageJ
 
-Labeling my data with DeepCell Label (Codename: Caliban)
+[Labeling my data with DeepCell Label (Codename: Caliban)](./data_annotation)
 
-* [Getting started with Caliban](./data_annotation)
-* [Caliban modes and actions](./data_annotation)
+* Getting started with Caliban
+* Caliban modes and actions
 
-Building new and improved models with deepcell-tf
+[Building new and improved models with deepcell-tf](./model_training)
 
-* [Collab notebook](./model_training)
+* Collab training notebook
 
 
 ## Copyright
