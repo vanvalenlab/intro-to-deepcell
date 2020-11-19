@@ -6,13 +6,11 @@ This material is intended to help users become acclimated with the [DeepCell](ht
 
 [Getting started](./getting_started)
 
-* Required Software Installations
-* Intro to Unix
-* Intro to Docker
-* Intro to Git
-* Python Best Practices
+* Required software installations
+* Intro to Unix, Docker, and Git
+* Python best practices
 * Basic Python, Numpy, and Scipy exercises
-* Intro to Python image processing for live cell imaging
+* Intro to Python image processing for live-cell imaging
 * Intro to deep learning with tensorflow
 
 [Ready-made predictions on real data: DeepCell.org](./deepcell_dot_org)
@@ -27,7 +25,7 @@ This material is intended to help users become acclimated with the [DeepCell](ht
 
 [Building new and improved models with deepcell-tf](./model_training)
 
-* Collab training notebook
+* Colab training notebook
 
 
 ## Copyright
