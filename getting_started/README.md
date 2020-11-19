@@ -1,16 +1,16 @@
-# Introduction to DeepCell
+# Getting Started
 
-This material is designed to provide an introduction to the basic tools used in the Van Valen Lab, including Unix, Git and Docker. There are also interactive Jupyter notebooks introducting Python and its scientific computing environment ([NumPy](https://www.numpy.org/), [SciPy](https://www.scipy.org/), and [scikit-image](https://scikit-image.org/)) as well as common deep learning libraries like [TensorFlow](https://www.tensorflow.org/) and [Keras](https://www.tensorflow.org/guide/keras).
+This material is designed to provide an introduction to the basic tools used in the Van Valen Lab, including Unix, Git, and Docker. There are also interactive Jupyter notebooks introducting Python and its scientific computing environment ([NumPy](https://www.numpy.org/), [SciPy](https://www.scipy.org/), and [scikit-image](https://scikit-image.org/)) as well as common deep learning libraries like [TensorFlow](https://www.tensorflow.org/) and [Keras](https://www.tensorflow.org/guide/keras).
 
 ## Table of Contents
 
 Please start with the introductory docs for common software development tools.
 
-* [Required Software Installations](./docs/Installs.md)
-* [Intro to Unix](./docs/Unix.md)
-* [Intro to Docker](./docs/Docker.md)
-* [Intro to Git](./docs/Git.md)
-* [Python Best Practices](./docs/Python-Style-Guide.md)
+* [Required Software Installations](./intro_docs/Installs.md)
+* [Intro to Unix](./intro_docs/Unix.md)
+* [Intro to Docker](./intro_docs/Docker.md)
+* [Intro to Git](./intro_docs/Git.md)
+* [Python Best Practices](./intro_docs/Python-Style-Guide.md)
 
 When ready, clone this repository and run the Jupyter notebooks locally.
 
