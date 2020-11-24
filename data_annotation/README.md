@@ -22,7 +22,7 @@ To train a model, we require both the raw images coming off a microscope, and th
 
 ## Load files
 
-### [Supported filetypes](./data_annotation)
+### Supported filetypes
 
 A project in DeepCell Label consists of a raw image stack and a labeled image stack. DeepCell Label can both load files with only a raw image stack, or a raw image stack and a labeled image stack. If you load a file with only a raw image stack, DeepCell Label will create an empty labeled stack that you can label from scratch.
 
