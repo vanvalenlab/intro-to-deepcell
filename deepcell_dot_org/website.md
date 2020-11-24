@@ -15,9 +15,7 @@ Generating data from the website is extremely easy.
 1. Go to DeepCell.org, and click on `PREDICT`
 ![image](DeepCell_website_predict.png)
 
-2. This will take you to the image upload interface. The default model is `multiplex`. Before submitting your image, make sure you understand [the available models and data formatting requirements](models.md)
-
-Upload your image by dragging it into the upload box, or by clicking and then browsing to find your image
+2. This will take you to the image upload interface. The default model is `multiplex`. Before submitting your image, make sure you understand [the available models and data formatting requirements](models.md). Upload your image by dragging it into the upload box, or by clicking and then browsing to find your image
 ![image](DeepCell_website_upload.png)
 
 3. Once your image has been succesfully uploaded, click `Submit`, and the server will begin processing your data.
