@@ -2,13 +2,27 @@
 
 ## Table of Contents
 
-Label your data with DeepCell Label (Codename: Caliban)
+* Overview
+* Load files
+    * supported filetypes
+    * drag & drop files onto [caliban.deepcell.org](caliban.deepcell.org)
+    * deploy DeepCell Label
+* Use DeepCell Label
+    * view images
+    * create labels in Paint mode
+    * correct labeling errors in Whole Label mode
+
+## Overview
 
 DeepCell Label is an browser-based data labeling tool designed for single-cell segmentation. In this guide, we'll walk through what filetypes are supported in DeepCell Label and how to beginning labeling your files in DeepCell Label.
 
 To train a model, we require both the raw images coming off a microscope, and the labeled images with a complete single-cell segmentation. DeepCell Label allows you to view your raw image files and create segmentation. We offer both a "paint mode" to segment an iamge down to the pixel-level, and a "whole label mode" that acts on whole areas with the same label.
 
-* [Supported filetypes](./data_annotation)
+
+
+## Load files
+
+### [Supported filetypes](./data_annotation)
 
 A project in DeepCell Label consists of a raw image stack and a labeled image stack. DeepCell Label can both load files with only a raw image stack, or a raw image stack and a labeled image stack. If you load a file with only a raw image stack, DeepCell Label will create an empty labeled stack that you can label from scratch.
 
@@ -18,8 +32,6 @@ At the moment, DeepCell Label can load the following filetypes:
 * .trk - a custom file format for DeepCell Label tracking projects; consists of a .tar file with a raw image stack, a labeled image stack, and lineage metadata
 
 Note that an image "stack" can have just one image, such as image formats with only one frame like a PNG.
-
-* [Getting started with DeepCell Label](./data_annotation)
 
 ### Drag & drop images on [caliban.deepcell.org](caliban.deepcell.org)
 
@@ -36,7 +48,7 @@ At the moment, DeepCell Label must load and export its project files from a [S3 
 If you are interested in creating your own DeepCell Label deployment, please contact us at _______ for more details and guidance.
 
 
-* [Caliban modes and actions](./data_annotation)
+## Use DeepCell Label
 
 Once you've created a project in DeepCell Label, you'll see a canvas on the right and an info table on the left. Here, we'll walk you through how to navigate your image, how to start labeling, and 
 
