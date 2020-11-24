@@ -11,4 +11,14 @@ is able to quickly deliver results for large numbers of images when demand incre
 
 ## Submitting data to the website
 Generating data from the website is extremely easy. 
-1. Go to DeepCell.org, and click on `Predict`
+1. Go to DeepCell.org, and click on `PREDICT`
+![image](DeepCell_website_predict.png)
+
+2. This will take you to the image upload interface. The default model is `multiplex`, which is the one we will use. Upload your image by dragging it into the upload box, or by clicking and then browsing to find your image
+![image](DeepCell_website_upload.png)
+
+3. Once your image has been succesfully uploaded, click `Submit`, and the server will begin processing your data.
+![image](DeepCell_wesbite_submit.png)
+
+4. Once complete, you can download the results, and then process additional images
+![image](DeepCell_website_download.png)
