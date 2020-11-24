@@ -1,32 +1,40 @@
 # Introduction to DeepCell
 
-This material is intended to help users become acclimated with the [DeepCell](https://www.deepcell.org/about) ecosystem. DeepCell addresses three key needs for deep learning (DL) and biological images: (1) How can I use DL easily on my data? (2) How can I interact with these predictions?, and (3) How can I improve these model predictions. This tutorial will provide a gentle introduction to all three areas. Additionally, we have included a "Getting Started" section for users that may be unfamiliar with the basic tools covered in this material.
+This material is intended to help users become acclimated with the [DeepCell](https://www.deepcell.org/about) ecosystem. DeepCell addresses three key needs for deep learning (DL) and biological images:
+
+1. How can I use DL easily on my data?
+2. How can I interact with these predictions?
+3. How can I improve these model predictions?
+
+This tutorial will provide a gentle introduction to all three areas. Additionally, we have included a "Getting Started" section for users that may be unfamiliar with the basic tools covered in this material.
 
 ## Table of Contents
 
-[Getting started](./getting_started)
+### [Getting Started](./getting_started)
 
-* Required software installations
-* Intro to Unix, Docker, and Git
-* Python best practices
-* Basic Python, Numpy, and Scipy exercises
-* Intro to Python image processing for live-cell imaging
-* Intro to deep learning with tensorflow
+* [Required software installations](./getting_started/intro_docs/Installs.md)
+* [Intro to Unix](./getting_started/intro_docs/Unix.md)
+* [Intro to Docker](./getting_started/intro_docs/Docker.md)
+* [Intro to Git](./getting_started/intro_docs/Git.md)
+* [Python best practices](./getting_started/intro_docs/Python-Style-Guide.md)
+* Several interactive Jupyter notebooks
+  * [Basic Python, Numpy, and Scipy exercises](./getting_started/Python-101.ipynb)
+  * [Intro to Python image processing for live-cell imaging](./getting_started/Image-Processing.ipynb)
+  * [Intro to deep learning with TensorFlow](./getting_started/Neural-Networks.ipynb)
 
-[Ready-made predictions on real data: DeepCell.org](./deepcell_dot_org)
+### DeepCell.org: Ready-made predictions on real data
 
-* Introduction to DeepCell.org
-* Plugging in to DeepCell.org with ImageJ
+* [Introduction to DeepCell.org](./deepcell_dot_org)
+* [Plugging in to DeepCell.org with ImageJ](./deepcell_dot_org)
 
-[Labeling my data with DeepCell Label (Codename: Caliban)](./data_annotation)
+### Labeling my data with DeepCell Label (Codename: Caliban)
 
-* Getting started with Caliban
-* Caliban modes and actions
+* [Getting started with Caliban](./data_annotation)
+* [Caliban modes and actions](./data_annotation)
 
-[Building new and improved models with deepcell-tf](./model_training)
+### Building new and improved models with deepcell-tf
 
-* Colab training notebook
-
+* [Use deepcell-tf with Google Colab](./model_training)
 
 ## Copyright
 
