@@ -18,8 +18,8 @@ When ready, clone this repository and run the Jupyter notebooks locally.
 * [Intro to Python image processing for live cell imaging](./Image-Processing.ipynb)
 * [Intro to deep learning with tensorflow](./Neural-Networks.ipynb)
 
-
 ## Acknowledgements
+
 These notebooks and tutorials build on and include material from earlier work:
 
 * The basic Python tutorial (including numpy, matplotlib, and some of the file handling) comes largely from work by Volodymyr Kuleshov and Isaac Caswell on the [CS231n Python tutorial by Justin Johnson](http://cs231n.github.io/python-numpy-tutorial/).
