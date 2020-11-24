@@ -27,9 +27,22 @@ To train a model, we require both the raw images coming off a microscope, and th
 A project in DeepCell Label consists of a raw image stack and a labeled image stack. DeepCell Label can both load files with only a raw image stack, or a raw image stack and a labeled image stack. If you load a file with only a raw image stack, DeepCell Label will create an empty labeled stack that you can label from scratch.
 
 At the moment, DeepCell Label can load the following filetypes:
-* .npz - zipped numpy arrays; may contain just a raw image stack, or both raw and labeled image stacks
+* .npz - zipped numpy arrays
+    * may contain just a raw image stack, or both raw and labeled image stacks
+    * we can package multiple image stacks into an .npz with [numpy's savz function](https://numpy.org/doc/stable/reference/generated/numpy.savez.html)
+    * the raw and labeled image stacks must be named `X` and `y` respectively when creating the .npz
+    * For example, the following Python code snippet creates dummy raw and labeled image stacks and saves them to a file
+    ```
+    array_shape = (30, 512, 512, 1)  # array shape is (frames, height, width, channels)
+    raw_image_stack = np.zeros(array_shape, dtype=np.uint16)
+    labeled_image_stack = np.zeros(array_shape, dtype=np.uint8)
+    # important to use X and y kwargs to name the zipped arrays
+    np.savez('/path/to/your/file.npz', X=raw_image_stack, y=labeled_image_stack)
+    ```
 * .png - loaded as a raw image stack
-* .trk - a custom file format for DeepCell Label tracking projects; consists of a .tar file with a raw image stack, a labeled image stack, and lineage metadata
+* .trk - a custom file format for DeepCell Label tracking projects
+    * consists of a .tar file with a raw image stack, a labeled image stack, and lineage metadata
+    * contact us at _____ for more details on working with this filetype
 
 Note that an image "stack" can have just one image, such as image formats with only one frame like a PNG.
 
