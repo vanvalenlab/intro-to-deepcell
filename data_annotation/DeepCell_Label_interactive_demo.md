@@ -61,6 +61,54 @@ The interactive canvas is where most of your interaction with the file will take
 The borders surrounding the interactive canvas serve a purpose as well--these change colors as a visual indicator to help contextualize your work at a glance. When a border is white, that means you are viewing the edge of the image. When a border is black, that indicates that more of the image exists off-canvas in that direction, and can be accessed by panning or zooming out.
 
 ## Image viewing options and controls
+You should have the demo file (link) loaded to follow along and try these controls for yourself.
+
+### Changing between input image and label views
+(image of input image, raw image, and overlay image side by side)
+
+#### Changing interaction mode also changes display
+The two main interaction modes, whole-label and pixel-editing modes, also have different image displays. The files open in pixel-editing mode by default, where the images are displayed as an overlay of labels on top of the input image. You can switch back and forth between whole-label and pixel-editing modes with the "e" key. In whole-label mode, you will see either the input image or an image of the labels.
+
+#### Changing between input and label images in whole-label mode
+To switch between these viewing modes, use the "z" key. Note that even when labels are not displayed on screen, you can still hover over image regions to see label information in the infopane, and can select these labels for actions.
+
+### Changing the field of view
+
+#### Zooming
+To zoom in and out on the image, you can hold down the alt key on your keyboard while scrolling up and down over the interactive canvas. Alternatively, you can zoom out with the "minus" key (-) on your keyboard and zoom in with the "equals" key (=) on your keyboard. Note that you can't zoom out past 100%, since at that level of zoom, the full image is scaled so that the display fits in your browser window.
+
+#### Panning
+You can pan around the image when it is zoomed in at any level above 100%. To pan, hold down the spacebar while you click and drag. You will not be able to pan past the edges of the image.
+
+### Adjusting image brightness and contrast
+
+#### Adjusting contrast
+To adjust the contrast of the input image, scroll up or down over the interactive canvas. This adjustment will often be the most helpful for increasing the visibility of objects. The contrast will be adjusted only if you can see the input image in your display (no adjustment will be applied if you are on the labels-only view).
+
+#### Adjusting brightness
+To adjust the brightness of the input image, hold down the shift key while scrolling up or down over the interactive canvas. Like contrast adjustment, the brightness will only change if you can see the input image in your display.
+
+#### Resetting brightness and contrast
+Press the zero (0) key to reset brightness and contrast to their default values. You can also undo and redo brightness and contrast changes with the undo/redo buttons or keyboard shortcuts.
+
+#### Inverting light/dark (pixel-editing mode)
+Inverting the grayscale input image in pixel-editing mode can sometimes help visualization of the label overlay image. To invert the image, press the "i" key while in pixel-editing mode. This will not affect the image display when in whole-label mode.
+
+### Changing the part of the file being displayed
+Each of these controls will only work if there are alternate parts of the file to be displayed. Eg, you can't change frames in a file that only has a single frame.
+
+#### Change channel
+To change the channel of the input image being displayed, press "c" or shift + c. (Shift + c will change channels in the opposite order that "c" does but otherwise works the same.) Note that there must not be selected labels (whole-label mode) to change channels, as the "c" key can also be used for some actions in this mode. You do not have to have the input image visible to change channels.
+
+When you change channels, you should see the "channel" information in the infopane update. Your brightness and contrast adjustments for each channel will be stored seperately. Try adjusting the brightness and contrast in a few channels and see what it's like to cycle between them!
+
+#### Change feature
+Changing features works similarly to changing channels in a file, and uses the "f" key or shift + f. Like changing channels, there must not be labels selected, and you do not need to have the labels displayed to change features. This demo file only contains one feature, so you will not be able to try this functionality right now.
+
+#### Change frames
+To go forward through frames in a file, press the "d" or right arrow key. To go backward through frames in a file, press the "a" or left arrow key. You can go backward from the first frame in the file to cycle back to the end of the file, and can go forward from the last frame of the file to return to the beginning. When you change frames, you should see the "frame" information in the infopane update, with the displayed image updating shortly afterward.
+
+Now that you know how to move through and view files with DeepCell Label, take a minute to explore the file. Next, we will cover whole-label actions starting in frame 7 of the demo file, so make sure you are able to get to this frame and toggle whole-label mode using the controls covered so far.
 
 ## Whole-label modifications to annotation file
 
