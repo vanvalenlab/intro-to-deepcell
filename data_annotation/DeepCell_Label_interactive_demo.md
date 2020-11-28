@@ -94,6 +94,9 @@ Press the zero (0) key to reset brightness and contrast to their default values.
 #### Inverting light/dark (pixel-editing mode)
 Inverting the grayscale input image in pixel-editing mode can sometimes help visualization of the label overlay image. To invert the image, press the "i" key while in pixel-editing mode. This will not affect the image display when in whole-label mode.
 
+### Highlighting labels
+The "h" key will turn highlighting on and off. Highlighted labels work slightly differently in pixel-editing and whole-label modes, so we will cover highlighting in more detail later. Turning highlighting on and off only affects how the labels are displayed to you, and does not affect the actual labels in the file.
+
 ### Changing the part of the file being displayed
 Each of these controls will only work if there are alternate parts of the file to be displayed. Eg, you can't change frames in a file that only has a single frame.
 
@@ -111,5 +114,68 @@ To go forward through frames in a file, press the "d" or right arrow key. To go 
 Now that you know how to move through and view files with DeepCell Label, take a minute to explore the file. Next, we will cover whole-label actions starting in frame 7 of the demo file, so make sure you are able to get to this frame and toggle whole-label mode using the controls covered so far.
 
 ## Whole-label modifications to annotation file
+In this section, we will cover the different whole-label actions available to modify annotation files. We will use these actions to fix specific errors throughout the label file, but you can also try them on other labels to see how they work.
+
+### Selecting labels in whole-label mode
+Labels are selected by clicking on them. Up to two labels can be selected in whole-label mode. Some actions require just one label, while others require two labels. Clicking on labels once two have been selected will overwrite the second label selected.
+
+#### Highlighted labels in whole-label mode
+In whole-label mode, selected labels can be displayed with a highlight. This will change the color of the selected labels to be red, and only affects how the labels are displayed to you. We recommend that highlighting be kept on so you can be sure you have selected the label(s) you intend to modify. If only one label is selected, you can cycle the highlight to different labels with the bracket keys ( \[ and \] ); this will also deselect the original label you clicked on.
+
+### Swapping labels
+Two labels can be swapped with each other to change the value of each label. This can be useful in timelapse or 3D files, where linking labels across different frames is an important aspect of labeling the full file.
+
+To swap two labels, select two different labels, then press the "s" key. A message will appear in "state" asking you to confirm the swap; you can either swap the labels in the same frame (press "s" again to choose this option), or swap them across all frames (press spacebar to confirm this option).
+
+#### Suggested swap
+(image)
+Labels 16 and 19 are consistent across most frames in this file, except for in frame 7, where they have swapped places. Swap them back to fix this labeling error.
+
+### Trimming stray pixels
+Sometimes, labels may have a few stray, unconnected pixels that should be removed from an annotation. These are often due to labeling mistakes made by other people, but can also be artifacts of computational labeling. We can quickly and conveniently remove these from the file with the "trim pixels" functionality. This action will not have an effect if there are no stray pixels to remove from a label.
+
+To use this action, hold down the shift key while you select a label. *Note: for this action, the click location of your selection does matter. Make sure to click on the part of the label you want to keep.* A message will appear in "state" asking you to confirm the action; press spacebar to confirm and apply the action.
+
+#### Suggested label to trim pixels from
+Frame 8 in the file has a stray brushstroke with label 28. (Label 28 has a large hole in the center, but you can also select the brushstroke to use highlighting to see where the other part of the label is.) To get rid of the stray brushstroke, hold down the shift key while you click on the real part of the label to select it, and confirm the action with spacebar.
+
+### Filling holes in labels
+Labels may have holes in them; use hole filling to quickly fix these errors instead of using a brush tool to manually fill in the gap. Holes are most often computational artifacts, but you can also use this functionality to speed up labeling objects from scratch by drawing an outline and filling in the rest of the label.
+
+To fill a hole, first select the label you want to fill a hole in. Next, press the "f" key. Then, click on the hole to fill (there is no confirmation with spacebar for this action).
+
+#### Suggested hole to fill
+Label 28 in frame 8 has a large hole in it. Use the hole fill action to quickly fix this annotation mistake.
+
+### Flood part of a label with a new label
+Accidentally reusing a label value is a common annotation mistake. As long as the two labels are separate, this can be easily fixed by flooding one of the labels with a new value.
+
+To flood a region of a label, hold down the alt key while you click on the region you wish to flood. *Note: for this action, the click location of your selection does matter. Make sure to click on the part of the label that you want to change the value of.* A message will appear in "state" asking you to confirm the action; press spacebar to confirm and apply the action. This action will work even if the selected label only appears in one place.
+
+#### Suggested label to flood
+(image)
+Label 27 in frame 9 appears in two locations. Select label 27 and compare frame 8 to frame 9 to see that one region of label 27 should be modified to be a different value. Use the label flooding action to fix the duplicate label 27. (Note: if you flood the wrong part of the label, you can undo the action and try again, or you can use the swap action to get the labels in frame 9 to match up with frames 8 and 10.)
+
+### Replace one label with another
+"Split" labels are a common type of annotation mistake seen in both computationally and manually generated label files. In this type of mistake, one object is annotated with two different labels. These two labels can easily be merged into one with the replace action. "Replace" can also be used to link two sequences of labels that belong to the same object across timelapse or 3D images.
+
+To replace one label with another, first select the label you want to keep, then select the label you want to replace. For this action, the order of selection matters, but the location in the label you click on does not. Press "r" to trigger the replace action. A message will appear in "state" asking you to confirm the replacement; you can either replace the labels in the same frame (press "s" to choose this option), or replace one label with the other across all frames (press spacebar to confirm this option). Use the single-frame option for fixing split errors and the all-frames option for merging lineages.
+
+#### Suggested label to replace
+In frame 10, label 17 is mistakenly split into labels 17 and 42. Use the single-frame replace action to replace 42 with 17.
+
+### Split one label into two with watershed transform
+A "merged" label error is when two adjacent objects are annotated with the same label (the opposite of a "split" label error). Sometimes, merged objects can be distinguished from each other by the brightness of the objects. When the objects are bright and have a distinct area of dimness separating them, the labels can be split apart accurately with the "watershed" action.
+
+To use this action, select the center of each object (click location matters). You will have the same label selected twice. Then, press "w" and confirm the prompt shown in "state" with the spacebar. The selected label will be split into the original label and a new label. The first click location will keep the original label and the second click location will be assigned the new label. Watershed will not necessarily work well in every case; alternatives exist for splitting apart labels in DeepCell Label.
+
+#### Suggested label to split with watershed
+(image)
+Label 25 in frame 11 is an example of a merged label that can be fixed with watershed. Try using the watershed action to split it apart--if the resulting label boundary does not look good, you can undo the action or replace the new label with the old label, and try again with different click locations.
+
+### Creating new labels
+Sometimes, you need to unlink sequences of labels in timelapse or 3D files. For example, if a cell divides and one of the daughter cells is given the same label as the parent, it is appropriate to give a new label to the daughter cell in the frames where it is present. This can be done with the "create" action: select the label that should get a new label, then press "c". A message will appear in "state" asking you to confirm the label creation; you can either create a new label in just that frame (press "s" to choose this option), or in all subsequent frames (press spacebar to confirm this option). The single-frame option is different from the label flooding action we used earlier, as creating a new label with "c" will change all pixels of the label in the frame, not just connected pixels. Use the "all subsequent frames" version of the action when unlinking two objects from each other that are otherwise labeled correctly.
+
+This file does not contain a specific error that is best fixed with the create action, but you can try it out on any labels you would like. Try creating a new label in multiple frames with the "all subsequent frames" version of the action, then link the two sequences back together with the replace action applied in all frames to understand these actions better.
 
 ## Pixel-level modifications to annotation file
