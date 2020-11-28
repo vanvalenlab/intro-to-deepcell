@@ -46,12 +46,19 @@ When mousing over labels in the interactive canvas, additional information about
 This part of the infopane will show you information and prompts related to interactions with the file. For example, selected labels will be shown in "state" information. When using actions in whole-label mode or some features of pixel-editing mode, confirmation prompts and other messages will be displayed in "state" as well. We will cover the different information you may see in "state" during the relevant portions of the demo.
 
 ### The interactive canvas
+(image)
 
 #### Undo and Redo buttons
-
-#### Canvas borders
+(image)
+Made a mistake? Quickly undo or redo your modifications with the buttons above the canvas (keyboard shortcuts available as well). These buttons can only be clicked when there are changes that can be undone or redone.
 
 #### Interactive canvas
+(image)
+The interactive canvas is where most of your interaction with the file will take place. This canvas displays images (labels, input images, or a combination of the two) and registers click locations as well as other information. To select a label, for example, you click on the label of interest in the canvas. The different ways you can interact with the canvas to view and modify the file will be covered in later sections of the demo.
+
+#### Canvas borders
+(image)
+The borders surrounding the interactive canvas serve a purpose as well--these change colors as a visual indicator to help contextualize your work at a glance. When a border is white, that means you are viewing the edge of the image. When a border is black, that indicates that more of the image exists off-canvas in that direction, and can be accessed by panning or zooming out.
 
 ## Image viewing options and controls
 
