@@ -179,3 +179,47 @@ Sometimes, you need to unlink sequences of labels in timelapse or 3D files. For 
 This file does not contain a specific error that is best fixed with the create action, but you can try it out on any labels you would like. Try creating a new label in multiple frames with the "all subsequent frames" version of the action, then link the two sequences back together with the replace action applied in all frames to understand these actions better.
 
 ## Pixel-level modifications to annotation file
+Labels often must be partially corrected, or even drawn in from scratch. DeepCell Label provides several tools suited to this purpose in pixel-editing mode. This section covers how to use these tools to effectively make pixel-level changes to annotation files. You can easily switch between the two editing modes by pressing "e".
+
+### Brush basics
+The brush tool is the main tool you will use in pixel-editing mode, and is on by default. Click and drag the brush on the interactive canvas to draw with it. As you draw with the brush, it will leave a translucent trace where it has gone. When you release the mouse, the server will process where you have drawn and update the label file appropriately.
+
+#### Brush size
+The brush has a 5 pixel radius by default, but can be adjusted to be larger or smaller with the up and down arrow keys. The brush size is displayed in the infopane when you are in pixel-editing mode.
+
+#### Brush value
+The brush starts out with a value of 1; this is the label that the brush will modify when drawing. When drawing, the brush will add this label to background regions. Existing labels will not be drawn over by the brush. When erasing, the brush will only erase the label it is set to, and will not modify other labels. The brush value is displayed in the infopane ("editing label") and can be incrementally changed using the bracket keys ( \[ and \] ).
+
+To set the brush to an unused value, press "n".
+
+You can also use the label picker functionality to change the value of the brush. Press "p" (a prompt will appear in "state") and then click on the label you would like to change the brush value to.
+
+#### Highlighting
+To help keep track of which label the brush is set to, pixels matching the current brush value will be highlighted in the image display (when highlighting is turned on). These labels will appear red and also have a solid white border around them. Try changing the value of the brush to see the highlighted label change as well.
+
+#### Erasing
+To toggle the brush's eraser on and off, press the "x" key. The brush will have a red outline if the eraser is on, and a white outline if the eraser is off (brush set to draw, not erase).
+
+#### Suggested regions to fix with the basic brush tool
+(image)
+In frame 12, label 22 does not fully cover its object, and label 23 covers too much background in addition to the object. Try changing the brush value to 22 to draw in some of the missing label, then increment to 23 and erase some of the extra label.
+
+### Advanced brush option: conversion brush
+Sometimes, the boundary between two labels is inaccurate, even though both objects are accurately covered by labels. Or, two objects are annotated with a single label, but cannot be accurately split using the watershed action. In these cases, instead of erasing one label and then drawing another in, we can use the conversion brush functionality to directly replace one label with another, without affecting the background or other labels.
+
+To turn on the conversion brush, press "r" (prompts will appear in "state"). First select the label you want to overwrite, then the label you want to draw with. To draw with a new label, press "n" instead of selecting a second label. Once these selections have been made, the label to be overwritten will appear with a red outline around it, and the label to draw with will have a white outline around it (even if highlighting is turned off). Drawing with the brush with this mode on will only affect these two labels.
+
+#### Suggested regions to fix with the conversion brush
+(image)
+In frame 13, the boundary between labels 27 and 29 is inaccurate, although the foreground/background distinction is accurate. Try using the conversion brush to adjust the boundary between these labels. You can also try using the conversion brush to draw a new label over part of label 35, which covers two objects.
+
+### Thresholding fluorescent images
+When objects have a clear fluorescent signal, thresholding is an alternative option to drawing in a label with the brush. The thresholding tool will never overwrite existing labels, or add duplicate labels to the file. To use this tool, press "t" while in pixel-editing mode (you will see a prompt in "state"). Then, click and drag to create a bounding box arond the area you would like to threshold. When you release the mouse button, the server will update the annotation file based on the box you drew.
+
+The quality of the thresholded label will depend on the input image as well as the bounding box you draw. For best results, make sure to include some background in your bounding box. Stray pixels may also be annotated using the threshold tool--these can be easily cleared away using the whole-label pixel trimming action.
+
+#### Suggested region to threshold
+One of the cells in frame 14 is conspicuously unlabeled. Try using the thresholding tool to label it!
+
+## When finished
+Download your file; this will allow you to use your corrected label file as training data for model training. The .npz file format keeps the input images and labels paired together until it's time to train.
