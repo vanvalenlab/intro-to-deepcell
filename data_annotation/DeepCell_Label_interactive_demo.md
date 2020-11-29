@@ -11,10 +11,10 @@ You should now see an interface that looks like this:
 On the left is the information display for the file and the labels within it. On the right is the canvas you will interact with to make display adjustments and modify labels in the file.
 
 ### The information pane
-![DeepCell Label interface with infopane boxed](https://figure-eight-deepcell.s3.us-east-2.amazonaws.com/instructions_and_examples/janelia_demo/interface_boxed_infopane.png)
+![DeepCell Label interface with infopane boxed](https://figure-eight-deepcell.s3.us-east-2.amazonaws.com/instructions_and_examples/janelia_demo/overall_interface_boxed_infopane.png)
 
 #### Frame, Channel, and Feature information
-![DeepCell Label infopane with frame, channel, feature info boxed](https://figure-eight-deepcell.s3.us-east-2.amazonaws.com/instructions_and_examples/janelia_demo/infopane_boxed_frames.png)
+![DeepCell Label infopane with frame, channel, feature info boxed](https://figure-eight-deepcell.s3.us-east-2.amazonaws.com/instructions_and_examples/janelia_demo/infopane_boxed_channels.png)
 
 DeepCell Label is designed to work with biological images, which often have multiple dimensions. To help keep track of what part of your file you are working on, the information pane will always display the frame, channel, and feature that are actively being viewed. 
  - "Frame" starts at zero and can refer to different timepoints in a sequence of timelapse images, or it can refer to different slices of a 3D image, depending on your data. 
