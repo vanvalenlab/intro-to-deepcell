@@ -1,5 +1,15 @@
 # Exploring data annotation with DeepCell Label
 
+## Table of Contents
+* [Understanding the interface](#understanding-the-deepcell-label-interface)
+  * [The information pane](#the-information-pane)
+  * [The interactive canvas](#the-interactive-canvas)
+* [Image viewing options and controls](#image-viewing-options-and-controls)
+* [Whole-label editing](#whole-label-modifications-to-annotation-file)
+* [Pixel-level editing](#pixel-level-modifications-to-annotation-file)
+* [When finished](#when-finished)
+
+
 ### To get started on the demo file:
  1. Download the .npz file from our [s3 bucket](https://caliban-input.s3.us-east-2.amazonaws.com/janelia_demo/HeLa-S3_janelia_demo_version.npz). This file is prepopulated with labels.
  2. Use drag and drop interface to open file with [DeepCell Label](https://label.deepcell.org/).
