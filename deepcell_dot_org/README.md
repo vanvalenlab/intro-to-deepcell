@@ -46,9 +46,7 @@ processed, and then returned within ImageJ.
 Before getting started, make sure you understand [the available models and data formatting requirements](models.md)
 
 ### Installation
-To install the ImageJ plugin, follow the [instructions][1] on our github
-
-[1]: <https://github.com/vanvalenlab/kiosk-imageJ-plugin#how-to-install target="_blank">
+To install the ImageJ plugin, follow the <a href="https://github.com/vanvalenlab/kiosk-imageJ-plugin#how-to-install" target="_blank">instructions</a>
 
 1. If you haven't already, please install [FIJI](https://imagej.net/Fiji/Downloads) or [ImageJ](https://imagej.net/Downloads)
 2. Download the [JAR file](https://github.com/vanvalenlab/kiosk-imageJ-plugin/releases/download/0.3.1/Kiosk_ImageJ-0.3.1.jar)
