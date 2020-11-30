@@ -48,9 +48,9 @@ The infopane provides information on what we are viewing in the canvas and the m
 #### Image display info
 ![DeepCell Label infopane with frame, channel, feature info boxed](https://figure-eight-deepcell.s3.us-east-2.amazonaws.com/instructions_and_examples/janelia_demo/infopane_boxed_channels.png)
 
-Biological images in DeepCell Label often have many dimensions. For example, we can have many frames, channels, or features with in an image.
+Biological images in DeepCell Label often have many dimensions. For example, we can have many frames, channels, or features to label within an image.
  - __frame__ refers to different timepoints in a sequence of timelapse images, or it refers to vertical slices of a 3D image.
- - __channel__ refers to different channels of the input image. In our demo file, we have a fluorescent channel and a phase channel
+ - __channel__ refers to different channels of the input image. The demo file contains three channels, a fluorescent cytoplasm channel, a phase channel, and a fluorescent nuclei channel.
  - __feature__ refers to different types of annotations that may be included in the file; "features" can be thought of like "channels" for different annotations. For example, an annotation file could contain one feature for nuclear segmentations and another for whole-cell segmentations to keep different annotations for the same cells paired together.
  
 DeepCell Label displays one 2-dimensional image slice at a time, and we can move through these slices to view and work on the complete image stack. To track which slice we're viewing, the table shows us the index of the frame, channel, and feature we are viewing, starting at zero and counting up. As you browse an image, these rows will keep track of your place in the file.
@@ -60,15 +60,15 @@ DeepCell Label displays one 2-dimensional image slice at a time, and we can move
 
 We can zoom and pan across images in DeepCell Label to work on specific areas of a large image. To track where we are in the image, we can see our field of view in the zoom and viewing rows.
 
- - __zoom__ tells us how much the image has been scaled
- - __viewing (x)__ or __(y)__ tells us the range of x or y coordinates we are viewing in the canvas
+ - __zoom__ tells us how much the image has been scaled, starting from 100%.
+ - __viewing (x)__ or __(y)__ tells us the range of x or y coordinates we are viewing in the canvas.
 
 #### Highlight info
 ![DeepCell Label infopane with highlighting info boxed](https://figure-eight-deepcell.s3.us-east-2.amazonaws.com/instructions_and_examples/janelia_demo/infopane_boxed_highlighting.png)
 
 Highlighting emphasizes the label(s) we are currently working with by making them bright red. As you work, you can check on the highlight status in the infopane in these rows:
- - __highlight__ tells us if highlighting is on
- - __highlight cells__ tells us which label(s) are highlighted
+ - __highlight__ tells us if highlighting is on.
+ - __highlight cells__ tells us which label(s) are highlighted.
 
 #### Edit mode info
 ![DeepCell Label infopane with pixel-editing information boxed](https://figure-eight-deepcell.s3.us-east-2.amazonaws.com/instructions_and_examples/janelia_demo/infopane_boxed_brush.png)
@@ -76,16 +76,16 @@ Highlighting emphasizes the label(s) we are currently working with by making the
 DeepCell Label has two modes of interacting with labels, "whole-label mode" and "paint mode". We can check the __edit mode__ row of the table to see which we are using.
 
 When in "paint mode" we'll also see these extra rows:
-- __brush size__ tells us the current size of the brush tool
-- __brush label__ tells us which label (if any) the brush is currently set to modify, starting at 1 by default
-- __eraser__ tells us whether the brush is currently set to draw or erase labels
+- __brush size__ tells us the current size of the brush tool.
+- __brush label__ tells us which label (if any) the brush is currently set to modify, starting at 1 by default.
+- __eraser__ tells us whether the brush is currently set to draw or erase labels.
 
 #### Label info
 ![DeepCell Label interface with a label hovered over, label info boxed](https://figure-eight-deepcell.s3.us-east-2.amazonaws.com/instructions_and_examples/janelia_demo/interface_boxed_label_hover.png)
 
 When hovering over a label in the canvas, we see extra information about the label in the __label__ and __slices__ row. 
- - __label__ tells us the value of the label
- - __slices__ tells us which frames the label is present in if we are working with timelapse or 3D data
+ - __label__ tells us the value of the label.
+ - __slices__ tells us which frames the label is present in if we are working with timelapse or 3D data.
 
 
 #### State
@@ -100,9 +100,9 @@ The __state__ row shows prompts related to actions on the canvas, such as a prom
 ![DeepCell Label interactive region of canvas](https://figure-eight-deepcell.s3.us-east-2.amazonaws.com/instructions_and_examples/janelia_demo/canvas_boxed_interactive_canvas.png)
 
 The canvas is where we spend most time in DeepCell Label. This canvas displays images slices, can display labels alone, raw images alone, or an overlay of the two. We use the canvas to
-  - select labels
   - browse the image
-  - modify the labels
+  - select labels
+  - modify selected labels
 
 To select a label, click on the label on the canvas.
 
@@ -125,8 +125,8 @@ We should now have the [demo file](https://caliban-input.s3.us-east-2.amazonaws.
 #### Change mode
 Recall that DeepCell Label has two modes, whole-label mode and paint modes. We start in paint mode by default. To switch between these modes, use the "e" key.
 
-You can tell which mode we are in by looking at which image the canvas displays.
- - In paint mode, we see an overlay of labels on top of the raw image. 
+You can tell which mode we are in by looking the canvas display or checking the infopane.
+ - In paint mode, a brush is visible in the canvas, and we see an overlay of labels on top of the raw image. The raw image is displayed in grayscale.
  - In whole-label mode, we only see either the raw image or the labels. You can switch between the raw image and the labels with the "z" key. 
 
 
@@ -141,16 +141,16 @@ Click and drag on the canvas while holding the spacebar to pan.
 ### Adjust image brightness and contrast
 
 #### Adjust contrast
-Scroll up or down on the canvas to adjust the contrast. Increasing contrast improves the visibility of objects in the raw image. We can only change contrast while viewing the raw image, not when viewing only the labels.
+Scroll up or down on the canvas to adjust the contrast. Increasing contrast improves the visibility of objects in the raw image. We can only change contrast while viewing the raw image or image overlay, not when viewing only the labels.
 
 #### Adjust brightness
-Scroll up or down on the canvas while holding the shift key to adjust brightness. As with contrast adjustment, we can only change brightness while viewing the raw image.
+Scroll up or down on the canvas while holding the shift key to adjust brightness. As with contrast adjustment, we can only change brightness while viewing the raw image or image overlay.
 
 #### Reset brightness and contrast
 Press the zero (0) key to reset brightness and contrast to their default values.
 
 #### Invert light/dark (paint mode only)
-Press the "i" key to invert the raw image. Inverting the  raw image in pixel-editing mode can help to see objects under the label overlay. Inverting only works in paint mode and does not change the display in whole-label mode.
+Press the "i" key to invert the raw image. Inverting the raw image in paint mode can help to see objects under the label overlay. Inverting only works in paint mode and does not change the display in whole-label mode.
 
 ### Highlighting labels
 Press the "h" key to toggle highlighting on and off. Highlighted labels work differently in paint mode and whole-label mode, so we will cover highlighting in more detail later.
@@ -165,7 +165,7 @@ Press the "a" or left arrow key to go backward through frames.
 You can cycle to the last/first frame when viewing the first/last frame.
 
 #### Change channel
-Press "C" or "Shift+C" to change the channel of the displayed image. "C" increments the channel, while "Shift+C" decrements teh channel.
+Press "C" or "Shift+C" to change the channel of the displayed image. "C" increments the channel, while "Shift+C" decrements the channel.
 
 Make sure you have no selected labels when changing channels, as the "c" key can change labels in whole-label mode.
 
@@ -189,16 +189,16 @@ Click on a label to select it. We can select up to two labels in whole-label mod
 #### Highlight labels in whole-label mode
 In whole-label mode, we can highlight the selected labels. Highlighting makes selected labels bright red. We recommend using highlighting to make sure we have selected the label(s) we intend to modify.
 
-If we've only selected one label, we can cycle the highlighted label with the bracket keys ( "\[" and "\]" ). This deselects the original selected label.
+If we've only selected one label, we can cycle the highlighted label with the bracket keys ( "\[" and "\]" ). This deselects the original selected label, but keeps the highlight active.
 
 ### Swap labels
 
 Select two different labels, then press the "s" key to swap the selected labels. A prompt will appear in "state" to confirm the swap where we can
- - press "S" to swap the labels in only the current frame ( again to choose this option),
+ - press "S" (again) to swap the labels in only the current frame,
  - press the spacebar to swap them across all frames, or
- - press "Esc" to quit the action.
+ - press "Esc" to abort the action.
 
-Swapping labels This can be useful in timelapse or 3D files with many frames, where consistent labels across each frame is required for labeling correctness.
+This can be useful in timelapse or 3D files with many frames, where consistent labels across each frame are required for labeling correctness.
 
 #### Suggested swap
 ![DeepCell Label demo labels for suggested swap](https://figure-eight-deepcell.s3.us-east-2.amazonaws.com/instructions_and_examples/janelia_demo/resized_suggested_swap.png)
@@ -209,7 +209,7 @@ Labels 16 and 19 are consistent across most frames in this file, except for in f
 
 Hold the shift key and select a label to trim disconnected pixels. *Note: for this action, the click location of your selection does matter. Make sure to click on the part of the label you want to keep.* A prompt will appear in __state__ where we can:
   - press spacebar to confirm, or
-  - press "Esc" to abort.
+  - press "Esc" to abort the action.
 
 Stray pixels can arise from labeling mistakes made by other people or from artifacts of computational labeling like thresholding. If there are no stray pixels to remove from a label, this action has no effect.
 
@@ -245,7 +245,7 @@ Label 27 in frame 9 appears in two locations. Select label 27 and compare frame 
 Select the label you want to keep, then select the label you want to replace, then press "R" to replace the second label with the first. A prompt will appear in __state__ to confirm; we can:
  - press "S" to replace the labels in the same frame 
  - press spacebar to replace one label with the other across all frames, or
-- press "Esc" to abort. 
+- press "Esc" to abort the action. 
 Use the single-frame option for fixing split errors and the all-frames option for merging lineages.
 
 "Split" labels are a common type of annotation mistake seen in both computationally and manually generated label files. In this type of mistake, one object is annotated with two different labels. These two labels can easily be merged into one with the replace action. "Replace" can also be used to link two sequences of labels that belong to the same object across timelapse or 3D images.
@@ -273,7 +273,7 @@ Label 25 in frame 11 is an example of a merged label that can be fixed with wate
 Select the label that should get a new label, then press "C". A prompt will appear in __state__ to confirm the label creation; we can:
  - press "S" to create a new label in only the current frame
  - press spacebar to create the label in all subsequent frames
- - press "Esc" to abort. 
+ - press "Esc" to abort the action. 
 
 The single-frame option is different from the label flooding action we used earlier, as creating a new label with "c" will change all pixels of the label in the frame, not just connected pixels. Use the "all subsequent frames" version of the action when unlinking two objects from each other that are otherwise labeled correctly.
 
@@ -286,20 +286,20 @@ This file does not contain a specific error that is best fixed with the create a
 Paint mode allows us to partially correct labels, or even draw labels from scratch. This section covers the tools to make pixel-level changes to labels files. We can easily switch between the whole label mode and paint mode by pressing "e".
 
 ### Brush basics
-Click and drag on the canvas to draw with the brush. As we draw with the brush, it leaves a translucent trace where we have drawn. When you release the mouse, we add labels to the trace area.
+Click and drag on the canvas to draw with the brush. As we draw with the brush, it leaves a translucent trace where we have drawn. When you release the mouse, we add a label to the trace area.
 
 #### Brush size
-We can cahnge the brush size with the up and down arrow keys. The brush has a 5 pixel radius by default. The brush size is shown in the infopane when in paint mode.
+We can change the brush size with the up and down arrow keys. The brush has a 5 pixel radius by default. The brush size is shown in the infopane when in paint mode.
 
 #### Brush label
-The brush label is the label that the brush modifies when drawing. The brush adds this label to _only_ background regions. Existing labels will not be drawn over by the brush. When erasing, we erase only the brush label, not modifying other labels. We can see the brush label in the infopane ("brush label") and we can cycle the label with the bracket keys ( "\[" and "\]" ).
+The brush label is the label that the brush modifies when drawing. The brush adds this label to _only_ background regions. Existing labels will not be drawn over by the brush. When erasing, we erase only the brush label, without modifying other labels. We can see the brush label in the infopane ("brush label") and we can cycle the label with the bracket keys ( "\[" and "\]" ).
 
 Press "N" (for "new") to set the brush to an unused value.
 
 Press "P" (for "picker") and then click on an label to set the brush label to an existing label.
 
 #### Highlighting
-The labels with the same value as the brush label will be highlighted red with a white border (when highlighting is turned on). Try changing the value of the brush to see the highlighted label change as well.
+The label in the image with the same value as the brush label will be highlighted red with a white border (when highlighting is turned on). Try changing the value of the brush to see the highlighted label change as well.
 
 #### Erasing
 Press the "X" key to toggle the eraser. The brush has a red outline when the eraser is on, and a white outline when the eraser is off (and set to draw instead).
@@ -323,9 +323,9 @@ Sometimes, the boundary between two labels is inaccurate, even though both objec
 In frame 13, the boundary between labels 27 and 29 is inaccurate, although the foreground/background distinction is accurate. Try using the conversion brush to adjust the boundary between these labels. You can also try using the conversion brush to draw a new label over part of label 35, which covers two objects (note: the second object is easier to see in channel 1).
 
 ### Threshold a raw image
-Press "t" while in pixel-editing mode, then click and drag to create a bounding box arond the area to threshold. When you release the mouse button, the brighter background areas inside the bounding box will have a new label.
+Press "t" while in pixel-editing mode, then click and drag to create a bounding box arond the area to threshold. When you release the mouse button, the brighter areas inside the bounding box will have a new label.
 
-When objects have a clear fluorescent signal, thresholding is an alternative option to drawing in a label with the brush. The quality of the thresholded label will depend on the input image as well as the bounding box you draw. For best results, make sure to include some background in your bounding box. We often see stray pixels when using the threshold tool. We can clear them with trim action in whole-label mode.
+When objects have a clear fluorescent signal, thresholding is an alternative option to drawing in a label with the brush. The quality of the thresholded label will depend on the input image as well as the bounding box you draw. For best results, make sure to include some background in your bounding box. We often see stray pixels when using the threshold tool, which we can clear with the trim action in whole-label mode.
 
 #### Suggested region to threshold
 One of the cells in frame 14 is conspicuously unlabeled. Try using the thresholding tool to label it!
