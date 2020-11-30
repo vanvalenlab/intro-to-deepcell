@@ -83,7 +83,7 @@ The borders surrounding the interactive canvas serve a purpose as well--these ch
 You should have the [demo file](https://caliban-input.s3.us-east-2.amazonaws.com/janelia_demo/HeLa-S3_janelia_demo_version.npz) loaded in [DeepCell Label](https://label.deepcell.org/) to follow along and try these controls for yourself.
 
 ### Changing between input image and label views
-(image of input image, raw image, and overlay image side by side)
+![DeepCell Label different display options side by side](https://figure-eight-deepcell.s3.us-east-2.amazonaws.com/instructions_and_examples/janelia_demo/different_displays.png)
 
 #### Changing interaction mode also changes display
 The two main interaction modes, whole-label and pixel-editing modes, also have different image displays. The files open in pixel-editing mode by default, where the images are displayed as an overlay of labels on top of the input image. You can switch back and forth between whole-label and pixel-editing modes with the "e" key. In whole-label mode, you will see either the input image or an image of the labels.
@@ -130,7 +130,7 @@ Changing features works similarly to changing channels in a file, and uses the "
 #### Change frames
 To go forward through frames in a file, press the "d" or right arrow key. To go backward through frames in a file, press the "a" or left arrow key. You can go backward from the first frame in the file to cycle back to the end of the file, and can go forward from the last frame of the file to return to the beginning. When you change frames, you should see the "frame" information in the infopane update, with the displayed image updating shortly afterward.
 
-Now that you know how to move through and view files with DeepCell Label, take a minute to explore the file. Next, we will cover whole-label actions starting in frame 7 of the demo file, so make sure you are able to get to this frame and toggle whole-label mode using the controls covered so far.
+Now that you know how to move through and view files with DeepCell Label, take a minute to explore the file. Next, we will cover whole-label actions starting in frame 5 of the demo file, so make sure you are able to get to this frame and toggle whole-label mode using the controls covered so far.
 
 ## Whole-label modifications to annotation file
 In this section, we will cover the different whole-label actions available to modify annotation files. We will use these actions to fix specific errors throughout the label file, but you can also try them on other labels to see how they work.
@@ -147,8 +147,9 @@ Two labels can be swapped with each other to change the value of each label. Thi
 To swap two labels, select two different labels, then press the "s" key. A message will appear in "state" asking you to confirm the swap; you can either swap the labels in the same frame (press "s" again to choose this option), or swap them across all frames (press spacebar to confirm this option).
 
 #### Suggested swap
-(image)
-Labels 16 and 19 are consistent across most frames in this file, except for in frame 7, where they have swapped places. Swap them back to fix this labeling error.
+![DeepCell Label demo labels for suggested swap](https://figure-eight-deepcell.s3.us-east-2.amazonaws.com/instructions_and_examples/janelia_demo/resized_suggested_swap.png)
+
+Labels 16 and 19 are consistent across most frames in this file, except for in frame 5, where they have swapped places. Swap them back to fix this labeling error.
 
 ### Trimming stray pixels
 Sometimes, labels may have a few stray, unconnected pixels that should be removed from an annotation. These are often due to labeling mistakes made by other people, but can also be artifacts of computational labeling. We can quickly and conveniently remove these from the file with the "trim pixels" functionality. This action will not have an effect if there are no stray pixels to remove from a label.
@@ -156,7 +157,9 @@ Sometimes, labels may have a few stray, unconnected pixels that should be remove
 To use this action, hold down the shift key while you select a label. *Note: for this action, the click location of your selection does matter. Make sure to click on the part of the label you want to keep.* A message will appear in "state" asking you to confirm the action; press spacebar to confirm and apply the action.
 
 #### Suggested label to trim pixels from
-Frame 8 in the file has a stray brushstroke with label 28. (Label 28 has a large hole in the center, but you can also select the brushstroke to use highlighting to see where the other part of the label is.) To get rid of the stray brushstroke, hold down the shift key while you click on the real part of the label to select it, and confirm the action with spacebar.
+![DeepCell Label demo label for suggested trim pixels action](https://figure-eight-deepcell.s3.us-east-2.amazonaws.com/instructions_and_examples/janelia_demo/suggested_trim_pixels.png)
+
+Frame 8 in the file has a stray brushstroke with label 28. To get rid of the stray brushstroke, hold down the shift key while you click on the real part of the label to select it, and confirm the action with spacebar.
 
 ### Filling holes in labels
 Labels may have holes in them; use hole filling to quickly fix these errors instead of using a brush tool to manually fill in the gap. Holes are most often computational artifacts, but you can also use this functionality to speed up labeling objects from scratch by drawing an outline and filling in the rest of the label.
@@ -164,6 +167,8 @@ Labels may have holes in them; use hole filling to quickly fix these errors inst
 To fill a hole, first select the label you want to fill a hole in. Next, press the "f" key. Then, click on the hole to fill (there is no confirmation with spacebar for this action).
 
 #### Suggested hole to fill
+![DeepCell Label demo label for suggested hole filling action](https://figure-eight-deepcell.s3.us-east-2.amazonaws.com/instructions_and_examples/janelia_demo/suggested_fill_hole.png)
+
 Label 28 in frame 8 has a large hole in it. Use the hole fill action to quickly fix this annotation mistake.
 
 ### Flood part of a label with a new label
@@ -172,7 +177,8 @@ Accidentally reusing a label value is a common annotation mistake. As long as th
 To flood a region of a label, hold down the alt key while you click on the region you wish to flood. *Note: for this action, the click location of your selection does matter. Make sure to click on the part of the label that you want to change the value of.* A message will appear in "state" asking you to confirm the action; press spacebar to confirm and apply the action. This action will work even if the selected label only appears in one place.
 
 #### Suggested label to flood
-(image)
+![DeepCell Label demo label for suggested flood cell action](https://figure-eight-deepcell.s3.us-east-2.amazonaws.com/instructions_and_examples/janelia_demo/suggested_flood_cell.png)
+
 Label 27 in frame 9 appears in two locations. Select label 27 and compare frame 8 to frame 9 to see that one region of label 27 should be modified to be a different value. Use the label flooding action to fix the duplicate label 27. (Note: if you flood the wrong part of the label, you can undo the action and try again, or you can use the swap action to get the labels in frame 9 to match up with frames 8 and 10.)
 
 ### Replace one label with another
@@ -181,6 +187,8 @@ Label 27 in frame 9 appears in two locations. Select label 27 and compare frame 
 To replace one label with another, first select the label you want to keep, then select the label you want to replace. For this action, the order of selection matters, but the location in the label you click on does not. Press "r" to trigger the replace action. A message will appear in "state" asking you to confirm the replacement; you can either replace the labels in the same frame (press "s" to choose this option), or replace one label with the other across all frames (press spacebar to confirm this option). Use the single-frame option for fixing split errors and the all-frames option for merging lineages.
 
 #### Suggested label to replace
+![DeepCell Label demo labels for suggested single-frame replace action](https://figure-eight-deepcell.s3.us-east-2.amazonaws.com/instructions_and_examples/janelia_demo/resized_suggested_replace.png)
+
 In frame 10, label 17 is mistakenly split into labels 17 and 42. Use the single-frame replace action to replace 42 with 17.
 
 ### Split one label into two with watershed transform
@@ -189,7 +197,8 @@ A "merged" label error is when two adjacent objects are annotated with the same 
 To use this action, select the center of each object (click location matters). You will have the same label selected twice. Then, press "w" and confirm the prompt shown in "state" with the spacebar. The selected label will be split into the original label and a new label. The first click location will keep the original label and the second click location will be assigned the new label. Watershed will not necessarily work well in every case; alternatives exist for splitting apart labels in DeepCell Label.
 
 #### Suggested label to split with watershed
-(image)
+![DeepCell Label demo label for suggested watershed action](https://figure-eight-deepcell.s3.us-east-2.amazonaws.com/instructions_and_examples/janelia_demo/suggested_watershed.png)
+
 Label 25 in frame 11 is an example of a merged label that can be fixed with watershed. Try using the watershed action to split it apart--if the resulting label boundary does not look good, you can undo the action or replace the new label with the old label, and try again with different click locations.
 
 ### Creating new labels
@@ -220,7 +229,8 @@ To help keep track of which label the brush is set to, pixels matching the curre
 To toggle the brush's eraser on and off, press the "x" key. The brush will have a red outline if the eraser is on, and a white outline if the eraser is off (brush set to draw, not erase).
 
 #### Suggested regions to fix with the basic brush tool
-(image)
+![DeepCell Label demo pixel-editing mode suggested basic brush fixes](https://figure-eight-deepcell.s3.us-east-2.amazonaws.com/instructions_and_examples/janelia_demo/suggested_brush_edits.png)
+
 In frame 12, label 22 does not fully cover its object, and label 23 covers too much background in addition to the object. Try changing the brush value to 22 to draw in some of the missing label, then increment to 23 and erase some of the extra label.
 
 ### Advanced brush option: conversion brush
@@ -229,8 +239,9 @@ Sometimes, the boundary between two labels is inaccurate, even though both objec
 To turn on the conversion brush, press "r" (prompts will appear in "state"). First select the label you want to overwrite, then the label you want to draw with. To draw with a new label, press "n" instead of selecting a second label. Once these selections have been made, the label to be overwritten will appear with a red outline around it, and the label to draw with will have a white outline around it (even if highlighting is turned off). Drawing with the brush with this mode on will only affect these two labels.
 
 #### Suggested regions to fix with the conversion brush
-(image)
-In frame 13, the boundary between labels 27 and 29 is inaccurate, although the foreground/background distinction is accurate. Try using the conversion brush to adjust the boundary between these labels. You can also try using the conversion brush to draw a new label over part of label 35, which covers two objects.
+![DeepCell Label demo pixel-editing mode suggested conv brush fixes](https://figure-eight-deepcell.s3.us-east-2.amazonaws.com/instructions_and_examples/janelia_demo/suggested_conv_brush_edits.png)
+
+In frame 13, the boundary between labels 27 and 29 is inaccurate, although the foreground/background distinction is accurate. Try using the conversion brush to adjust the boundary between these labels. You can also try using the conversion brush to draw a new label over part of label 35, which covers two objects (note: the second object is easier to see in channel 1).
 
 ### Thresholding fluorescent images
 When objects have a clear fluorescent signal, thresholding is an alternative option to drawing in a label with the brush. The thresholding tool will never overwrite existing labels, or add duplicate labels to the file. To use this tool, press "t" while in pixel-editing mode (you will see a prompt in "state"). Then, click and drag to create a bounding box arond the area you would like to threshold. When you release the mouse button, the server will update the annotation file based on the box you drew.
