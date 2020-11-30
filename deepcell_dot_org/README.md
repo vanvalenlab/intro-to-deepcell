@@ -48,6 +48,5 @@ Before getting started, make sure you understand [the available models and data 
 ### Installation
 To install the ImageJ plugin, follow the <a href="https://github.com/vanvalenlab/kiosk-imageJ-plugin#how-to-install" target="_blank">instructions</a>
 
-### Running
-TODO: should we just link to the plugin repo instructions here?
-
+### Generate predictions
+To generate predictions using the plugin, follow the <a href="https://github.com/vanvalenlab/kiosk-imageJ-plugin#how-to-run-the-plugin" target="_blank">instructions</a>
