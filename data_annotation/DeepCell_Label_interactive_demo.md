@@ -25,6 +25,26 @@ On the right is an interactive canvas with a raw image and its labels.
 ### The infopane
 ![DeepCell Label interface with infopane boxed](https://figure-eight-deepcell.s3.us-east-2.amazonaws.com/instructions_and_examples/janelia_demo/overall_interface_boxed_infopane.png)
 
+The infopane provides information on what we are viewing in the canvas and the modes & tools to edit labels. Here is a summary of the information displayed in the info, with more details on each row below.
+
+| Row Name                       | description of row                                |
+|--------------------------------|---------------------------------------------------|
+| frame:                         | index of displayed frame                          |
+| channel:                       | index of displayed channel                        |
+| feature:                       | index of displayed feature                        |
+| zoom:                          | percentage image has been scaled                  |
+| viewing (x):                   | range of visible x coordinates                    |
+| viewing (y):                   | range of displayed y coordianted                  |
+| highlight cells:               | whether highlighting is on                        |
+| highlighted cells:             | which labels are highlighted                      |
+| edit mode:                     | "whole-label mode" or "paint mode"                |
+| brush size: (paint mode only)  | size of the brush in pixels                       |
+| brush label: (paint mode only) | label the brush is painting                       |
+| eraser: (paint mode only)      | whether the brush is erasing                      |
+| label:                         | label the mouse is hovering over                  |
+| slices:                        | list of frames the hovered label is present in    |
+| state:                         | prompts for actions, or currently selected labels |
+
 #### Image display info
 ![DeepCell Label infopane with frame, channel, feature info boxed](https://figure-eight-deepcell.s3.us-east-2.amazonaws.com/instructions_and_examples/janelia_demo/infopane_boxed_channels.png)
 
@@ -35,7 +55,7 @@ Biological images in DeepCell Label often have many dimensions. For example, we 
  
 DeepCell Label displays one 2-dimensional image slice at a time, and we can move through these slices to view and work on the complete image stack. To track which slice we're viewing, the table shows us the index of the frame, channel, and feature we are viewing, starting at zero and counting up. As you browse an image, these rows will keep track of your place in the file.
 
-#### Field of View information
+#### Field of View info
 ![DeepCell Label infopane with FOV info boxed](https://figure-eight-deepcell.s3.us-east-2.amazonaws.com/instructions_and_examples/janelia_demo/infopane_boxed_FOV.png)
 
 We can zoom and pan across images in DeepCell Label to work on specific areas of a large image. To track where we are in the image, we can see our field of view in the zoom and viewing rows.
@@ -43,24 +63,24 @@ We can zoom and pan across images in DeepCell Label to work on specific areas of
  - __zoom__ tells us how much the image has been scaled, starting from 100%.
  - __viewing (x)__ or __(y)__ tells us the range of x or y coordinates we are viewing in the canvas.
 
-#### Highlighting information
+#### Highlight info
 ![DeepCell Label infopane with highlighting info boxed](https://figure-eight-deepcell.s3.us-east-2.amazonaws.com/instructions_and_examples/janelia_demo/infopane_boxed_highlighting.png)
 
 Highlighting emphasizes the label(s) we are currently working with by making them bright red. As you work, you can check on the highlight status in the infopane in these rows:
- - __highlight cells__ tells us if highlighting is on.
+ - __highlight__ tells us if highlighting is on.
  - __highlight cells__ tells us which label(s) are highlighted.
 
-#### Editing mode information
+#### Edit mode info
 ![DeepCell Label infopane with pixel-editing information boxed](https://figure-eight-deepcell.s3.us-east-2.amazonaws.com/instructions_and_examples/janelia_demo/infopane_boxed_brush.png)
 
-DeepCell Label has two modes of interacting with labels, "whole-label mode" and "paint mode". We can check the __mode__ row of the table to see which we are using.
+DeepCell Label has two modes of interacting with labels, "whole-label mode" and "paint mode". We can check the __edit mode__ row of the table to see which we are using.
 
 When in "paint mode" we'll also see these extra rows:
 - __brush size__ tells us the current size of the brush tool.
 - __brush label__ tells us which label (if any) the brush is currently set to modify, starting at 1 by default.
 - __eraser__ tells us whether the brush is currently set to draw or erase labels.
 
-#### Label information
+#### Label info
 ![DeepCell Label interface with a label hovered over, label info boxed](https://figure-eight-deepcell.s3.us-east-2.amazonaws.com/instructions_and_examples/janelia_demo/interface_boxed_label_hover.png)
 
 When hovering over a label in the canvas, we see extra information about the label in the __label__ and __slices__ row. 
@@ -71,7 +91,7 @@ When hovering over a label in the canvas, we see extra information about the lab
 #### State
 ![DeepCell Label infopane examples of state box](https://figure-eight-deepcell.s3.us-east-2.amazonaws.com/instructions_and_examples/janelia_demo/state_examples.png)
 
-The __state__ row shows prompts related to actions on the canvas, such as a prompt to select a label or confirmation for the action. We will cover the prompts shown later when detailing actions on the canvas. When not prompting an action, the state instead tells us which labels are selected.
+The __state__ row shows prompts related to actions on the canvas, such as a prompt to select a label or confirmation for the action. When not prompting an action, the state instead tells us which labels are selected.
 
 ### The interactive canvas
 ![DeepCell Label canvas region of displayed page](https://figure-eight-deepcell.s3.us-east-2.amazonaws.com/instructions_and_examples/janelia_demo/interface_boxed_canvas.png)
