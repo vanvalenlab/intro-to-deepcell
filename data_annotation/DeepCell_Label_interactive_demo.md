@@ -29,7 +29,7 @@ The infopane provides information on what we are viewing in the canvas and the m
 
 | Row Name                       | description of row                                |
 |--------------------------------|---------------------------------------------------|
-| (frame)[]:                         | index of displayed frame                          |
+| frame:                         | index of displayed frame                          |
 | channel:                       | index of displayed channel                        |
 | feature:                       | index of displayed feature                        |
 | zoom:                          | percentage image has been scaled                  |
