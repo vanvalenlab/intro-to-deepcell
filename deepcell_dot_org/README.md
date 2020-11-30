@@ -6,7 +6,7 @@ Deepcell.org is a web-based interface to access our pretrained deep learning mod
 * [Generating predictions with DeepCell.org](README.md/#generating-predictions-with-deepcellorg)
 * [Plugging in to DeepCell.org with ImageJ](README.md/#plugging-in-to-deepcellorg-with-imagej)
 
-### Formatting data for web-based models
+## Formatting data for web-based models
 
 #### Multiplex Model
 The multiplex model performs whole-cell segmentation of tissue imaging data. The input to the model is two-channel images. The first channel must be a
@@ -15,7 +15,7 @@ nuclear channel (such as DAPI). The second channel must be a membrane or cytopla
 #### Nuclear Segmentation Model
 TODO: do we describe both nuclear and cytoplasm model? Only one? Keep this blank?
 
-### Generating predictions with DeepCell.org
+## Generating predictions with DeepCell.org
 Deepcell.org is a web-based interface to access our pretrained deep learning models. The website allows you to easily upload example images, 
 run them on our available models, and download the results without requiring any local installation. 
 
@@ -24,7 +24,7 @@ large volumes of data using cloud computing. By automatically scaling up when us
 is able to quickly deliver results for large numbers of images when demand increases, while reducing costs by downscaling when demand decreases. 
 
 
-#### Submitting data to the website
+### Submitting data to the website
 Generating data from the website is quite easy. 
 1. Go to DeepCell.org, and click on `PREDICT`
 ![image](DeepCell_website_predict.png)
@@ -39,14 +39,16 @@ Generating data from the website is quite easy.
 ![image](DeepCell_website_download.png)
 
 
-### Plugging in to DeepCell.org with ImageJ
+## Plugging in to DeepCell.org with ImageJ
 The ImageJ plugin provides an easy interface to access our pretrained deep learning models within ImageJ itself. Data is automatically uploaded to our server,
 processed, and then returned within ImageJ. 
 
 Before getting started, make sure you understand [the available models and data formatting requirements](models.md)
 
-#### Installation
-TODO: should we just link to the plugin repo instructions here?
+### Installation
+To install the ImageJ plugin, follow the [instructions][1] on our github
+
+[1]: <https://github.com/vanvalenlab/kiosk-imageJ-plugin#how-to-install target="_blank">
 
 1. If you haven't already, please install [FIJI](https://imagej.net/Fiji/Downloads) or [ImageJ](https://imagej.net/Downloads)
 2. Download the [JAR file](https://github.com/vanvalenlab/kiosk-imageJ-plugin/releases/download/0.3.1/Kiosk_ImageJ-0.3.1.jar)
@@ -57,6 +59,6 @@ TODO: should we just link to the plugin repo instructions here?
 is installed and select the jars folder. 
 
 
-#### Running
+### Running
 TODO: should we just link to the plugin repo instructions here?
 
