@@ -18,10 +18,10 @@ This material is intended to help users become acclimated with the [DeepCell](ht
 * Introduction to DeepCell.org
 * Plugging in to DeepCell.org with ImageJ
 
-[Labeling my data with DeepCell Label (Codename: Caliban)](./data_annotation)
+[Labeling my data with DeepCell Label](./data_annotation)
 
-* Getting started with Caliban
-* Caliban modes and actions
+* Load files
+* Use DeepCell Label
 
 [Building new and improved models with deepcell-tf](./model_training)
 
