@@ -17,11 +17,17 @@ make sure your data is formatted appropriately.
 
 #### Multiplex Model
 
-The multiplex model performs whole-cell segmentation of tissue imaging data. The input to the model is two-channel images. The first channel must be a nuclear channel (such as DAPI). The second channel must be a membrane or cytoplasmic channel (such as E-Cadherin).
+The multiplex model performs whole-cell segmentation of tissue imaging data. The input to the model is two-channel images. The first channel must be a nuclear channel (such as DAPI). The second channel must be a membrane or cytoplasmic channel (such as E-Cadherin).  
+
+![image](resources/multiplex_model_input.png) 
+![image](resources/multiplex_model_output.png)
 
 #### Nuclear Segmentation Model
 
-The nuclear segmentation model performs nuclear segmentation of cell culture images. The input to the model is a single channel nuclear image (such as DAPI). 
+The nuclear segmentation model performs nuclear segmentation of cell culture images. The input to the model is a single channel nuclear image (such as DAPI).   
+
+![image](resources/nuclear_model_input.png) 
+![image](resources/nuclear_model_output.png)
 
 ## Generating predictions with DeepCell.org
 
@@ -31,16 +37,20 @@ Deepcell.org is a web-based interface to access our pre-trained deep learning mo
 
 Generating data from the website is quite easy.
 
-1. Go to DeepCell.org, and click on `PREDICT`.
+1. Go to DeepCell.org, and click on `PREDICT`.  
+
 ![image](resources/DeepCell_website_predict.png)
 
-2. This will take you to the image upload interface. The default model is `multiplex`. Before submitting your image, make sure you understand [the available models and data formatting requirements](models.md). Upload your image by dragging it into the upload box, or by clicking and then browsing to find your image.
+2. This will take you to the image upload interface. The default model is `multiplex`. Before submitting your image, make sure you understand [the available models and data formatting requirements](models.md). Upload your image by dragging it into the upload box, or by clicking and then browsing to find your image.  
+
 ![image](resources/DeepCell_website_upload.png)
 
-3. Once your image has been successfully uploaded, click `Submit`, and the server will begin processing your data.
+3. Once your image has been successfully uploaded, click `Submit`, and the server will begin processing your data.  
+
 ![image](resources/DeepCell_website_submit.png)
 
-4. Once complete, you can download the results, and then process additional images.
+4. Once complete, you can download the results, and then process additional images.  
+
 ![image](resources/DeepCell_website_download.png)
 
 ## Generating predictions with ImageJ
