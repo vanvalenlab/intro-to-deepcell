@@ -4,11 +4,11 @@
 
 * [Overview](#overview)
 * [Load files](#load-files)
-    * drag & drop files onto <a href="https://label.deepcell.org" target="_blank">label.deepcell.org</a>
-    * supported filetypes
+    * Drag & Drop files onto <a href="https://label.deepcell.org" target="_blank">label.deepcell.org</a>
+    * Supported filetypes
 * [Use DeepCell Label](#use-deepcell-label)
-    * [guided walkthrough with a demo file](DeepCell_Label_interactive_demo.md)
-    * [use RGB mode](DeepCell_Label_RGB.md)
+    * [Guided walkthrough with a demo file](DeepCell_Label_interactive_demo.md)
+    * [Use RGB mode](DeepCell_Label_RGB.md)
 
 ## Overview
 
