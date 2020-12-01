@@ -16,7 +16,7 @@ DeepCell Label is an browser-based data labeling tool designed for biological im
 
 ### Drag & drop images on [label.deepcell.org](https://label.deepcell.org/)
 
-The easiest way to use DeepCell Label is to visit [label.deepcell.org](https://label.deepcell.org/) and drag & drop your images into the upload file box. DeepCell Label will create a new project for you and redirect to the project URL, formatted like label.deepcell.org/project/{projectID}, where projectID is 12 random characters.
+The easiest way to use DeepCell Label is to visit [label.deepcell.org](https://label.deepcell.org/) and drag & drop your images into the upload file box. DeepCell Label will create a new project for you and redirect to the project URL, formatted like `label.deepcell.org/project/{projectID}`, where `projectID` is 12 random characters.
 
 We also offer a selection of test files in a drop down menu on the DeepCell Label homepage, allowing you to explore DeepCell Label without providing your own data. Opening a test file from the dropdown menu will create and redirect you to a new project URL.
 
