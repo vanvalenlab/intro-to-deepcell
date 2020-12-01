@@ -331,4 +331,10 @@ When objects have a clear fluorescent signal, thresholding is an alternative opt
 One of the cells in frame 14 is conspicuously unlabeled. Try using the thresholding tool to label it!
 
 ## Export labels
-Download your labels with the download button above the infopane. With the downloaded .npz, your raw images and labels as training data for model training. The .npz file format keeps the input images and labels paired together until it's time to train.
+![DeepCell Label download button](https://figure-eight-deepcell.s3.us-east-2.amazonaws.com/instructions_and_examples/janelia_demo/download_button.png)
+
+Download your labels with the download button above the infopane. Your raw images and labels are stored together in the .npz file as training data for model training.
+
+Want to explore an alternate viewing option for multichannel images? Check out [what differences to expect in RGB mode](./DeepCell_Labeling_RGB.md).
+
+Ready to put your training data to use? Quickly [train up your own model](../model_training) with DeepCell.
