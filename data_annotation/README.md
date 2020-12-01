@@ -8,9 +8,6 @@
     * drag & drop files onto [label.deepcell.org](https://label.deepcell.org/)
     * deploy DeepCell Label
 * [Use DeepCell Label](#use-deepcell-label)
-    * view images
-    * create labels in Paint mode
-    * correct labeling errors in Whole Label mode
 
 ## Overview
 
