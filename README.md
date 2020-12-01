@@ -1,29 +1,52 @@
 # Introduction to DeepCell
 
-This material is designed to provide an introduction to the basic tools used in the Van Valen Lab, including Unix, Git and Docker. There are also interactive Jupyter notebooks introducting Python and its scientific computing environment ([NumPy](https://www.numpy.org/), [SciPy](https://www.scipy.org/), and [scikit-image](https://scikit-image.org/)) as well as common deep learning libraries like [TensorFlow](https://www.tensorflow.org/) and [Keras](https://www.tensorflow.org/guide/keras).
+This material is intended to help users become acclimated with the [DeepCell](https://www.deepcell.org/about) ecosystem. DeepCell addresses three key needs for deep learning and biological images:
+
+1. How can I use deep learning easily on my data?
+2. How can I interact with these predictions?
+3. How can I improve these model predictions?
+
+This tutorial will provide a gentle introduction to all three areas. Additionally, we have included a "Getting Started" section for users that may be unfamiliar with the basic tools covered in this material.
 
 ## Table of Contents
 
-Please start with the introductory docs for common software development tools.
+[Getting started](./getting_started)
 
-* [Required Software Installations](./docs/Installs.md)
-* [Intro to Unix](./docs/Unix.md)
-* [Intro to Docker](./docs/Docker.md)
-* [Intro to Git](./docs/Git.md)
-* [Python Best Practices](./docs/Python-Style-Guide.md)
+* Required software installations
+* Intro to Unix, Docker, and Git
+* Python best practices
+* Basic Python, Numpy, and Scipy exercises
+* Intro to Python image processing for live-cell imaging
+* Intro to deep learning with tensorflow
 
-When ready, clone this repository and run the Jupyter notebooks locally.
+[Ready-made predictions on real data: DeepCell.org](./deepcell_dot_org)
 
-* [Basic Python, Numpy, and Scipy exercises](./Python-101.ipynb)
-* [Intro to Python image processing for live cell imaging](./Image-Processing.ipynb)
-* [Intro to deep learning with tensorflow](./Neural-Networks.ipynb)
+* Introduction to DeepCell.org
+* Plugging in to DeepCell.org with ImageJ
 
+[Labeling my data with DeepCell Label](./data_labeling)
 
-## Acknowledgements
-These notebooks and tutorials build on and include material from earlier work:
+* Load files
+* Use DeepCell Label
 
-* The basic Python tutorial (including numpy, matplotlib, and some of the file handling) comes largely from work by Volodymyr Kuleshov and Isaac Caswell on the [CS231n Python tutorial by Justin Johnson](http://cs231n.github.io/python-numpy-tutorial/).
+[Building new and improved models with deepcell-tf](./model_training)
 
-* The flow statements and SciPy sections in Day 1 come largely from [work by Rajath Kumar](https://github.com/rajathkumarmp/Python-Lectures). Those original notes, in turn, were updated for Python 3 and amended for use in [Monash University mathematics courses by Andreas Ernst](https://gitlab.erc.monash.edu.au/andrease/Python4Maths/tree/master).
+* Introduction to `deepcell-tf`
+* Training a model in Google Colab
 
-* The image processing tutorials come largely from Jonas Hartmann's (Gilmour group, EMBL Heidelberg) [Python BioImage Analysis Tutorial](https://github.com/WhoIsJack/python-bioimage-analysis-tutorial).
+## Copyright
+
+Copyright © 2016-2020 [The Van Valen Lab](http://www.vanvalen.caltech.edu/) at the California Institute of Technology (Caltech), with support from the Shurl and Kay Curci Foundation, Google Research Cloud, the Paul Allen Family Foundation, & National Institutes of Health (NIH) under Grant U24CA224309-01.
+All rights reserved.
+
+## License
+
+This software is licensed under a modified [APACHE2](https://github.com/vanvalenlab/intro-to-deepcell/blob/master/LICENSE). See [LICENSE](https://github.com/vanvalenlab/intro-to-deepcell/blob/master/LICENSE) for full details.
+
+## Trademarks
+
+All other trademarks referenced herein are the property of their respective owners.
+
+## Credits
+
+[![Van Valen Lab, Caltech](https://upload.wikimedia.org/wikipedia/commons/7/75/Caltech_Logo.svg)](http://www.vanvalen.caltech.edu/)
