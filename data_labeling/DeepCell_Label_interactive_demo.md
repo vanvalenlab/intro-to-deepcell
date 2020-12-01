@@ -14,7 +14,7 @@
 ### To get started on the demo file:
 
  1. Download the .npz file from our [S3 bucket](https://caliban-input.s3.us-east-2.amazonaws.com/janelia_demo/HeLa-S3_janelia_demo_version.npz). This file is prepopulated with labels.
- 2. Drag and drop the file onto the <a href="label.deepcell.org" target="_blank">DeepCell Label</a> homepage.
+ 2. Drag and drop the file onto the <a href="http://label.deepcell.org" target="_blank">DeepCell Label</a> homepage.
 
 ## DeepCell Label interface
 
@@ -136,7 +136,7 @@ The borders of the canvas help show where we are within an image. If a border is
 
 ## View an image
 
-We should now have the [demo file](https://caliban-input.s3.us-east-2.amazonaws.com/janelia_demo/HeLa-S3_janelia_demo_version.npz) loaded in <a href="label.deepcell.org" target="_blank">DeepCell Label</a> to follow along and try these controls.
+We should now have the [demo file](https://caliban-input.s3.us-east-2.amazonaws.com/janelia_demo/HeLa-S3_janelia_demo_version.npz) loaded in <a href="http://label.deepcell.org" target="_blank">DeepCell Label</a> to follow along and try these controls.
 
 ### Change between input image and label views
 ![DeepCell Label different display options side by side](https://figure-eight-deepcell.s3.us-east-2.amazonaws.com/instructions_and_examples/janelia_demo/different_displays.png)
