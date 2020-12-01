@@ -63,42 +63,6 @@ If you are interested in creating your own DeepCell Label deployment, please con
 
 ## Use DeepCell Label
 
-Once you've created a project in DeepCell Label, you'll see a canvas on the right and an info table on the left. Here, we'll walk you through how to navigate your image, how to start labeling, and 
+Want to learn more about the tools available in DeepCell Label? Start with our [guided walkthrough of a provided demo file](DeepCell_Label_interactive_demo.md), or load up a test file from the menu on the [DeepCell Label homepage](https://label.deepcell.org/).
 
-### View an image
-
-* changing frames
-* changing channels
-* changing features
-    * both nuclear & cytoplasmic labelings in the same file
-
-* panning
-* zooming
-* changing brightness & contrast
-    * resetting brightness & contrast
-
-### Create a new labeling from scratch (paint mode)
-
-
-* brush
-* eraser
-* conversion brush
-
-* changing brush size
-* changing label
-    * increment/decrement
-    * label picker
-    * new label
-
-* threshold
-
-### Fix labeling errors (whole label mode)
-
-* trim pixels
-* fill holes
-* swap labels
-* delete labels
-* split labels (watershed transformation)
-* flood label
-    * with new label (fix duplicated label)
-    * with existing label (fix split label)
+Curious about visualizing your image channels with a multicolor overlay while you work? Check out our overview of [how to switch to an RGB viewing mode, and what changes to expect.](DeepCell_Labeling_RGB.md)
