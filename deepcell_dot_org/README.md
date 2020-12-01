@@ -85,7 +85,7 @@ Generating data from the website is quite easy.
 
 ![image](resources/DeepCell_website_predict.png)
 
-2. This will take you to the image upload interface. The default model is `multiplex`. Before submitting your image, make sure you understand [the available models and data formatting requirements](models.md). Upload your image by dragging it into the upload box, or by clicking and then browsing to find your image.  
+2. This will take you to the image upload interface. The default model is `multiplex`. Before submitting your image, make sure you understand [the available models and data formatting requirements](#formatting-data-for-web-based-models). Upload your image by dragging it into the upload box, or by clicking and then browsing to find your image.  
 
 ![image](resources/DeepCell_website_upload.png)
 
@@ -101,7 +101,7 @@ Generating data from the website is quite easy.
 
 The ImageJ plugin provides an easy interface to access our pre-trained deep learning models. Data is automatically uploaded to our server, processed, and then returned within ImageJ.
 
-Before getting started, make sure you understand [the available models and data formatting requirements](README.md/#formatting-data-for-web-based-models).
+Before getting started, make sure you understand [the available models and data formatting requirements](#formatting-data-for-web-based-models).
 
 ### Installation
 
