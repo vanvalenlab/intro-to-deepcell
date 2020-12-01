@@ -18,7 +18,7 @@ This material is intended to help users become acclimated with the [DeepCell](ht
 * Introduction to DeepCell.org
 * Plugging in to DeepCell.org with ImageJ
 
-[Labeling my data with DeepCell Label](./data_annotation)
+[Labeling my data with DeepCell Label](./data_labeling)
 
 * Load files
 * Use DeepCell Label
