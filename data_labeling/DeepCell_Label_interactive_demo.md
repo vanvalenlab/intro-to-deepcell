@@ -67,8 +67,8 @@ DeepCell Label displays one 2-dimensional image slice at a time, and we can move
 
 We can zoom and pan across images in DeepCell Label to work on specific areas of a large image. To track where we are in the image, we can see our field of view in the zoom and viewing rows.
 
- - __zoom__ tells us how much the image has been scaled, starting from 100%.
- - __viewing (x)__ or __(y)__ tells us the range of x or y coordinates we are viewing in the canvas.
+- __zoom__ tells us how much the image has been scaled, starting from 100%.
+- __viewing (x)__ or __(y)__ tells us the range of x or y coordinates we are viewing in the canvas.
 
 #### Highlight info
 
@@ -344,6 +344,7 @@ This file does not contain a specific error that is best fixed with the delete a
 Paint mode allows us to partially correct labels, or even draw labels from scratch. This section covers the tools to make pixel-level changes to labels files. We can easily switch between the whole label mode and paint mode by pressing "e".
 
 ### Brush basics
+
 Click and drag on the canvas to draw with the brush. As we draw with the brush, it leaves a translucent trace where we have drawn. When you release the mouse, we add a label to the trace area.
 
 #### Brush size
