@@ -18,7 +18,6 @@ Each of the models we host has slightly different requirements for input data. P
 
 The multiplex model performs whole-cell segmentation of tissue imaging data. The input to the model is two-channel images. The first channel must be a nuclear channel (such as DAPI). The second channel must be a membrane or cytoplasmic channel (such as E-Cadherin).  
 
-
 <table width="700" border="1" cellpadding="5">
 
 <tr>
