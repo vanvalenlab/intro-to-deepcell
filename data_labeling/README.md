@@ -10,7 +10,7 @@
 
 ## Overview
 
-DeepCell Label is an browser-based data labeling tool designed for biological imagess. DeepCell Label allows you to view biological image and create or modify labels on top of them, building or modifying a single-cell segmentation of the image. In this guide, we'll walk through starting up DeepCell Label and the labeling tools available on this platform.
+DeepCell Label is an browser-based data labeling tool designed for biological images. DeepCell Label allows you to view biological image and create or modify labels on top of them, building or modifying a single-cell segmentation of the image. In this guide, we'll walk through starting up DeepCell Label and the labeling tools available on this platform.
 
 
 ## Load files
@@ -21,7 +21,7 @@ The easiest way to use DeepCell Label is to visit [label.deepcell.org](https://l
 
 We also offer a selection of test files in a drop down menu on the DeepCell Label homepage, allowing you to explore DeepCell Label without providing your own data. Opening a test file from the dropdown menu will create and redirect you to a new project URL.
 
-We will be this [demo file](https://caliban-input.s3.us-east-2.amazonaws.com/janelia_demo/HeLa-S3_janelia_demo_version.npz) throughout the upcoming guided walkthrough. Try downloading it now and opening it in DeepCell Label by dragging and dropping.
+We will be working with this [demo file](https://caliban-input.s3.us-east-2.amazonaws.com/janelia_demo/HeLa-S3_janelia_demo_version.npz) throughout the upcoming guided walkthrough. Try downloading it now and opening it in DeepCell Label by dragging and dropping.
 
 ### Supported filetypes
 
