@@ -2,8 +2,8 @@
 
 ## Table of Contents
 
-* [Introduction to `deepcell-tf`](README.md/#introduction-to-deepcell-tf)
-* [Model training with Google Colab](README.md/#model-training-with-google-colab)
+* [Introduction to `deepcell-tf`](#introduction-to-deepcell-tf)
+* [Model training with Google Colab](#model-training-with-google-colab)
 
 ## Introduction to deepcell-tf
 
