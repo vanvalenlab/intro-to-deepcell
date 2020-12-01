@@ -55,9 +55,9 @@ The infopane provides information on what we are viewing in the canvas and the m
 
 Biological images in DeepCell Label often have many dimensions. For example, we can have many frames, channels, or features to label within an image.
 
- - __frame__ refers to different timepoints in a sequence of timelapse images, or it refers to vertical slices of a 3D image.
- - __channel__ refers to different channels of the input image. The demo file contains three channels, a fluorescent cytoplasm channel, a phase channel, and a fluorescent nuclei channel.
- - __feature__ refers to different types of annotations that may be included in the file; "features" can be thought of like "channels" for different annotations. For example, an annotation file could contain one feature for nuclear segmentations and another for whole-cell segmentations to keep different annotations for the same cells paired together.
+- __frame__ refers to different timepoints in a sequence of timelapse images, or it refers to vertical slices of a 3D image.
+- __channel__ refers to different channels of the input image. The demo file contains three channels, a fluorescent cytoplasm channel, a phase channel, and a fluorescent nuclei channel.
+- __feature__ refers to different types of annotations that may be included in the file; "features" can be thought of like "channels" for different annotations. For example, an annotation file could contain one feature for nuclear segmentations and another for whole-cell segmentations to keep different annotations for the same cells paired together.
  
 DeepCell Label displays one 2-dimensional image slice at a time, and we can move through these slices to view and work on the complete image stack. To track which slice we're viewing, the table shows us the index of the frame, channel, and feature we are viewing, starting at zero and counting up. As you browse an image, these rows will keep track of your place in the file.
 
@@ -76,8 +76,8 @@ We can zoom and pan across images in DeepCell Label to work on specific areas of
 
 Highlighting emphasizes the label(s) we are currently working with by making them bright red. As you work, you can check on the highlight status in the infopane in these rows:
 
- - __highlight__ tells us if highlighting is on.
- - __highlight cells__ tells us which label(s) are highlighted.
+- __highlight__ tells us if highlighting is on.
+- __highlight cells__ tells us which label(s) are highlighted.
 
 #### Edit mode info
 
@@ -97,8 +97,8 @@ When in "paint mode" we'll also see these extra rows:
 
 When hovering over a label in the canvas, we see extra information about the label in the __label__ and __slices__ row.
 
- - __label__ tells us the value of the label.
- - __slices__ tells us which frames the label is present in if we are working with timelapse or 3D data.
+- __label__ tells us the value of the label.
+- __slices__ tells us which frames the label is present in if we are working with timelapse or 3D data.
 
 #### State
 
@@ -116,9 +116,9 @@ The __state__ row shows prompts related to actions on the canvas, such as a prom
 
 The canvas is where we spend the most time in DeepCell Label. This canvas displays image slices, labels alone, raw images alone, or an overlay of the two. We use the canvas to:
 
-  - browse the image
-  - select labels
-  - modify selected labels
+- browse the image
+- select labels
+- modify selected labels
 
 To select a label, click on the label on the canvas.
 
@@ -147,8 +147,8 @@ Recall that DeepCell Label has two modes, whole-label mode and paint mode. We st
 
 You can tell which mode we are in by looking at the canvas display or checking the infopane.
 
- - In paint mode, a brush is visible in the canvas, and we see an overlay of labels on top of the raw image. The raw image is displayed in grayscale.
- - In whole-label mode, we only see either the raw image or the labels. You can switch between the raw image and the labels with the "z" key. 
+- In paint mode, a brush is visible in the canvas, and we see an overlay of labels on top of the raw image. The raw image is displayed in grayscale.
+- In whole-label mode, we only see either the raw image or the labels. You can switch between the raw image and the labels with the "z" key. 
 
 ### Change the field of view
 
