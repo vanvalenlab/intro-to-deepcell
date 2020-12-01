@@ -282,6 +282,17 @@ Sometimes, you need to unlink sequences of labels in timelapse or 3D files. For 
 #### Suggested label to create
 This file does not contain a specific error that is best fixed with the create action, but you can try it out on any labels you would like. Try creating a new label in multiple frames with the "all subsequent frames" version of the action, then link the two sequences back together with the replace action applied in all frames to understand these actions better.
 
+### Delete labels
+
+Select the label to be deleted, then press "X". A prompt will appear in __state__ to confirm the label deletion; we can:
+- press spacebar to delete the label in only that frame, or
+- press "Esc" to abort the action.
+
+The delete action will remove all of that label from the frame, even unconnected pieces. This action can be used to quickly and completely remove annotation mistakes, such as labels that have been assigned to image artifacts.
+
+#### Suggested label to delete
+This file does not contain a specific error that is best fixed with the delete action, but you can try it out on any labels you would like. 
+
 ## Paint mode
 Paint mode allows us to partially correct labels, or even draw labels from scratch. This section covers the tools to make pixel-level changes to labels files. We can easily switch between the whole label mode and paint mode by pressing "e".
 
