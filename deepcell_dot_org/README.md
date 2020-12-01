@@ -80,7 +80,7 @@ Deepcell.org is a web-based interface to access our pre-trained deep learning mo
 
 Generating data from the website is quite easy.
 
-1. Go to DeepCell.org, and click on `PREDICT`.  
+1. Go to [DeepCell.org](https://deepcell.org), and click on `PREDICT`.  
 
 ![image](resources/DeepCell_website_predict.png)
 
