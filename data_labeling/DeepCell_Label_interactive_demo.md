@@ -10,7 +10,6 @@
 * [Paint mode](#paint-mode)
 * [Export labels](#export-labels)
 
-
 ### To get started on the demo file:
 
  1. Download the .npz file from our [S3 bucket](https://caliban-input.s3.us-east-2.amazonaws.com/janelia_demo/HeLa-S3_janelia_demo_version.npz). This file is prepopulated with labels.
