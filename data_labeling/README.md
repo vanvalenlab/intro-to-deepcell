@@ -4,7 +4,7 @@
 
 * [Overview](#overview)
 * [Load files](#load-files)
-    * drag & drop files onto <a href="http://label.deepcell.org" target="_blank">label.deepcell.org</a>
+    * drag & drop files onto <a href="https://label.deepcell.org" target="_blank">label.deepcell.org</a>
     * supported filetypes
 * [Use DeepCell Label](#use-deepcell-label)
     * [guided walkthrough with a demo file](DeepCell_Label_interactive_demo.md)
@@ -16,9 +16,9 @@ DeepCell Label is an browser-based data labeling tool designed for biological im
 
 ## Load files
 
-### Drag & drop images on <a href="http://label.deepcell.org" target="_blank">label.deepcell.org</a>
+### Drag & drop images on <a href="https://label.deepcell.org" target="_blank">label.deepcell.org</a>
 
-The easiest way to use DeepCell Label is to visit <a href="http://label.deepcell.org" target="_blank">label.deepcell.org</a> and drag & drop your images into the upload file box. DeepCell Label will create a new project for you and redirect to the project URL, formatted like `label.deepcell.org/project/{projectID}`, where `projectID` is 12 random characters.
+The easiest way to use DeepCell Label is to visit <a href="https://label.deepcell.org" target="_blank">label.deepcell.org</a> and drag & drop your images into the upload file box. DeepCell Label will create a new project for you and redirect to the project URL, formatted like `label.deepcell.org/project/{projectID}`, where `projectID` is 12 random characters.
 
 We also offer a selection of test files in a drop down menu on the DeepCell Label homepage, allowing you to explore DeepCell Label without providing your own data. Opening a test file from the dropdown menu will create and redirect you to a new project URL.
 
@@ -47,6 +47,6 @@ At the moment, DeepCell Label supports the following filetypes:
 
 ## Use DeepCell Label
 
-Want to learn more about the tools available in DeepCell Label? Start with our [guided walkthrough of a provided demo file](DeepCell_Label_interactive_demo.md), or load up a test file from the menu on the <a href="http://label.deepcell.org" target="_blank">DeepCell Label homepage</a>.
+Want to learn more about the tools available in DeepCell Label? Start with our [guided walkthrough of a provided demo file](DeepCell_Label_interactive_demo.md), or load up a test file from the menu on the <a href="https://label.deepcell.org" target="_blank">DeepCell Label homepage</a>.
 
 Curious about visualizing your image channels with a multicolor overlay while you work? Check out our overview of [how to switch to an RGB viewing mode, and what changes to expect.](DeepCell_Label_RGB.md)
