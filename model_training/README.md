@@ -2,10 +2,10 @@
 
 ## Table of Contents
 
-* [Introduction to `deepcell-tf`](README.md/#what-is-deepcell-tf?)
+* [Introduction to `deepcell-tf`](README.md/#introduction-to-deepcell-tf)
 * [Model training with Google Colab](README.md/#model-training-with-google-colab)
 
-## Introduction to `deepcell-tf`
+## Introduction to deepcell-tf
 
 [`deepcell-tf`](https://github.com/vanvalenlab/deepcell-tf) is a TensorFlow-based deep learning library for biological images.
 It provides several resources for training and evaluating deep learning models including:
