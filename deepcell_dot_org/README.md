@@ -12,8 +12,7 @@ To faciliate this, we created the [Kiosk](https://github.com/vanvalenlab/kiosk-c
 
 ## Formatting data for web-based models
 
-Each of the models we host has slightly different requirements for input data. Please identify which of the following models you will be using, and
-make sure your data is formatted appropriately. 
+Each of the models we host has slightly different requirements for input data. Please identify which of the following models you will be using, and make sure your data is formatted appropriately. 
 
 #### Multiplex Model
 
