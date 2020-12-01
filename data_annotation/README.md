@@ -1,11 +1,11 @@
-# Introduction to DeepCell Label (Codename: Caliban)
+# Introduction to DeepCell Label
 
 ## Table of Contents
 
 * [Overview](#overview)
 * [Load files](#load-files)
     * supported filetypes
-    * drag & drop files onto [caliban.deepcell.org](caliban.deepcell.org)
+    * drag & drop files onto [label.deepcell.org](label.deepcell.org)
     * deploy DeepCell Label
 * [Use DeepCell Label](#use-deepcell-label)
     * view images
@@ -46,15 +46,15 @@ At the moment, DeepCell Label can load the following filetypes:
 
 Note that an image "stack" can have just one image, such as image formats with only one frame like a PNG.
 
-### Drag & drop images on [caliban.deepcell.org](caliban.deepcell.org)
+### Drag & drop images on [label.deepcell.org](label.deepcell.org)
 
-The easiest way to use DeepCell Label is to visit [caliban.deepcell.org](caliban.deepcell.org) and drag & drop your images into the upload file box. DeepCell Label will create a new project for you and redirect to the project URL, formatted like caliban.deepcell.org/project/{projectID}, where projectID is 12 random characters.
+The easiest way to use DeepCell Label is to visit [label.deepcell.org](label.deepcell.org) and drag & drop your images into the upload file box. DeepCell Label will create a new project for you and redirect to the project URL, formatted like label.deepcell.org/project/{projectID}, where projectID is 12 random characters.
 
 We also offer a selection of test files in a drop down menu on the DeepCell Label homepage, allowing you to explore DeepCell Label without providing your own data. Opening a test file from the dropdown menu will create and redirect you to a new project URL.
 
 ### Deploy your own DeepCell Label application
 
-When you find that DeepCell Label meets your image labeling needs, you may want to create your own deployment of Caliban to scale up your labeling pipeline and label images _en masse_. Currently, DeepCell Label supports deployments on a local server, and on Amazon Web Service's [Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/).
+When you find that DeepCell Label meets your image labeling needs, you may want to create your own deployment of DeepCell Label to scale up your labeling pipeline and label images _en masse_. Currently, DeepCell Label supports deployments on a local server, and on Amazon Web Service's [Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/).
 
 At the moment, DeepCell Label must load and export its project files from a [S3 bucket](https://aws.amazon.com/s3/). We are currently developing support to load and export project work onto the local file system where the DeepCell Label application is deployed.
 
