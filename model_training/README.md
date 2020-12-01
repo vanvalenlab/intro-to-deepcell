@@ -15,7 +15,7 @@ It provides several resources for training and evaluating deep learning models i
 * Predefined model architectures (`deepcell.model_zoo`)
 * Evaluation metrics (`deepcell.metrics`)
 * Pre-trained models (`deepcell.applications`)
-  * [Check out the example application notebooks.](https://github.com/vanvalenlab/deepcell-tf/blob/master/notebooks/applications/Nuclear-Application.ipynb)
+  * [Check out the example application notebooks](https://github.com/vanvalenlab/deepcell-tf/tree/master/notebooks/applications)
 
 ## Model training with Google Colab
 
