@@ -1,6 +1,12 @@
 # Introduction to DeepCell
 
-This material is intended to help users become acclimated with the [DeepCell](https://www.deepcell.org/about) ecosystem. DeepCell addresses three key needs for deep learning (DL) and biological images: (1) How can I use DL easily on my data? (2) How can I interact with these predictions?, and (3) How can I improve these model predictions. This tutorial will provide a gentle introduction to all three areas. Additionally, we have included a "Getting Started" section for users that may be unfamiliar with the basic tools covered in this material.
+This material is intended to help users become acclimated with the [DeepCell](https://www.deepcell.org/about) ecosystem. DeepCell addresses three key needs for deep learning and biological images:
+
+1. How can I use deep learning easily on my data?
+2. How can I interact with these predictions?
+3. How can I improve these model predictions?
+
+This tutorial will provide a gentle introduction to all three areas. Additionally, we have included a "Getting Started" section for users that may be unfamiliar with the basic tools covered in this material.
 
 ## Table of Contents
 
@@ -25,8 +31,8 @@ This material is intended to help users become acclimated with the [DeepCell](ht
 
 [Building new and improved models with deepcell-tf](./model_training)
 
-* Colab training notebook
-
+* Introduction to `deepcell-tf`
+* Training a model in Google Colab
 
 ## Copyright
 
