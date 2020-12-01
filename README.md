@@ -33,7 +33,6 @@ This tutorial will provide a gentle introduction to all three areas. Additionall
 
 * Colab training notebook
 
-
 ## Copyright
 
 Copyright © 2016-2020 [The Van Valen Lab](http://www.vanvalen.caltech.edu/) at the California Institute of Technology (Caltech), with support from the Shurl and Kay Curci Foundation, Google Research Cloud, the Paul Allen Family Foundation, & National Institutes of Health (NIH) under Grant U24CA224309-01.
