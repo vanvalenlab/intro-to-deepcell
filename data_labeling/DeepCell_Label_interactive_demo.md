@@ -3,8 +3,8 @@
 ## Table of Contents
 
 * [DeepCell Label interface](#deepcell-label-interface)
-  * [infopane](#the-infopane)
-  * [canvas](#the-canvas)
+  * [Infopane](#the-infopane)
+  * [Canvas](#the-canvas)
 * [View an image](#view-an-image)
   * [Change between input image and label views](#change-between-input-image-and-label-views)
   * [Change the field of view](#change-the-field-of-view)
