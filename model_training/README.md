@@ -14,6 +14,7 @@ It provides several resources for training and evaluating deep learning models i
 * Image data generators (`deepcell.image_generators`)
 * Predefined model architectures (`deepcell.model_zoo`)
 * Evaluation metrics (`deepcell.metrics`)
+* Pre-trained models (`deepcell.applications`)
 
 ## Model training with Google Colab
 
