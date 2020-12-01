@@ -31,7 +31,8 @@ This tutorial will provide a gentle introduction to all three areas. Additionall
 
 [Building new and improved models with deepcell-tf](./model_training)
 
-* Colab training notebook
+* Introduction to `deepcell-tf`
+* Training a model in Google Colab
 
 ## Copyright
 
