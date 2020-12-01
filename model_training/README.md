@@ -1,5 +1,22 @@
-# Training Models with Deepcell-tf
+# Training Models with deepcell-tf
 
-Hardware acceleration has played a critical role in deep learning's rise to prominence. While DeepCell can be used on conventional hardware, acceleration with GPUs certainly extends its capabilities. Google has provided free and easy access to accelerated environments with Colaboratory. Google Colaboratory (or Colab for short) is essentially a jupyter notebook hosted by Google cloud machines.
+## Table of Contents
 
-An example DeepCell training notebook is available here: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vanvalenlab/intro-to-deepcell/blob/Janelia_Reorg/model_training/training_with_deepcell-tf.ipynb)
+* [Introduction to `deepcell-tf`](#introduction-to-deepcell-tf)
+* [Model training with Google Colab](#model-training-with-google-colab)
+
+## Introduction to deepcell-tf
+
+[`deepcell-tf`](https://github.com/vanvalenlab/deepcell-tf) is a TensorFlow-based deep learning library for biological images.
+It provides several resources for training and evaluating deep learning models including:
+
+* Downloadable datasets (`deepcell.datasets`)
+* Image data generators (`deepcell.image_generators`)
+* Predefined model architectures (`deepcell.model_zoo`)
+* Evaluation metrics (`deepcell.metrics`)
+
+## Model training with Google Colab
+
+[Google Colab](https://colab.research.google.com/notebooks/intro.ipynb) provides free and easy access to GPU environments. Click the badge below to open a DeepCell training notebook and train your own model.
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vanvalenlab/intro-to-deepcell/blob/Janelia_Reorg/model_training/training_with_deepcell-tf.ipynb)
