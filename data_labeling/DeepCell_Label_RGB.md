@@ -43,4 +43,4 @@ Currently, the watershed action (whole-label mode) and threshold functionality (
 
 All other DeepCell Label functionality is present in this alternate viewing mode, and there is no difference in output files based on which mode was used to create labels.
 
-Want to try out this mode but aren't sure which file to start with? Use the `512-RGB.npz` example file [available on DeepCell Label](https://label.deepcell.org/) and add `?rgb=true` to the URL after the project loads.
+Want to try out this mode but aren't sure which file to start with? Use the `512-RGB.npz` example file available on <a href="label.deepcell.org" target="_blank">DeepCell Label</a> and add `?rgb=true` to the URL after the project loads.
