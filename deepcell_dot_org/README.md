@@ -1,14 +1,19 @@
-# Introduction to DeepCell.org
+# Running pretrained models from the cloud
 
-DeepCell.org is a web-based interface to access our pre-trained deep learning models. The website allows you to easily upload example images, run them on our available models, and download the results without requiring any local installation. The backend is managed by the [kiosk](https://github.com/vanvalenlab/kiosk-console), which provides an efficient and scalable way to analyze large volumes of data using cloud computing.
+Deep learning models perform best when run on GPU hardware. However, having every lab purchase their own GPU is not reasonable or effecient. To help make it as easy as possible to run our deep learning models, we have created a number of different options for using our cloud-based servers to analyze data. This makes it easy for anyone to submit their images to be analyzed, without needing to worry about installing any complicated software or purchase any expensive hardware. 
+
+To faciliate this, we created the [Kiosk](https://github.com/vanvalenlab/kiosk-console). DeepCell Kiosk provides an efficient and scalable way to analyze large volumes of data using cloud computing. By automatically adjusting resources based on usage, the Kiosk is able to quickly deliver results for large numbers of images when demand increases, while reducing costs by downscaling when demand decreases.
 
 ## Table of Contents
 
 * [Formatting data for web-based models](#formatting-data-for-web-based-models)
 * [Generating predictions with DeepCell.org](#generating-predictions-with-deepcellorg)
-* [Plugging in to DeepCell.org with ImageJ](#plugging-in-to-deepcellorg-with-imagej)
+* [Generating predictions with ImageJ](#generating-predictions-with-imagej)
 
 ## Formatting data for web-based models
+
+Each of the models we host has slightly different requirements for input data. Please identify which of the following models you will be using, and
+make sure your data is formatted appropriately. 
 
 #### Multiplex Model
 
@@ -16,15 +21,11 @@ The multiplex model performs whole-cell segmentation of tissue imaging data. The
 
 #### Nuclear Segmentation Model
 
-TODO: do we describe both nuclear and cytoplasm model? Only one? Keep this blank?
+The nuclear segmentation model performs nuclear segmentation of cell culture images. The input to the model is a single channel nuclear image (such as DAPI). 
 
 ## Generating predictions with DeepCell.org
 
 Deepcell.org is a web-based interface to access our pre-trained deep learning models. The website allows you to easily upload example images, run them on our available models, and download the results without requiring any local installation.
-
-DeepCell.org is run by the [DeepCell Kiosk](https://github.com/vanvalenlab/kiosk-console).
-The Kiosk provides an efficient and scalable way to analyze large volumes of data using cloud computing.
-By automatically scaling up when usage increases and scaling down when usage decreases, the Kiosk is able to quickly deliver results for large numbers of images when demand increases, while reducing costs by downscaling when demand decreases.
 
 ### Submitting data to the website
 
@@ -42,9 +43,9 @@ Generating data from the website is quite easy.
 4. Once complete, you can download the results, and then process additional images.
 ![image](resources/DeepCell_website_download.png)
 
-## Plugging in to DeepCell.org with ImageJ
+## Generating predictions with ImageJ
 
-The ImageJ plugin provides an easy interface to access our pre-trained deep learning models within ImageJ itself. Data is automatically uploaded to our server, processed, and then returned within ImageJ.
+The ImageJ plugin provides an easy interface to access our pre-trained deep learning models. Data is automatically uploaded to our server, processed, and then returned within ImageJ.
 
 Before getting started, make sure you understand [the available models and data formatting requirements](README.md/#formatting-data-for-web-based-models).
 
