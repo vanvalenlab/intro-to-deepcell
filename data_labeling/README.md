@@ -8,7 +8,7 @@
     * supported filetypes
 * [Use DeepCell Label](#use-deepcell-label)
     * [guided walkthrough with a demo file](DeepCell_Label_interactive_demo.md)
-    * [use RGB mode](DeepCell_Labeling_RGB.md)
+    * [use RGB mode](DeepCell_Label_RGB.md)
 
 ## Overview
 
@@ -49,4 +49,4 @@ At the moment, DeepCell Label supports the following filetypes:
 
 Want to learn more about the tools available in DeepCell Label? Start with our [guided walkthrough of a provided demo file](DeepCell_Label_interactive_demo.md), or load up a test file from the menu on the [DeepCell Label homepage](https://label.deepcell.org/).
 
-Curious about visualizing your image channels with a multicolor overlay while you work? Check out our overview of [how to switch to an RGB viewing mode, and what changes to expect.](DeepCell_Labeling_RGB.md)
+Curious about visualizing your image channels with a multicolor overlay while you work? Check out our overview of [how to switch to an RGB viewing mode, and what changes to expect.](DeepCell_Label_RGB.md)

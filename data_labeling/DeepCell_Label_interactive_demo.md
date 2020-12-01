@@ -402,6 +402,6 @@ One of the cells in frame 14 is conspicuously unlabeled. Try using the threshold
 
 Download your labels with the download button above the infopane. Your raw images and labels are stored together in the .npz file as training data for model training.
 
-Want to explore an alternate viewing option for multichannel images? Check out [what differences to expect in RGB mode](./DeepCell_Labeling_RGB.md).
+Want to explore an alternate viewing option for multichannel images? Check out [what differences to expect in RGB mode](./DeepCell_Label_RGB.md).
 
 Ready to put your training data to use? Quickly [train up your own model](../model_training) with DeepCell.
