@@ -24,10 +24,10 @@ This tutorial will provide a gentle introduction to all three areas. Additionall
 * Introduction to DeepCell.org
 * Plugging in to DeepCell.org with ImageJ
 
-[Labeling my data with DeepCell Label (Codename: Caliban)](./data_annotation)
+[Labeling my data with DeepCell Label](./data_labeling)
 
-* Getting started with Caliban
-* Caliban modes and actions
+* Load files
+* Use DeepCell Label
 
 [Building new and improved models with deepcell-tf](./model_training)
 
