@@ -19,15 +19,60 @@ make sure your data is formatted appropriately.
 
 The multiplex model performs whole-cell segmentation of tissue imaging data. The input to the model is two-channel images. The first channel must be a nuclear channel (such as DAPI). The second channel must be a membrane or cytoplasmic channel (such as E-Cadherin).  
 
-![image](resources/multiplex_model_input.png) 
-![image](resources/multiplex_model_output.png)
+
+<table width="700" border="1" cellpadding="5">
+
+<tr>
+<td align="center" valign="center">
+Input Data
+</td>
+
+<td align="center" valign="center">
+Model Predictions
+</td>
+</tr>
+
+<tr>
+<td align="center" valign="center">
+<img src=resources/multiplex_model_input.png alt="Input Data" />
+</td>
+
+<td align="center" valign="center">
+<img src=resources/multiplex_model_output.png alt="Model Predictions" />
+</td>
+</tr>
+
+</table>
 
 #### Nuclear Segmentation Model
 
 The nuclear segmentation model performs nuclear segmentation of cell culture images. The input to the model is a single channel nuclear image (such as DAPI).   
 
-![image](resources/nuclear_model_input.png) 
-![image](resources/nuclear_model_output.png)
+
+<table width="700" border="1" cellpadding="5">
+
+<tr>
+<td align="center" valign="center">
+Input Data
+</td>
+
+<td align="center" valign="center">
+Model Predictions
+</td>
+</tr>
+
+<tr>
+<td align="center" valign="center">
+<img src=resources/nuclear_model_input.png alt="Input Data" />
+</td>
+
+<td align="center" valign="center">
+<img src=resources/nuclear_model_output.png alt="Model Predictions" />
+</td>
+</tr>
+
+</table>
+
 
 ## Generating predictions with DeepCell.org
 
