@@ -43,7 +43,7 @@ At the moment, DeepCell Label supports the following filetypes:
 * .png - loaded as a single raw image
 * .trk - a custom file format for DeepCell Label tracking projects
     * consists of a .tar file with a raw image stack, a labeled image stack, and lineage metadata
-    * contact us at _______ for more details on working with this filetype
+    * leave an issue on the [DeepCell Label repository](https://github.com/vanvalenlab/deepcell-label/pull/214) for more details on working with this filetype
 
 ## Use DeepCell Label
 
