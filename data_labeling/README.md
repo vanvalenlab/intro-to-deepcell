@@ -12,7 +12,6 @@
 
 DeepCell Label is an browser-based data labeling tool designed for biological images. DeepCell Label allows you to view biological image and create or modify labels on top of them, building or modifying a single-cell segmentation of the image. In this guide, we'll walk through starting up DeepCell Label and the labeling tools available on this platform.
 
-
 ## Load files
 
 ### Drag & drop images on [label.deepcell.org](https://label.deepcell.org/)
@@ -28,6 +27,7 @@ We will be working with this [demo file](https://caliban-input.s3.us-east-2.amaz
 A project in DeepCell Label consists of a raw image stack and a labeled image stack. DeepCell Label can both load files with only a raw image stack, or a raw image stack and a labeled image stack. If you load a file with only a raw image stack, DeepCell Label will create an empty labeled stack that you can label from scratch.
 
 At the moment, DeepCell Label supports the following filetypes:
+
 * .npz - zipped numpy arrays
     * contains paired raw and labeled image stacks
     * we can package multiple image stacks into an .npz with [numpy's savez function](https://numpy.org/doc/stable/reference/generated/numpy.savez.html), like with the following Python code snippet:
@@ -42,7 +42,6 @@ At the moment, DeepCell Label supports the following filetypes:
 * .trk - a custom file format for DeepCell Label tracking projects
     * consists of a .tar file with a raw image stack, a labeled image stack, and lineage metadata
     * contact us at _______ for more details on working with this filetype
-
 
 ## Use DeepCell Label
 
