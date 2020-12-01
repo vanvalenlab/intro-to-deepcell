@@ -31,22 +31,22 @@ DeepCell.org is run by the [DeepCell Kiosk](https://github.com/vanvalenlab/kiosk
 Generating data from the website is quite easy.
 
 1. Go to DeepCell.org, and click on `PREDICT`.
-![image](DeepCell_website_predict.png)
+![image](resources/DeepCell_website_predict.png)
 
 2. This will take you to the image upload interface. The default model is `multiplex`. Before submitting your image, make sure you understand [the available models and data formatting requirements](models.md). Upload your image by dragging it into the upload box, or by clicking and then browsing to find your image
-![image](DeepCell_website_upload.png)
+![image](resources/DeepCell_website_upload.png)
 
 3. Once your image has been successfully uploaded, click `Submit`, and the server will begin processing your data.
-![image](DeepCell_wesbite_submit.png)
+![image](resources/DeepCell_website_submit.png)
 
 4. Once complete, you can download the results, and then process additional images
-![image](DeepCell_website_download.png)
+![image](resources/DeepCell_website_download.png)
 
-## Plugging into DeepCell.org with ImageJ
+## Plugging in to DeepCell.org with ImageJ
 
 The ImageJ plugin provides an easy interface to access our pre-trained deep learning models within ImageJ itself. Data is automatically uploaded to our server, processed, and then returned within ImageJ.
 
-Before getting started, make sure you understand [the available models and data formatting requirements](models.md).
+Before getting started, make sure you understand [the available models and data formatting requirements](README.md/#formatting-data-for-web-based-models).
 
 ### Installation
 
