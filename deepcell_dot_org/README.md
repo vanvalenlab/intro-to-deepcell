@@ -1,12 +1,12 @@
 # Introduction to DeepCell.org
 
-Deepcell.org is a web-based interface to access our pre-trained deep learning models. The website allows you to easily upload example images, run them on our available models, and download the results without requiring any local installation. The backend is managed by the [kiosk](https://github.com/vanvalenlab/kiosk-console), which provides an efficient and scalable way to analyze large volumes of data using cloud computing.
+DeepCell.org is a web-based interface to access our pre-trained deep learning models. The website allows you to easily upload example images, run them on our available models, and download the results without requiring any local installation. The backend is managed by the [kiosk](https://github.com/vanvalenlab/kiosk-console), which provides an efficient and scalable way to analyze large volumes of data using cloud computing.
 
 ## Table of Contents
 
-* [Formatting data for web-based models](README.md/#formatting-data-for-web-based-models)
-* [Generating predictions with DeepCell.org](README.md/#generating-predictions-with-deepcellorg)
-* [Plugging in to DeepCell.org with ImageJ](README.md/#plugging-in-to-deepcellorg-with-imagej)
+* [Formatting data for web-based models](#formatting-data-for-web-based-models)
+* [Generating predictions with DeepCell.org](#generating-predictions-with-deepcellorg)
+* [Plugging in to DeepCell.org with ImageJ](#plugging-in-to-deepcellorg-with-imagej)
 
 ## Formatting data for web-based models
 
