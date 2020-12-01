@@ -7,6 +7,8 @@
     * drag & drop files onto [label.deepcell.org](https://label.deepcell.org/)
     * supported filetypes
 * [Use DeepCell Label](#use-deepcell-label)
+    * [guided walkthrough with a demo file](DeepCell_Label_interactive_demo.md)
+    * [use RGB mode](DeepCell_Labeling_RGB.md)
 
 ## Overview
 
