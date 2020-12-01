@@ -21,4 +21,4 @@ It provides several resources for training and evaluating deep learning models i
 
 [Google Colab](https://colab.research.google.com/notebooks/intro.ipynb) provides free and easy access to GPU environments. Click the badge below to open a DeepCell training notebook and train your own model.
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vanvalenlab/intro-to-deepcell/blob/Janelia_Reorg/model_training/training_with_deepcell-tf.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vanvalenlab/intro-to-deepcell/blob/master/model_training/training_with_deepcell-tf.ipynb)
