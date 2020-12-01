@@ -1,6 +1,6 @@
-# Running pretrained models from the cloud
+# Running pre-trained models from the cloud
 
-Deep learning models perform best when run on GPU hardware. However, having every lab purchase their own GPU is not reasonable or effecient. To help make it as easy as possible to run our deep learning models, we have created a number of different options for using our cloud-based servers to analyze data. This makes it easy for anyone to submit their images to be analyzed, without needing to worry about installing any complicated software or purchase any expensive hardware. 
+Deep learning models perform best when run on GPU hardware. However, having every lab purchase their own GPU is not reasonable or efficient. To help make it as easy as possible to run our deep learning models, we have created a number of different options for using our cloud-based servers to analyze data. This makes it easy for anyone to submit their images to be analyzed, without needing to worry about installing any complicated software or purchase any expensive hardware.
 
 To faciliate this, we created the [Kiosk](https://github.com/vanvalenlab/kiosk-console). DeepCell Kiosk provides an efficient and scalable way to analyze large volumes of data using cloud computing. By automatically adjusting resources based on usage, the Kiosk is able to quickly deliver results for large numbers of images when demand increases, while reducing costs by downscaling when demand decreases.
 
@@ -12,9 +12,9 @@ To faciliate this, we created the [Kiosk](https://github.com/vanvalenlab/kiosk-c
 
 ## Formatting data for web-based models
 
-Each of the models we host has slightly different requirements for input data. Please identify which of the following models you will be using, and make sure your data is formatted appropriately. 
+Each of the models we host has slightly different requirements for input data. Please identify which of the following models you will be using, and make sure your data is formatted appropriately.
 
-#### Multiplex Model
+### Multiplex Model
 
 The multiplex model performs whole-cell segmentation of tissue imaging data. The input to the model is two-channel images. The first channel must be a nuclear channel (such as DAPI). The second channel must be a membrane or cytoplasmic channel (such as E-Cadherin).  
 
@@ -42,10 +42,9 @@ Model Predictions
 
 </table>
 
-#### Nuclear Segmentation Model
+### Nuclear Segmentation Model
 
-The nuclear segmentation model performs nuclear segmentation of cell culture images. The input to the model is a single channel nuclear image (such as DAPI).   
-
+The nuclear segmentation model performs nuclear segmentation of cell culture images. The input to the model is a single channel nuclear image (such as DAPI).
 
 <table width="700" border="1" cellpadding="5">
 
@@ -70,7 +69,6 @@ Model Predictions
 </tr>
 
 </table>
-
 
 ## Generating predictions with DeepCell.org
 
