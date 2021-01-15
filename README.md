@@ -19,10 +19,11 @@ This tutorial will provide a gentle introduction to all three areas. Additionall
 * Intro to Python image processing for live-cell imaging
 * Intro to deep learning with tensorflow
 
-[Ready-made predictions on real data: DeepCell.org](./deepcell_dot_org)
+[Analyzing my images with pretrained models](./pretrained_models)
 
-* Introduction to DeepCell.org
-* Plugging in to DeepCell.org with ImageJ
+* Summary of available models
+* Running pretrained models on the cloud
+* Running pretrained models locally
 
 [Labeling my data with DeepCell Label](./data_labeling)
 
@@ -36,7 +37,7 @@ This tutorial will provide a gentle introduction to all three areas. Additionall
 
 ## Copyright
 
-Copyright © 2016-2020 [The Van Valen Lab](http://www.vanvalen.caltech.edu/) at the California Institute of Technology (Caltech), with support from the Shurl and Kay Curci Foundation, Google Research Cloud, the Paul Allen Family Foundation, & National Institutes of Health (NIH) under Grant U24CA224309-01.
+Copyright © 2016-2021 [The Van Valen Lab](http://www.vanvalen.caltech.edu/) at the California Institute of Technology (Caltech), with support from the Shurl and Kay Curci Foundation, Google Research Cloud, the Paul Allen Family Foundation, & National Institutes of Health (NIH) under Grant U24CA224309-01.
 All rights reserved.
 
 ## License
