@@ -1,22 +1,29 @@
-# Running pre-trained models from the cloud
+# Running pre-trained models
 
-Deep learning models perform best when run on GPU hardware. However, having every lab purchase their own GPU is not reasonable or efficient. To help make it as easy as possible to run our deep learning models, we have created a number of different options for using our cloud-based servers to analyze data. This makes it easy for anyone to submit their images to be analyzed, without needing to worry about installing any complicated software or purchase any expensive hardware.
+Deep learning models require large volumes of training data in order to perform well. Not all labs have the necessary datasets or expertise to train their own model for each experiment. We have created a suite of high-quality, pretrained deep learning mdoels which can be applied out of the box to different types of biological image data. Each model is designed for a specific task, including tissue imaging, cell culture, and tracking. 
 
-To faciliate this, we created the [Kiosk](https://github.com/vanvalenlab/kiosk-console). DeepCell Kiosk provides an efficient and scalable way to analyze large volumes of data using cloud computing. By automatically adjusting resources based on usage, the Kiosk is able to quickly deliver results for large numbers of images when demand increases, while reducing costs by downscaling when demand decreases.
+We have proivded a range of options to access these model. Please see below for a description of each model, as well as the diffeent ways to use it to analyze your data. 
 
 ## Table of Contents
 
-* [Formatting data for web-based models](#formatting-data-for-web-based-models)
-* [Generating predictions with DeepCell.org](#generating-predictions-with-deepcellorg)
-* [Generating predictions with ImageJ](#generating-predictions-with-imagej)
+* [Formatting data for pretrained models](#formatting-data-for-pretrained-models)
+  * Mesmer
+  * Nuclear segmentation model
+* [Running pretrained models in the cloud](#running-pretrained-models-in-the-cloud)
+  * Deepcell.org
+  * FIJI/ImageJ Plugin
+* [Running pretrained models locally](#running-pretrained-models-locally)
+  * Jupyter Notebook
+  * Runnable docker image
+  * Multiplexed imaging analysis pipeline
 
-## Formatting data for web-based models
+## Formatting data for pretrained models
 
 Each of the models we host has slightly different requirements for input data. Please identify which of the following models you will be using, and make sure your data is formatted appropriately.
 
-### Multiplex Model
+### Mesmer
 
-The multiplex model performs whole-cell segmentation of tissue imaging data. The input to the model is two-channel images. The first channel must be a nuclear channel (such as DAPI). The second channel must be a membrane or cytoplasmic channel (such as E-Cadherin).  
+The Mesmer model performs whole-cell segmentation of tissue imaging data. The input to the model is two-channel images. The first channel must be a nuclear channel (such as DAPI). The second channel must be a membrane or cytoplasmic channel (such as E-Cadherin).  
 
 <table width="700" border="1" cellpadding="5">
 
@@ -70,11 +77,15 @@ Model Predictions
 
 </table>
 
-## Generating predictions with DeepCell.org
+## Running pretrained models in the cloud
+
+Deep learning models perform best when run on GPU hardware. However, having every lab purchase their own GPU is not reasonable or efficient. To help make it as easy as possible to run our deep learning models, we have created a number of different options for using our cloud-based servers to analyze data. This makes it easy for anyone to submit their images to be analyzed, without needing to worry about installing any complicated software or purchase any expensive hardware.
+
+To faciliate this, we created the [Kiosk](https://github.com/vanvalenlab/kiosk-console). DeepCell Kiosk provides an efficient and scalable way to analyze large volumes of data using cloud computing. By automatically adjusting resources based on usage, the Kiosk is able to quickly deliver results for large numbers of images when demand increases, while reducing costs by downscaling when demand decreases.
+
+### Generating predictions with DeepCell.org
 
 Deepcell.org is a web-based interface to access our pre-trained deep learning models. The website allows you to easily upload example images, run them on our available models, and download the results without requiring any local installation.
-
-### Submitting data to the website
 
 Generating data from the website is quite easy.
 
@@ -94,16 +105,29 @@ Generating data from the website is quite easy.
 
 ![image](resources/DeepCell_website_download.png)
 
-## Generating predictions with ImageJ
+### Generating predictions with ImageJ
 
 The ImageJ plugin provides an easy interface to access our pre-trained deep learning models. Data is automatically uploaded to our server, processed, and then returned within ImageJ.
 
-Before getting started, make sure you understand [the available models and data formatting requirements](#formatting-data-for-web-based-models).
+Before getting started, make sure you understand [the available models and data formatting requirements](#formatting-data-for-pretrained-models).
 
-### Installation
+#### Installation
 
 To install the ImageJ plugin, follow the [instructions](https://github.com/vanvalenlab/kiosk-imageJ-plugin#how-to-install).
 
-### Generate predictions
+#### Generate predictions
 
 To generate predictions using the plugin, follow the [instructions](https://github.com/vanvalenlab/kiosk-imageJ-plugin#how-to-run-the-plugin).
+
+## Running pretrained models locally
+
+Although cloud-based deployments are convenient and lower the barrier to entry for new labs, the degree of customization and throughput are limited compared to running the models locally. For users with large volumes of imaging data or specific requirements, we have also made our models available to be run locally or via a cluster. 
+
+### Jupyter notebook
+The [deepcell-tf application](https://github.com/vanvalenlab/deepcell-tf/tree/master/notebooks/applications) notebooks provide an easy interface to run our pretrained models. Please follow the instructions in the [deepcell-tf ReadMe](https://github.com/vanvalenlab/deepcell-tf/blob/master/README.md) to set up the repository, then select the application notebook that corresponds best to your specific use case. 
+
+### Runnable docker image
+For users who want to integrate one of our models with an existing image analysis workflow, we created a runnable docker image that can be directly called from the command line as part of a larger workflow. See the [ReadMe](https://github.com/vanvalenlab/deepcell-applications/blob/master/README.md) for instructions on getting started
+
+### Multiplex image analysis pipeline
+For users who are specifically interested in analyzing multiplexed image data, our collaborators at the Angelo Lab have set up their own analysis pipeline which uses the DeepCell ecosystem for cell segmentation. See their [ReadMe](https://github.com/angelolab/ark-analysis) for instructions on getting started
