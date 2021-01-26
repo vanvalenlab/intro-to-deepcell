@@ -9,10 +9,10 @@ We have proivded a range of options to access these models. Please see below for
 * [Formatting data for pre-trained models](#formatting-data-for-pre-trained-models)
   * Mesmer
   * Nuclear segmentation model
-* [Running pre-trained models in the cloud](#running-pretrained-models-in-the-cloud)
+* [Running pre-trained models in the cloud](#running-pre-trained-models-in-the-cloud)
   * Deepcell.org
   * FIJI/ImageJ Plugin
-* [Running pre-trained models locally](#running-pretrained-models-locally)
+* [Running pre-trained models locally](#running-pre-trained-models-locally)
   * Jupyter Notebook
   * Runnable docker image
   * Multiplexed imaging analysis pipeline
@@ -77,7 +77,7 @@ Model Predictions
 
 </table>
 
-## Running pretrained models in the cloud
+## Running pre-trained models in the cloud
 
 Deep learning models perform best when run on accelrated hardware, such as GPUs. However, not every lab has the resources or desire to purchase and manage their own GPU-enabled workstations. To help make it as easy as possible to run our deep learning models, we have created a number of different options for using our cloud-based servers to analyze data. This makes it easy for anyone to submit their images to be analyzed, without needing to worry about installing any complicated software or purchase any expensive hardware.
 
