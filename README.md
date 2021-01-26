@@ -23,7 +23,7 @@ This tutorial will provide a gentle introduction to all three areas. Additionall
 
 * Summary of available models
 * Running pre-trained models in the cloud
-* Running pr-etrained models locally
+* Running pre-trained models locally
 
 [Labeling my data with DeepCell Label](./data_labeling)
 
