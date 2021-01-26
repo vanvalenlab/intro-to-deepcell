@@ -19,11 +19,11 @@ This tutorial will provide a gentle introduction to all three areas. Additionall
 * Intro to Python image processing for live-cell imaging
 * Intro to deep learning with tensorflow
 
-[Analyzing my images with pretrained models](./pretrained_models)
+[Analyzing my images with pre-trained models](./pretrained_models)
 
 * Summary of available models
-* Running pretrained models on the cloud
-* Running pretrained models locally
+* Running pre-trained models in the cloud
+* Running pr-etrained models locally
 
 [Labeling my data with DeepCell Label](./data_labeling)
 
