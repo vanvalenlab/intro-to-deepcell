@@ -1,23 +1,23 @@
 # Running pre-trained models
 
-Deep learning models require large volumes of training data in order to perform well. Not all labs have the necessary datasets or expertise to train their own model for each experiment. We have created a suite of high-quality, pretrained deep learning mdoels which can be applied out of the box to different types of biological image data. Each model is designed for a specific task, including tissue imaging, cell culture, and tracking. 
+Deep learning models require large volumes of training data in order to perform well. Not all labs have the necessary datasets or expertise to train their own model for each experiment. We have created a suite of high-quality, pre-trained deep learning mdoels which can be applied out of the box to different types of biological image data. Each model is designed for a specific task, including tissue imaging, cell culture, and tracking. 
 
-We have proivded a range of options to access these model. Please see below for a description of each model, as well as the diffeent ways to use it to analyze your data. 
+We have proivded a range of options to access these models. Please see below for a description of each model, as well as the different ways each can be used to analyze your data. 
 
 ## Table of Contents
 
-* [Formatting data for pretrained models](#formatting-data-for-pretrained-models)
+* [Formatting data for pre-trained models](#formatting-data-for-pre-trained-models)
   * Mesmer
   * Nuclear segmentation model
-* [Running pretrained models in the cloud](#running-pretrained-models-in-the-cloud)
+* [Running pre-trained models in the cloud](#running-pretrained-models-in-the-cloud)
   * Deepcell.org
   * FIJI/ImageJ Plugin
-* [Running pretrained models locally](#running-pretrained-models-locally)
+* [Running pre-trained models locally](#running-pretrained-models-locally)
   * Jupyter Notebook
   * Runnable docker image
   * Multiplexed imaging analysis pipeline
 
-## Formatting data for pretrained models
+## Formatting data for pre-trained models
 
 Each of the models we host has slightly different requirements for input data. Please identify which of the following models you will be using, and make sure your data is formatted appropriately.
 
@@ -79,7 +79,7 @@ Model Predictions
 
 ## Running pretrained models in the cloud
 
-Deep learning models perform best when run on GPU hardware. However, having every lab purchase their own GPU is not reasonable or efficient. To help make it as easy as possible to run our deep learning models, we have created a number of different options for using our cloud-based servers to analyze data. This makes it easy for anyone to submit their images to be analyzed, without needing to worry about installing any complicated software or purchase any expensive hardware.
+Deep learning models perform best when run on accelrated hardware, such as GPUs. However, not every lab has the resources or desire to purchase and manage their own GPU-enabled workstations. To help make it as easy as possible to run our deep learning models, we have created a number of different options for using our cloud-based servers to analyze data. This makes it easy for anyone to submit their images to be analyzed, without needing to worry about installing any complicated software or purchase any expensive hardware.
 
 To faciliate this, we created the [Kiosk](https://github.com/vanvalenlab/kiosk-console). DeepCell Kiosk provides an efficient and scalable way to analyze large volumes of data using cloud computing. By automatically adjusting resources based on usage, the Kiosk is able to quickly deliver results for large numbers of images when demand increases, while reducing costs by downscaling when demand decreases.
 
@@ -109,7 +109,7 @@ Generating data from the website is quite easy.
 
 The ImageJ plugin provides an easy interface to access our pre-trained deep learning models. Data is automatically uploaded to our server, processed, and then returned within ImageJ.
 
-Before getting started, make sure you understand [the available models and data formatting requirements](#formatting-data-for-pretrained-models).
+Before getting started, make sure you understand [the available models and data formatting requirements](#formatting-data-for-pre-trained-models).
 
 #### Installation
 
@@ -119,12 +119,12 @@ To install the ImageJ plugin, follow the [instructions](https://github.com/vanva
 
 To generate predictions using the plugin, follow the [instructions](https://github.com/vanvalenlab/kiosk-imageJ-plugin#how-to-run-the-plugin).
 
-## Running pretrained models locally
+## Running pre-trained models locally
 
 Although cloud-based deployments are convenient and lower the barrier to entry for new labs, the degree of customization and throughput are limited compared to running the models locally. For users with large volumes of imaging data or specific requirements, we have also made our models available to be run locally or via a cluster. 
 
 ### Jupyter notebook
-The [deepcell-tf application](https://github.com/vanvalenlab/deepcell-tf/tree/master/notebooks/applications) notebooks provide an easy interface to run our pretrained models. Please follow the instructions in the [deepcell-tf ReadMe](https://github.com/vanvalenlab/deepcell-tf/blob/master/README.md) to set up the repository, then select the application notebook that corresponds best to your specific use case. 
+The [deepcell-tf application](https://github.com/vanvalenlab/deepcell-tf/tree/master/notebooks/applications) notebooks provide an easy interface to run our pre-trained models. Please follow the instructions in the [deepcell-tf ReadMe](https://github.com/vanvalenlab/deepcell-tf/blob/master/README.md) to set up the repository, then select the application notebook that corresponds best to your specific use case. 
 
 ### Runnable docker image
 For users who want to integrate one of our models with an existing image analysis workflow, we created a runnable docker image that can be directly called from the command line as part of a larger workflow. See the [ReadMe](https://github.com/vanvalenlab/deepcell-applications/blob/master/README.md) for instructions on getting started
