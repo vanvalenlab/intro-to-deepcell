@@ -7,7 +7,7 @@ We have proivded a range of options to access these models. Please see below for
 ## Table of Contents
 
 * [Formatting data for pre-trained models](#formatting-data-for-pre-trained-models)
-  * Mesmer
+  * Multiplex segmentation model
   * Nuclear segmentation model
 * [Running pre-trained models in the cloud](#running-pre-trained-models-in-the-cloud)
   * Deepcell.org
@@ -21,9 +21,9 @@ We have proivded a range of options to access these models. Please see below for
 
 Each of the models we host has slightly different requirements for input data. Please identify which of the following models you will be using, and make sure your data is formatted appropriately.
 
-### Mesmer
+### Multiplex segmentation model
 
-The Mesmer model performs whole-cell segmentation of tissue imaging data. The input to the model is two-channel images. The first channel must be a nuclear channel (such as DAPI). The second channel must be a membrane or cytoplasmic channel (such as E-Cadherin).  
+The multiplex model performs whole-cell segmentation of tissue imaging data. The input to the model is two-channel images. The first channel must be a nuclear channel (such as DAPI). The second channel must be a membrane or cytoplasmic channel (such as E-Cadherin).  
 
 <table width="700" border="1" cellpadding="5">
 
@@ -49,7 +49,7 @@ Model Predictions
 
 </table>
 
-### Nuclear Segmentation Model
+### Nuclear segmentation model
 
 The nuclear segmentation model performs nuclear segmentation of cell culture images. The input to the model is a single channel nuclear image (such as DAPI).
 
