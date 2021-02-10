@@ -51,7 +51,7 @@ Model Predictions
 
 ### Nuclear segmentation model
 
-The nuclear segmentation model performs nuclear segmentation of cell culture images. The input to the model is a single channel nuclear image (such as DAPI).
+The nuclear segmentation model performs nuclear segmentation of cell culture images. The input to the model is a single-channel nuclear image (such as DAPI).
 
 <table width="700" border="1" cellpadding="5">
 
@@ -124,10 +124,13 @@ To generate predictions using the plugin, follow the [instructions](https://gith
 Although cloud-based deployments are convenient and lower the barrier to entry for new labs, the degree of customization and throughput is limited compared to running the models locally. For users with large volumes of imaging data or specific requirements, we have also made our models available to be run locally or via a cluster. 
 
 ### Jupyter notebook
-The [deepcell-tf application](https://github.com/vanvalenlab/deepcell-tf/tree/master/notebooks/applications) notebooks provide an easy interface to run our pre-trained models. Please follow the instructions in the [deepcell-tf ReadMe](https://github.com/vanvalenlab/deepcell-tf/blob/master/README.md) to set up the repository, then select the application notebook that corresponds best to your specific use case. 
+
+The [deepcell-tf application](https://github.com/vanvalenlab/deepcell-tf/tree/master/notebooks/applications) notebooks provide an easy interface to run our pre-trained models. Please follow the instructions in the [deepcell-tf README](https://github.com/vanvalenlab/deepcell-tf/blob/master/README.md) to set up the repository, then select the application notebook that corresponds best to your specific use case. 
 
 ### Runnable docker image
-For users who want to integrate one of our models with an existing image analysis workflow, we created a runnable Docker image that can be directly called from the command line as part of a larger workflow. See the [ReadMe](https://github.com/vanvalenlab/deepcell-applications/blob/master/README.md) for instructions on getting started
+
+For users who want to integrate one of our models with an existing image analysis workflow, we created a Docker image that can be directly called from the command line as part of a larger workflow. See the [README](https://github.com/vanvalenlab/deepcell-applications/blob/master/README.md) for instructions on getting started.
 
 ### Multiplex image analysis pipeline
-For users who are specifically interested in analyzing multiplexed image data, our collaborators at the Angelo Lab have set up their own analysis pipeline which uses the DeepCell ecosystem for cell segmentation. See their [ReadMe](https://github.com/angelolab/ark-analysis) for instructions on getting started
+
+For users who are specifically interested in analyzing multiplexed image data, our collaborators at the Angelo Lab have set up their own analysis pipeline which uses the DeepCell ecosystem for cell segmentation. See their [README](https://github.com/angelolab/ark-analysis) for instructions on getting started.
