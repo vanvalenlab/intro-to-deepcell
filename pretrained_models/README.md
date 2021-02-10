@@ -14,7 +14,7 @@ We have provided a range of options to access these models. Please see below for
   * FIJI/ImageJ Plugin
 * [Running pre-trained models locally](#running-pre-trained-models-locally)
   * Jupyter Notebook
-  * Runnable docker image
+  * Command line Docker image
   * Multiplexed imaging analysis pipeline
 
 ## Formatting data for pre-trained models
@@ -127,7 +127,7 @@ Although cloud-based deployments are convenient and lower the barrier to entry f
 
 The [deepcell-tf application](https://github.com/vanvalenlab/deepcell-tf/tree/master/notebooks/applications) notebooks provide an easy interface to run our pre-trained models. Please follow the instructions in the [deepcell-tf README](https://github.com/vanvalenlab/deepcell-tf/blob/master/README.md) to set up the repository, then select the application notebook that corresponds best to your specific use case. 
 
-### Runnable docker image
+### Command line Docker image
 
 For users who want to integrate one of our models with an existing image analysis workflow, we created a Docker image that can be directly called from the command line as part of a larger workflow. See the [README](https://github.com/vanvalenlab/deepcell-applications/blob/master/README.md) for instructions on getting started.
 
