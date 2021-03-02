@@ -39,7 +39,7 @@ This tutorial will provide a gentle introduction to all three areas. Additionall
 
 To learn more about the various systems and software that comprise DeepCell, please refer to the publications below. Relevant links are highlighted below each publication.
 
-[Greenwald, Miller et al. Accurate whole-cell segmentation in multiplexed images of tissues with large-scale data annotation and deep learning](https://www.biorxiv.org/content/10.1101/2021.03.01.431313v2)
+[Greenwald, Miller et al. Whole-cell segmentation of tissue images with human-level performance using large-scale data annotation and deep learning](https://www.biorxiv.org/content/10.1101/2021.03.01.431313v2)
 
 * The TissueNet dataset will be released through [deepcell.datasets](https://datasets.deepcell.org) at the time of publication.
 * The Mesmer pipeline can be run from deepcell.org or via ImageJ/QuPath plugins by reading our documentation on [running pretrained models in the cloud](./pretrained_models#running-pre-trained-models-in-the-cloud)
