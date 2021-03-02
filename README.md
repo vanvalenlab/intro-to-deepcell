@@ -41,7 +41,7 @@ To learn more about the various systems and software that comprise DeepCell, ple
 
 [Greenwald, Miller et al. Whole-cell segmentation of tissue images with human-level performance using large-scale data annotation and deep learning](https://www.biorxiv.org/content/10.1101/2021.03.01.431313v2)
 
-* The TissueNet dataset will be released through [deepcell.datasets](https://datasets.deepcell.org) at the time of publication.
+* The TissueNet dataset will be released through [deepcell.datasets](https://datasets.deepcell.org) at the time of publication
 * The Mesmer pipeline can be run from deepcell.org or via ImageJ/QuPath plugins by reading our documentation on [running pretrained models in the cloud](./pretrained_models#running-pre-trained-models-in-the-cloud)
 * The Mesmer pipeline can be run locally via a jupyter notebook as shown in this [example notebook](https://github.com/vanvalenlab/deepcell-tf/blob/master/notebooks/applications/Mesmer-Application.ipynb), or from the command line using our [application Docker](https://github.com/vanvalenlab/deepcell-applications/blob/master/README.md)
 * The ark-analysis multiplexed image analysis pipeline is at [this github link](https://github.com/angelolab/ark-analysis)
@@ -49,9 +49,9 @@ To learn more about the various systems and software that comprise DeepCell, ple
 
 [Bannon et al. DeepCell Kiosk: scaling deep learning–enabled cellular image analysis with Kubernetes](https://doi.org/10.1038/s41592-020-01023-0)
 
-* The DeepCell Kiosk can be downloaded from the [github repo](https://github.com/vanvalenlab/kiosk-console) and additional documentation is hosted on [Read the Docs](https://deepcell-kiosk.readthedocs.io/en/master/GETTING_STARTED.html).
-* A persistent deployment of the Kiosk is hosted at [https://deepcell.org/](https://deepcell.org/).
-* The code used to generate figures from the paper is available in our [publication figure repo](https://github.com/vanvalenlab/publication-figures/tree/mesmer_update/2020-Bannon_et_al-Kiosk).
+* The DeepCell Kiosk can be downloaded from the [github repo](https://github.com/vanvalenlab/kiosk-console) and additional documentation is hosted on [Read the Docs](https://deepcell-kiosk.readthedocs.io/en/master/GETTING_STARTED.html)
+* A persistent deployment of the Kiosk is hosted at [https://deepcell.org/](https://deepcell.org/)
+* The code used to generate figures from the paper is available in our [publication figure repo](https://github.com/vanvalenlab/publication-figures/tree/mesmer_update/2020-Bannon_et_al-Kiosk)
 
 ## Copyright
 
