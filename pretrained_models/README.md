@@ -7,7 +7,7 @@ We have provided a range of options to access these models. Please see below for
 ## Table of Contents
 
 * [Formatting data for pre-trained models](#formatting-data-for-pre-trained-models)
-  * Multiplex segmentation model
+  * Mesmer segmentation model
   * Nuclear segmentation model
 * [Running pre-trained models in the cloud](#running-pre-trained-models-in-the-cloud)
   * Deepcell.org
@@ -21,9 +21,9 @@ We have provided a range of options to access these models. Please see below for
 
 Each of the models we host has slightly different requirements for input data. Please identify which of the following models you will be using, and make sure your data is formatted appropriately.
 
-### Multiplex segmentation model
+### Mesmer segmentation model
 
-The multiplex model performs whole-cell segmentation of tissue imaging data. The input to the model is two-channel images. The first channel must be a nuclear channel (such as DAPI). The second channel must be a membrane or cytoplasmic channel (such as E-Cadherin).  
+The Mesmer model performs whole-cell segmentation of tissue imaging data. The input to the model is two-channel images. The first channel must be a nuclear channel (such as DAPI). The second channel must be a membrane or cytoplasmic channel (such as E-Cadherin).  
 
 <table width="700" border="1" cellpadding="5">
 
@@ -93,7 +93,7 @@ Generating data from the website is quite easy.
 
 ![image](resources/DeepCell_website_predict.png)
 
-2. This will take you to the image upload interface. The default model is `multiplex`. Before submitting your image, make sure you understand [the available models and data formatting requirements](#formatting-data-for-web-based-models). Upload your image by dragging it into the upload box, or by clicking and then browsing to find your image.  
+2. This will take you to the image upload interface. The default model is `Mesmer`. Before submitting your image, make sure you understand [the available models and data formatting requirements](#formatting-data-for-web-based-models). Upload your image by dragging it into the upload box, or by clicking and then browsing to find your image.  
 
 ![image](resources/DeepCell_website_upload.png)
 
