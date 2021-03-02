@@ -37,7 +37,7 @@ This tutorial will provide a gentle introduction to all three areas. Additionall
 
 ## Publications
 
-To learn more about the various systems and software that comprise DeepCell, please refer to the publications below. Relevant links are highlighted below each publication
+To learn more about the various systems and software that comprise DeepCell, please refer to the publications below. Relevant links are highlighted below each publication.
 
 [Greenwald, Miller et al. Accurate whole-cell segmentation in multiplexed images of tissues with large-scale data annotation and deep learning](https://www.biorxiv.org/content/10.1101/2021.03.01.431313v2)
 
