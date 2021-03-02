@@ -37,9 +37,9 @@ This tutorial will provide a gentle introduction to all three areas. Additionall
 
 ## Publications
 
-Each of the following publications makes use of the DeepCell ecosystem, as well as the specific resources relevant for each paper.
+To learn more about the various systems and software that comprise DeepCell, please refer to the publications below. Relevant links are highlighted below each publication
 
-### [Greenwald, Miller et al. Accurate whole-cell segmentation in multiplexed images of tissues with large-scale data annotation and deep learning]()
+[Greenwald, Miller et al. Accurate whole-cell segmentation in multiplexed images of tissues with large-scale data annotation and deep learning]()
 
 * The TissueNet dataset will be released through [deepcell.datasets](https://datasets.deepcell.org) at the time of publication.
 * The Mesmer pipeline can be run from deepcell.org or via ImageJ/QuPath plugins by reading our documentation on [running pretrained models in the cloud](./pretrained_models#running-pre-trained-models-in-the-cloud)
@@ -47,7 +47,7 @@ Each of the following publications makes use of the DeepCell ecosystem, as well 
 * The ark-analysis multiplexed image analysis pipeline is at [this github link](https://github.com/angelolab/ark-analysis)
 * All code for model training and figure generation for the paper can be found in our [publication figures repo](https://github.com/vanvalenlab/publication-figures/tree/master/2021-Greenwald_Miller_et_al-Mesmer)
 
-### [Bannon et al. DeepCell Kiosk: scaling deep learning–enabled cellular image analysis with Kubernetes](https://doi.org/10.1038/s41592-020-01023-0)
+[Bannon et al. DeepCell Kiosk: scaling deep learning–enabled cellular image analysis with Kubernetes](https://doi.org/10.1038/s41592-020-01023-0)
 
 * The DeepCell Kiosk can be downloaded from the [github repo](https://github.com/vanvalenlab/kiosk-console) and additional documentation is hosted on [Read the Docs](https://deepcell-kiosk.readthedocs.io/en/master/GETTING_STARTED.html).
 * A persistent deployment of the Kiosk is hosted at [https://deepcell.org/](https://deepcell.org/).
