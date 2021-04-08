@@ -35,8 +35,6 @@ The infopane tells us what we are viewing in the canvas. See the Info Pane tab o
 
 #### The canvas
 
-![DeepCell Label interactive region of canvas](https://figure-eight-deepcell.s3.us-east-2.amazonaws.com/instructions_and_examples/janelia_demo/canvas_boxed_interactive_canvas.png)
-
 We use the canvas to:
 
 - browse the image
@@ -51,8 +49,6 @@ See the Select tab to learn how to select labels.
 See the Tools and Actions tabs to learn how to edit the selected labels.
 
 #### Undo and Redo buttons
-
-![DeepCell Label undo and redo buttons](https://figure-eight-deepcell.s3.us-east-2.amazonaws.com/instructions_and_examples/janelia_demo/canvas_boxed_undo_buttons.png)
 
 Made a mistake? Undo or redo your modifications with Undo and Redo buttons above the canvas. We can also use the shortcuts **Ctrl+Z** to undo and **Ctrl+Shift+Z** to redo.
 
@@ -206,8 +202,8 @@ Thresholding often results in rough borders with stray pixels. Autofitting after
 
 Select two labels, then press <kbd>s</kdb> key to swap the selected labels. A prompt will appear in the "confirm action" row to confirm the swap where we can:
 
-- press "Enter" to swap the labels,
-- press "Esc" to abort the action.
+- press <kbd>Enter</kbd> to swap the labels,
+- press <kbd>Esc</kbd> to abort the action.
 
 Swapping only affects the labels in the current frame.
 
@@ -215,7 +211,7 @@ This can be useful in timelapse or 3D files with many frames, where consistent l
 
 ### Replace one label with another
 
-Select the label you want to keep, then select the label you want to replace, then press "R" to replace the second label with the first. A prompt will appear in **confirm action** where we can:
+Select the label you want to keep, then select the label you want to replace, then press <kbd>R</kbd> to replace the second label with the first. A prompt will appear in **confirm action** where we can:
 
 - press <kbd>Enter</kbd> to replace the label in the current frame
 - press <kbd>Space</kbd> to replace the label across all frames, or
