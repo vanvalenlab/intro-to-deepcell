@@ -9,7 +9,10 @@
 - [Example: tissue images](#example:-tissue-images)
 - [Example: nuclear image](#example:-nuclear-image)
 - [Example: Human Protein Atlas image](#example:-human-protein-atlas-image)
-- Tools
+- [Example: timelapse images](#example:-timelapse-images)
+- [Select Labels](#select-labels)
+- [Tools](#tools)
+- [Actions](#actions)
 - [Export labels](#export-labels)
 
 ## DeepCell Label interface
@@ -63,7 +66,9 @@ Made a mistake? Undo or redo your modifications with Undo and Redo buttons above
 
 ## Example: Human Protein Atlas image
 
-## Example: time-lapse images (?)
+## Example: timelapse images
+
+(maybe?)
 
 ## Select Labels
 
@@ -71,7 +76,9 @@ Before we can edit a label, we must select it. When we select a label as the for
 
 See the Select Labels tab of the dropdown instructions for more details and controls.
 
-## Tools (fold into examples?)
+## Tools
+
+(fold into examples?)
 
 ### Brush Tool
 
