@@ -2,30 +2,30 @@
 
 ## Table of Contents
 
-* [DeepCell Label interface](#deepcell-label-interface)
-  * [Infopane](#the-infopane)
-  * [Canvas](#the-canvas)
-* [View an image](#view-an-image)
-  * [Change between input image and label views](#change-between-input-image-and-label-views)
-  * [Change the field of view](#change-the-field-of-view)
-  * [Adjust image brightness and contrast](#adjust-image-brightness-and-contrast)
-  * [Highlighting labels](#highlighting-labels)
-  * [Changing the displayed image slice](#changing-the-displayed-image-slice)
-* [Whole-label mode](#whole-label-mode)
-  * [Select labels](#select-labels-in-whole-label-mode)
-  * [Swap labels](#swap-labels)
-  * [Trim stray pixels](#trim-stray-pixels)
-  * [Fill holes in labels](#fill-holes-in-labels)
-  * [Flood a labeled region with a new label](#flood-a-labeled-region-with-a-new-label)
-  * [Replace one label with another](#replace-one-label-with-another)
-  * [Split one label into two with watershed transform](#split-one-label-into-two-with-watershed-transform)
-  * [Create new labels](#create-new-labels)
-  * [Delete labels](#delete-labels)
-* [Paint mode](#paint-mode)
-  * [Brush basics](#brush-basics)
-  * [Conversion brush](#conversion-brush-advanced-brush-option)
-  * [Thresholding](#threshold-a-raw-image)
-* [Export labels](#export-labels)
+- [DeepCell Label interface](#deepcell-label-interface)
+  - [Infopane](#the-infopane)
+  - [Canvas](#the-canvas)
+- [View an image](#view-an-image)
+  - [Change between input image and label views](#change-between-input-image-and-label-views)
+  - [Change the field of view](#change-the-field-of-view)
+  - [Adjust image brightness and contrast](#adjust-image-brightness-and-contrast)
+  - [Highlighting labels](#highlighting-labels)
+  - [Changing the displayed image slice](#changing-the-displayed-image-slice)
+- [Whole-label mode](#whole-label-mode)
+  - [Select labels](#select-labels-in-whole-label-mode)
+  - [Swap labels](#swap-labels)
+  - [Trim stray pixels](#trim-stray-pixels)
+  - [Fill holes in labels](#fill-holes-in-labels)
+  - [Flood a labeled region with a new label](#flood-a-labeled-region-with-a-new-label)
+  - [Replace one label with another](#replace-one-label-with-another)
+  - [Split one label into two with watershed transform](#split-one-label-into-two-with-watershed-transform)
+  - [Create new labels](#create-new-labels)
+  - [Delete labels](#delete-labels)
+- [Paint mode](#paint-mode)
+  - [Brush basics](#brush-basics)
+  - [Conversion brush](#conversion-brush-advanced-brush-option)
+  - [Thresholding](#threshold-a-raw-image)
+- [Export labels](#export-labels)
 
 ### To get started on the demo file:
 
@@ -45,82 +45,7 @@ On the right is an interactive canvas with a raw image and its labels.
 
 ![DeepCell Label interface with infopane boxed](https://figure-eight-deepcell.s3.us-east-2.amazonaws.com/instructions_and_examples/janelia_demo/overall_interface_boxed_infopane.png)
 
-The infopane provides information on what we are viewing in the canvas and the modes & tools to edit labels. Here is a summary of the information displayed in the info, with more details on each row below.
-
-| Row Name                       | description of row                                |
-|--------------------------------|---------------------------------------------------|
-| frame:                         | index of displayed frame                          |
-| channel:                       | index of displayed channel                        |
-| feature:                       | index of displayed feature                        |
-| zoom:                          | percentage image has been scaled                  |
-| viewing (x):                   | range of visible x coordinates                    |
-| viewing (y):                   | range of displayed y coordianted                  |
-| highlight cells:               | whether highlighting is on                        |
-| highlighted cells:             | which labels are highlighted                      |
-| edit mode:                     | "whole-label mode" or "paint mode"                |
-| brush size: (paint mode only)  | size of the brush in pixels                       |
-| brush label: (paint mode only) | label the brush is painting                       |
-| eraser: (paint mode only)      | whether the brush is erasing                      |
-| label:                         | label the mouse is hovering over                  |
-| slices:                        | list of frames the hovered label is present in    |
-| state:                         | prompts for actions, or currently selected labels |
-
-#### Image display info
-
-![DeepCell Label infopane with frame, channel, feature info boxed](https://figure-eight-deepcell.s3.us-east-2.amazonaws.com/instructions_and_examples/janelia_demo/infopane_boxed_channels.png)
-
-Biological images in DeepCell Label often have many dimensions. For example, we can have many frames, channels, or features to label within an image.
-
-- __frame__ refers to different timepoints in a sequence of timelapse images, or it refers to vertical slices of a 3D image.
-- __channel__ refers to different channels of the input image. The demo file contains three channels, a fluorescent cytoplasm channel, a phase channel, and a fluorescent nuclei channel.
-- __feature__ refers to different types of annotations that may be included in the file; "features" can be thought of like "channels" for different annotations. For example, an annotation file could contain one feature for nuclear segmentations and another for whole-cell segmentations to keep different annotations for the same cells paired together.
- 
-DeepCell Label displays one 2-dimensional image slice at a time, and we can move through these slices to view and work on the complete image stack. To track which slice we're viewing, the table shows us the index of the frame, channel, and feature we are viewing, starting at zero and counting up. As you browse an image, these rows will keep track of your place in the file.
-
-#### Field of View info
-
-![DeepCell Label infopane with FOV info boxed](https://figure-eight-deepcell.s3.us-east-2.amazonaws.com/instructions_and_examples/janelia_demo/infopane_boxed_FOV.png)
-
-We can zoom and pan across images in DeepCell Label to work on specific areas of a large image. To track where we are in the image, we can see our field of view in the zoom and viewing rows.
-
-- __zoom__ tells us how much the image has been scaled, starting from 100%.
-- __viewing (x)__ or __(y)__ tells us the range of x or y coordinates we are viewing in the canvas.
-
-#### Highlight info
-
-![DeepCell Label infopane with highlighting info boxed](https://figure-eight-deepcell.s3.us-east-2.amazonaws.com/instructions_and_examples/janelia_demo/infopane_boxed_highlighting.png)
-
-Highlighting emphasizes the label(s) we are currently working with by making them bright red. As you work, you can check on the highlight status in the infopane in these rows:
-
-- __highlight__ tells us if highlighting is on.
-- __highlight cells__ tells us which label(s) are highlighted.
-
-#### Edit mode info
-
-![DeepCell Label infopane with pixel-editing information boxed](https://figure-eight-deepcell.s3.us-east-2.amazonaws.com/instructions_and_examples/janelia_demo/infopane_boxed_brush.png)
-
-DeepCell Label has two modes of interacting with labels, "whole-label mode" and "paint mode". We can check the __edit mode__ row of the table to see which we are using.
-
-When in "paint mode" we'll also see these extra rows:
-
-- __brush size__ tells us the current size of the brush tool.
-- __brush label__ tells us which label (if any) the brush is currently set to modify, starting at 1 by default.
-- __eraser__ tells us whether the brush is currently set to draw or erase labels.
-
-#### Label info
-
-![DeepCell Label interface with a label hovered over, label info boxed](https://figure-eight-deepcell.s3.us-east-2.amazonaws.com/instructions_and_examples/janelia_demo/interface_boxed_label_hover.png)
-
-When hovering over a label in the canvas, we see extra information about the label in the __label__ and __slices__ row.
-
-- __label__ tells us the value of the label.
-- __slices__ tells us which frames the label is present in if we are working with timelapse or 3D data.
-
-#### State
-
-![DeepCell Label infopane examples of state box](https://figure-eight-deepcell.s3.us-east-2.amazonaws.com/instructions_and_examples/janelia_demo/state_examples.png)
-
-The __state__ row shows prompts related to actions on the canvas, such as a prompt to select a label or confirmation for the action. When not prompting an action, the state instead tells us which labels are selected.
+The infopane provides information on what we are viewing in the canvas and the modes & tools to edit labels. See the Info Pane tab of the dropdown instructions in Label to learn more.
 
 ### The interactive canvas
 
@@ -130,115 +55,26 @@ The __state__ row shows prompts related to actions on the canvas, such as a prom
 
 ![DeepCell Label interactive region of canvas](https://figure-eight-deepcell.s3.us-east-2.amazonaws.com/instructions_and_examples/janelia_demo/canvas_boxed_interactive_canvas.png)
 
-The canvas is where we spend the most time in DeepCell Label. This canvas displays image slices, labels alone, raw images alone, or an overlay of the two. We use the canvas to:
+We use the canvas to:
 
 - browse the image
+- adjust the image for better viewing
 - select labels
-- modify selected labels
+- edit selected labels
 
-To select a label, click on the label on the canvas.
+See the Canvas tab of the dropdown instructions to learn how to browse and adjust the images.
 
 #### Undo and Redo buttons
 
 ![DeepCell Label undo and redo buttons](https://figure-eight-deepcell.s3.us-east-2.amazonaws.com/instructions_and_examples/janelia_demo/canvas_boxed_undo_buttons.png)
 
-Made a mistake? Undo or redo your modifications with these buttons above the canvas. We can also use __Ctrl+Z__ to undo and __Ctrl+Shift+Z__ to redo.
+Made a mistake? Undo or redo your modifications with these buttons above the canvas. We can also use **Ctrl+Z** to undo and **Ctrl+Shift+Z** to redo.
 
-#### Canvas borders
-
-![DeepCell Label edges of interactive canvas](https://figure-eight-deepcell.s3.us-east-2.amazonaws.com/instructions_and_examples/janelia_demo/canvas_boxed_edges.png)
-
-The borders of the canvas help show where we are within an image. If a border is white, we are along an edge of the image. If a border is black, the image extends off-canvas in that direction and we can pan or zoom out to view it.
-
-## View an image
-
-We should now have the [demo file](https://caliban-input.s3.us-east-2.amazonaws.com/janelia_demo/HeLa-S3_janelia_demo_version.npz) loaded in <a href="https://label.deepcell.org" target="_blank">DeepCell Label</a> to follow along and try these controls.
-
-### Change between input image and label views
-![DeepCell Label different display options side by side](https://figure-eight-deepcell.s3.us-east-2.amazonaws.com/instructions_and_examples/janelia_demo/different_displays.png)
-
-#### Change mode
-
-Recall that DeepCell Label has two modes, whole-label mode and paint mode. We start in paint mode by default. To switch between these modes, use the "e" key.
-
-You can tell which mode we are in by looking at the canvas display or checking the infopane.
-
-- In paint mode, a brush is visible in the canvas, and we see an overlay of labels on top of the raw image. The raw image is displayed in grayscale.
-- In whole-label mode, we only see either the raw image or the labels. You can switch between the raw image and the labels with the "z" key. 
-
-### Change the field of view
-
-#### Zoom
-
-Scroll on the canvas while holding the "Alt" key to zoom. We can also zoom out with the "minus" key (-) and zoom in with the "equals" key (=).
-
-#### Pan
-
-Click and drag on the canvas while holding the spacebar to pan.
-
-### Adjust image brightness and contrast
-
-#### Adjust contrast
-
-Scroll up or down on the canvas to adjust the contrast. Increasing contrast improves the visibility of objects in the raw image. We can only change contrast while viewing the raw image or image overlay, not when viewing only the labels.
-
-#### Adjust brightness
-
-Scroll up or down on the canvas while holding the shift key to adjust brightness. As with contrast adjustment, we can only change brightness while viewing the raw image or image overlay.
-
-#### Reset brightness and contrast
-
-Press the zero (0) key to reset brightness and contrast to their default values.
-
-#### Invert light/dark (paint mode only)
-
-Press the "i" key to invert the raw image. Inverting the raw image in paint mode can help to see objects under the label overlay. Inverting only works in paint mode and does not change the display in whole-label mode.
-
-### Highlighting labels
-
-Press the "h" key to toggle highlighting on and off. Highlighted labels work differently in paint mode and whole-label mode, so we will cover highlighting in more detail later.
-
-### Changing the displayed image slice
-
-#### Change frames
-
-Press the "d" or right arrow key to go forward through frames.
-
-Press the "a" or left arrow key to go backwards through frames.
-
-You can cycle to the last/first frame when viewing the first/last frame.
-
-#### Change channel
-
-Press "C" or "Shift+C" to change the channel of the displayed image. "C" increments the channel, while "Shift+C" decrements the channel.
-
-Make sure you have no selected labels when changing channels, as the "c" key can change labels in whole-label mode.
-
-Brightness and contrast adjustments for each channel are stored separately. Try adjusting the brightness and contrast in a few channels and see what it's like to cycle between them!
-
-#### Change feature
-
-Press "F" key (to increment) or "Shift+F" (to decrement) to change the displayed feature. 
-
-Make sure you have no labels selected, as "f" fills holes in whole-label mode.
-
-The demo file only contains one feature, so you will not be able to try this functionality right now.
-
-Now that you know how to move through and view files with DeepCell Label, take a minute to explore the file. Next, we will cover whole-label actions starting in frame 5 of the demo file, so make sure you can get to this frame and toggle whole-label mode using the controls covered so far.
-
-## Whole-label mode
-
-In this section, we will cover the whole-label actions available to edit labels. We will use these actions to fix specific errors throughout the label file, but you can also try them on other labels to see how they work.
+## Whole-label mode (TODO: change name)
 
 ### Select labels in whole-label mode
 
 Click on a label to select it. We can select up to two labels in whole-label mode. Some actions require just one selected label, while others require two selected labels. Clicking on a label after selecting two overwrites the second selected label with the new label.
-
-#### Highlight labels in whole-label mode
-
-In whole-label mode, we can highlight the selected labels. Highlighting makes selected labels bright red. We recommend using highlighting to make sure we have selected the label(s) we intend to modify.
-
-If we've only selected one label, we can cycle the highlighted label with the bracket keys ( "\[" and "\]" ). This deselects the original selected label, but keeps the highlight active.
 
 ### Swap labels
 
@@ -258,7 +94,7 @@ Labels 16 and 19 are consistent across most frames in this file, except for in f
 
 ### Trim stray pixels
 
-Hold the shift key and select a label to trim disconnected pixels. *Note: for this action, the click location of your selection does matter. Make sure to click on the part of the label you want to keep.* A prompt will appear in __state__ where we can:
+Hold the shift key and select a label to trim disconnected pixels. _Note: for this action, the click location of your selection does matter. Make sure to click on the part of the label you want to keep._ A prompt will appear in **state** where we can:
 
 - press spacebar to confirm, or
 - press "Esc" to abort the action.
@@ -273,18 +109,19 @@ Frame 8 in the file has a stray brushstroke with label 28. To get rid of the str
 
 ### Fill holes in labels
 
-Select the label with a hole, then press the "f" key to fill a hole. We will see a prompt in __state__ to click on the hole to fill.
+Select the label with a hole, then press the "f" key to fill a hole. We will see a prompt in **state** to click on the hole to fill.
 
 Holes are most often computational artifacts. We can also use this functionality to speed up labeling objects from scratch by drawing an outline and filling in the rest of the label.
 
 #### Suggested hole to fill
+
 ![DeepCell Label demo label for suggested hole filling action](https://figure-eight-deepcell.s3.us-east-2.amazonaws.com/instructions_and_examples/janelia_demo/suggested_fill_hole.png)
 
 Label 28 in frame 8 has a large hole in it. Use the hole fill action to quickly fix this annotation mistake.
 
 ### Flood a labeled region with a new label
 
-Hold down the "Alt" key while you click on the region you wish to flood. *Note: for this action, the click location of your selection does matter. Make sure to click on the part of the label that you want to change the value of.* A prompt will appear in __state__ asking you to confirm the action; press spacebar to confirm and apply the action.
+Hold down the "Alt" key while you click on the region you wish to flood. _Note: for this action, the click location of your selection does matter. Make sure to click on the part of the label that you want to change the value of._ A prompt will appear in **state** asking you to confirm the action; press spacebar to confirm and apply the action.
 
 Flooding a region allows us to fix our work after accidentally reusing a label value. As long as the two regions are separate, this mistake can be easily fixed by flooding one of the regions with a new value.
 
@@ -296,11 +133,11 @@ Label 27 in frame 9 appears in two locations. Select label 27 and compare frame 
 
 ### Replace one label with another
 
-Select the label you want to keep, then select the label you want to replace, then press "R" to replace the second label with the first. A prompt will appear in __state__ to confirm; we can:
+Select the label you want to keep, then select the label you want to replace, then press "R" to replace the second label with the first. A prompt will appear in **state** to confirm; we can:
 
-- press "S" to replace the labels in the same frame 
+- press "S" to replace the labels in the same frame
 - press spacebar to replace one label with the other across all frames, or
-- press "Esc" to abort the action. 
+- press "Esc" to abort the action.
 
 Use the single-frame option for fixing split errors and the all-frames option for merging lineages.
 
@@ -314,7 +151,7 @@ In frame 10, label 17 is mistakenly split into labels 17 and 42. Use the single-
 
 ### Split one label into two with watershed transform
 
-Select the center of each object (click location matters), and then press "W". Make sure to select the same label twice. Confirm the prompt shown in __state__ with the spacebar. 
+Select the center of each object (click location matters), and then press "W". Make sure to select the same label twice. Confirm the prompt shown in **state** with the spacebar.
 
 The selected label will be split into the original label and a new label. The first click location will keep the original label and the second click location will be assigned the new label. Watershed will not necessarily work well in every case; alternatives exist for splitting apart labels in DeepCell Label.
 
@@ -328,7 +165,7 @@ Label 25 in frame 11 is an example of a merged label that can be fixed with wate
 
 ### Create new labels
 
-Select the label that should get a new label, then press "C". A prompt will appear in __state__ to confirm the label creation; we can:
+Select the label that should get a new label, then press "C". A prompt will appear in **state** to confirm the label creation; we can:
 
 - press "S" to create a new label in only the current frame,
 - press spacebar to create the label in all subsequent frames, or
@@ -344,7 +181,7 @@ This file does not contain a specific error that is best fixed with the create a
 
 ### Delete labels
 
-Select the label to be deleted, then press "X". A prompt will appear in __state__ to confirm the label deletion; we can:
+Select the label to be deleted, then press "X". A prompt will appear in **state** to confirm the label deletion; we can:
 
 - press spacebar to delete the label in only that frame, or
 - press "Esc" to abort the action.
@@ -353,7 +190,7 @@ The delete action will remove all of that label from the frame, even unconnected
 
 #### Suggested label to delete
 
-This file does not contain a specific error that is best fixed with the delete action, but you can try it out on any labels you would like. 
+This file does not contain a specific error that is best fixed with the delete action, but you can try it out on any labels you would like.
 
 ## Paint mode
 
@@ -391,7 +228,7 @@ In frame 12, label 22 does not fully cover its object, and label 23 covers too m
 
 ### Conversion brush (advanced brush option)
 
-Press "r", then select the label you want to paint over, then the label you want to paint with. Prompts will appear in __state__ to walk you through these steps to use the conversion brush. Press "n" instead of selecting a second label to draw with a new label.
+Press "r", then select the label you want to paint over, then the label you want to paint with. Prompts will appear in **state** to walk you through these steps to use the conversion brush. Press "n" instead of selecting a second label to draw with a new label.
 
 Once these selections have been made, the label to be overwritten will appear with a red outline around it, and the label to draw with will have a white outline around it.
 
