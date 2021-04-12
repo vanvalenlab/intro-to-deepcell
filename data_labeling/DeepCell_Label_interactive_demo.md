@@ -31,6 +31,7 @@ On the right, we see an interactive canvas with labels overlaid on a raw image.
 ![DeepCell Label interface with infopane boxed](https://figure-eight-deepcell.s3.us-east-2.amazonaws.com/instructions_and_examples/bebi205_demo/infopane_boxed.png)
 
 The infopane tells us what we are viewing in the canvas. See the Info Table tab of the dropdown instructions in Label to learn more about each row:
+
 ![Info Table submenu in expanded instructions](https://figure-eight-deepcell.s3.us-east-2.amazonaws.com/instructions_and_examples/bebi205_demo/instructions_tab_infotable_boxed.png)
 
 ### The interactive canvas
@@ -62,7 +63,7 @@ Made a mistake? Undo or redo your modifications with Undo and Redo buttons above
 
 ### Download
 
-1. Download the tissue imaging .npz file from our [S3 bucket](). This file is prepopulated with labels.
+1. Download the tissue imaging .npz file from our [S3 bucket](https://caliban-input.s3.us-east-2.amazonaws.com/janelia_demo/multiplex_janelia_demo_version.npz). This file is prepopulated with labels.
 2. Drag and drop the file onto the dropzone on the <a href="https://label.deepcell.org" target="_blank">DeepCell Label</a> homepage.
 3. The file will be displayed in the single-channel viewing mode at first. Press **Ctrl+B** or add `?rgb=True` to the end of your URL to change the viewing mode.
 
@@ -70,7 +71,17 @@ Made a mistake? Undo or redo your modifications with Undo and Redo buttons above
 
 ## Example: nuclear image
 
+### Download
+
+1. Download the nuclear imaging .npz file from our [S3 bucket](https://caliban-input.s3.us-east-2.amazonaws.com/janelia_demo/HeLa-S3_nuc_seg_demo.npz). This file is prepopulated with labels.
+2. Drag and drop the file onto the dropzone on the <a href="https://label.deepcell.org" target="_blank">DeepCell Label</a> homepage.
+
 ## Example: Human Protein Atlas image
+
+### Download
+
+1. Download the Human Protein Atlas .png image from our [S3 bucket](https://caliban-input.s3.us-east-2.amazonaws.com/janelia_demo/HPA_512_example.png). This image is not paired with any labels.
+2. Drag and drop the file onto the dropzone on the <a href="https://label.deepcell.org" target="_blank">DeepCell Label</a> homepage.
 
 ## Example: timelapse images
 
