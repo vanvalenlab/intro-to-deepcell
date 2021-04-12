@@ -57,7 +57,7 @@ See the Tools and Actions tabs to learn how to edit the selected labels.
 
 #### Undo and Redo buttons
 
-Made a mistake? Undo or redo your modifications with Undo and Redo buttons above the canvas. We can also use the shortcuts **Ctrl+Z** to undo and **Ctrl+Shift+Z** to redo.
+Made a mistake? Undo or redo your modifications with Undo and Redo buttons above the canvas. We can also use the shortcuts <kbd>Ctrl</kbd> + <kbd>Z</kbd> to undo and <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Z</kbd> to redo.
 
 #### Navigating the file
 
@@ -75,7 +75,7 @@ In RGB viewing mode, the default viewing mode shows all label outlines in white 
 
 1. Download the tissue imaging .npz file from our [S3 bucket](https://caliban-input.s3.us-east-2.amazonaws.com/janelia_demo/multiplex_janelia_demo_version.npz). This file is prepopulated with labels.
 2. Drag and drop the file onto the dropzone on the <a href="https://label.deepcell.org" target="_blank">DeepCell Label</a> homepage.
-3. The file will be displayed in the single-channel viewing mode at first. Press **Ctrl+B** or add `?rgb=True` to the end of your URL to change the viewing mode.
+3. The file will be displayed in the single-channel viewing mode at first. Press <kbd>Ctrl</kbd> + <kbd>B</kbd> or add `?rgb=True` to the end of your URL to change the viewing mode.
 
 ![Change viewing mode of RGB sample image](https://figure-eight-deepcell.s3.us-east-2.amazonaws.com/instructions_and_examples/bebi205_demo/toggle_RGB_mode.png)
 
@@ -146,7 +146,7 @@ Select one label as the foreground and the other as the background, and paint to
 
 #### Use case: change the brush size
 
-Press the <kbb>↑</kbd> to make the brush larger.
+Press the <kbd> ↑</kbd> to make the brush larger.
 
 Press the <kbd> ↓</kbd> to make the brush smaller.
 
@@ -249,7 +249,7 @@ Thresholding often results in rough borders with stray pixels. Autofitting after
 
 ### Swap labels
 
-Select two labels, then press <kbd>s</kdb> key to swap the selected labels. A prompt will appear in the "confirm action" row to confirm the swap where we can:
+Select two labels, then press <kbd>s</kbd> key to swap the selected labels. A prompt will appear in the "confirm action" row to confirm the swap where we can:
 
 - press <kbd>Enter</kbd> to swap the labels,
 - press <kbd>Esc</kbd> to abort the action.
