@@ -59,6 +59,16 @@ See the Tools and Actions tabs to learn how to edit the selected labels.
 
 Made a mistake? Undo or redo your modifications with Undo and Redo buttons above the canvas. We can also use the shortcuts **Ctrl+Z** to undo and **Ctrl+Shift+Z** to redo.
 
+#### Navigating the file
+
+Files can contain information about multiple frames, channels, and features. The Info Table tab of the dropdown instructions explains these different aspects of a file, and the Canvas tab explains how to update the view of these different components.
+
+Zoom and pan functionality can be used to get a closer look at the current view. There is no limit to how far you can zoom in on a file; although there are diminishing returns for viewing details within the image, working at high levels of zoom can help make mouse movements more accurate.
+
+Highlighting functionality helps distinguish a label of interest from the other labels in the file. Highlighting can be used to methodically review the labels in a file, or to distinctly see the label currently being modified. Both the current foreground and background labels will be highlighted. See the Select Labels tab of the dropdown instructions for how to change the labels being highlighted.
+
+In RGB viewing mode, the default viewing mode shows all label outlines in white overlaid on the color image. In this view, highlighted labels appear with a translucent interior, and the background label is displayed with a red, instead of white, boundary. In single-channel viewing mode, the default viewing mode shows colorful labels overlaid on a grayscale image. In this view, the highlighted foreground label interior is recolored red and outlined in white, and the highlighted background label is outlined in red. Recoloring the foreground label to red can be toggled on and off but the label outlines will appear whether or not highlighting is turned on. When viewing the highlighted solid-color label display, the foreground label is recolored to red.
+
 ## Example: tissue image
 
 ### Download
