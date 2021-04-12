@@ -79,6 +79,11 @@ In RGB viewing mode, the default viewing mode shows all label outlines in white 
 
 ![Change viewing mode of RGB sample image](https://figure-eight-deepcell.s3.us-east-2.amazonaws.com/instructions_and_examples/bebi205_demo/toggle_RGB_mode.png)
 
+### Relevant tools/actions
+- brush
+- delete
+- replace
+
 ## Example: nuclear image
 
 ### Download
@@ -86,12 +91,22 @@ In RGB viewing mode, the default viewing mode shows all label outlines in white 
 1. Download the nuclear imaging .npz file from our [S3 bucket](https://caliban-input.s3.us-east-2.amazonaws.com/janelia_demo/HeLa-S3_nuc_seg_demo.npz). This file is prepopulated with labels.
 2. Drag and drop the file onto the dropzone on the <a href="https://label.deepcell.org" target="_blank">DeepCell Label</a> homepage.
 
+### Relevant tools/actions
+- autofit
+- grow/shrink label
+- watershed (combine the two labels at bottom of file and use watershed to split them apart)
+
 ## Example: Human Protein Atlas image
 
 ### Download
 
 1. Download the Human Protein Atlas .png image from our [S3 bucket](https://caliban-input.s3.us-east-2.amazonaws.com/janelia_demo/HPA_512_example.png). This image is not paired with any labels.
 2. Drag and drop the file onto the dropzone on the <a href="https://label.deepcell.org" target="_blank">DeepCell Label</a> homepage.
+
+### Relevant tools/actions
+- threshold (nuc channel)
+- trim pixels (thresholded labels)
+- flood (when forgetting to change threshold val between two cells)
 
 ## Example: timelapse images
 
