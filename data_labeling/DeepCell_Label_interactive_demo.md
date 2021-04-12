@@ -20,7 +20,7 @@
 To learn the DeepCell Label interface, open the first example file on the homepage, named **3D organoid annotation**.
 
 You should now see an interface that looks like this:
-![DeepCell Label interface](https://figure-eight-deepcell.s3.us-east-2.amazonaws.com/instructions_and_examples/janelia_demo/overall_interface.png)
+![DeepCell Label interface](https://figure-eight-deepcell.s3.us-east-2.amazonaws.com/instructions_and_examples/bebi205_demo/initial_page.png)
 
 On the left, we see an infopane with data about what we are viewing.
 
@@ -28,13 +28,14 @@ On the right, we see an interactive canvas with labels overlaid on a raw image.
 
 ### The infopane
 
-![DeepCell Label interface with infopane boxed](https://figure-eight-deepcell.s3.us-east-2.amazonaws.com/instructions_and_examples/janelia_demo/overall_interface_boxed_infopane.png)
+![DeepCell Label interface with infopane boxed](https://figure-eight-deepcell.s3.us-east-2.amazonaws.com/instructions_and_examples/bebi205_demo/infopane_boxed.png)
 
-The infopane tells us what we are viewing in the canvas. See the Info Pane tab of the dropdown instructions in Label to learn more about each row.
+The infopane tells us what we are viewing in the canvas. See the Info Table tab of the dropdown instructions in Label to learn more about each row:
+![Info Table submenu in expanded instructions](https://figure-eight-deepcell.s3.us-east-2.amazonaws.com/instructions_and_examples/bebi205_demo/instructions_tab_infotable_boxed.png)
 
 ### The interactive canvas
 
-![DeepCell Label canvas region of displayed page](https://figure-eight-deepcell.s3.us-east-2.amazonaws.com/instructions_and_examples/janelia_demo/interface_boxed_canvas.png)
+![DeepCell Label canvas region of displayed page](https://figure-eight-deepcell.s3.us-east-2.amazonaws.com/instructions_and_examples/bebi205_demo/canvas_boxed.png)
 
 #### The canvas
 
@@ -51,6 +52,8 @@ See the Select tab to learn how to select labels.
 
 See the Tools and Actions tabs to learn how to edit the selected labels.
 
+![Other tabs of infopane](https://figure-eight-deepcell.s3.us-east-2.amazonaws.com/instructions_and_examples/bebi205_demo/instructions_tab_other_tabs_boxed.png)
+
 #### Undo and Redo buttons
 
 Made a mistake? Undo or redo your modifications with Undo and Redo buttons above the canvas. We can also use the shortcuts **Ctrl+Z** to undo and **Ctrl+Shift+Z** to redo.
@@ -61,6 +64,9 @@ Made a mistake? Undo or redo your modifications with Undo and Redo buttons above
 
 1. Download the tissue imaging .npz file from our [S3 bucket](). This file is prepopulated with labels.
 2. Drag and drop the file onto the dropzone on the <a href="https://label.deepcell.org" target="_blank">DeepCell Label</a> homepage.
+3. The file will be displayed in the single-channel viewing mode at first. Press **Ctrl+B** or add `?rgb=True` to the end of your URL to change the viewing mode.
+
+![Change viewing mode of RGB sample image](https://figure-eight-deepcell.s3.us-east-2.amazonaws.com/instructions_and_examples/bebi205_demo/toggle_RGB_mode.png)
 
 ## Example: nuclear image
 
