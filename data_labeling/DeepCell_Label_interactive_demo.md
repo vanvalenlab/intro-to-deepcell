@@ -5,8 +5,8 @@
 - [DeepCell Label interface](#deepcell-label-interface)
   - [Infopane](#the-infopane)
   - [Canvas](#the-canvas)
-  - [Undo/Redo]()
-- [Example: tissue images](#example:-tissue-images)
+  - [Undo/Redo](#Undo-and-Redo-buttons)
+- [Example: tissue image](#example:-tissue-image)
   - [brush tool](#brush-tool)
   - [replace action](#replace-action)
 - [Example: nuclear image](#example:-nuclear-image)
@@ -17,7 +17,7 @@
   - [threshold tool](#Threshold-tool)
   - [trim tool](#Trim-tool)
   - [flood tool](#flood-tool)
-- [Example: timelapse and 3D images](#example:-timelapse-images)
+- [Example: timelapse and 3D files](#Example:-timelapse-and-3D-files)
 - [Export labels](#export-labels)
 
 ## DeepCell Label interface
@@ -185,7 +185,7 @@ Select the label you want to keep, then select the label you want to replace, th
 - [autofit](#autofit-tool)
   - [clean up a rough brush stroke](#clean-up-a-rough-brush-stroke)
   - [smooth rough borders](#smooth-rough-borders)
-- [grow/shrink label](#grow/shrink-tool)
+- [grow/shrink](#grow/shrink-tool)
 - [watershed](#watershed-tool)
   - [split two cells with the same label](#split-two-cells-with-the-same-label)
 
@@ -195,13 +195,15 @@ Press <kbd>M</kbd> to use the Autofit tool. The Autofit tool adjusts foreground 
 
 Click a label once to select it as the foreground label, then click on it again to Autofit the label.
 
-#### clean up a rough brush stroke
+Use cases
 
-After filling in the rough shape of a label with the Brush, you can use Autofit to snap the brush stroke to the cell border.
+- #### clean up a rough brush stroke
 
-#### smooth rough borders
+  - After filling in the rough shape of a label with the Brush, click on the label with Autofit to snap the brush stroke to the cell border.
 
-Thresholding often results in rough borders with stray pixels. Autofitting after thresholding can be an easy way to smooth the borders.
+- #### smooth rough borders
+  - Click on a label with Autofit after thresholding to smooth the borders.
+  - Thresholding often results in rough borders with stray pixels.
 
 ### Grow/Shrink tool
 
@@ -338,7 +340,5 @@ We do not have an example timelapse file prepared for this workshop. Here are so
 ![DeepCell Label download button](https://figure-eight-deepcell.s3.us-east-2.amazonaws.com/instructions_and_examples/janelia_demo/download_button.png)
 
 Download your labels with the download button above the infopane. Your raw images and labels are stored together in the .npz file as training data for model training. The raw images are stored in an array named `X` with shape `(frames, width, height, channels)` and the labels are stored in an array named `y` with shape `(frames, width, height, channels)`.
-
-Want to explore an alternate viewing option for multichannel images? Check out [what differences to expect in RGB mode](./DeepCell_Label_RGB.md).
 
 Ready to put your training data to use? Quickly [train your own model](../model_training) with DeepCell.
