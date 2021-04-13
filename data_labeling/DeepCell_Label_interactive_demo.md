@@ -76,8 +76,8 @@ Zoom and pan functionality can be used to get a closer look at the current view.
 
 ### Select labels
 
-Before we can edit a label, we must select it. When we select a label as the **foreground** label, we can add more that label, while selecting the label as the **background** lets us remove that label.
-The foreground is outlined in white, while the background label is outline in red.
+Before we can edit a label, we must select it. When we select a label as the **foreground** label, we can add more to that label, while selecting the label as the **background** lets us overwrite or remove that label.
+The foreground is outlined in white, while the background label is outlined in red.
 
 When highlighting is on, the foreground label also becomes bright red, making it easy to focus on. By selecting all the labels in order, we can methodically review the labels in a file.
 
@@ -111,7 +111,7 @@ In RGB viewing mode, we can see all the labels outlined in white on top of a col
   - [split a label into two](#split-a-label-into-two)
 - [replace](#replace-action)
   - [delete labels by replacing with no label](#delete-labels-by-replacing-with-no-label)
-  - [fix spilt labelings](#fix-spilt-labelings)
+  - [fix split labelings](#fix-split-labelings)
 
 ### Brush Tool
 
@@ -119,18 +119,18 @@ Press <kbd>B</kbd> to use the Brush tool.
 
 The Brush will paint the foreground label over the background label. See the Selecting Labels tab for details on selecting labels.
 
-Click and drag with the Brush to paint the foreground label over the background label.
+Click and drag with the Brush to paint the foreground label over the background label. Other labels in the file won't be affected by the brush.
 
 The Brush lets us correct label borders, or even draw labels from scratch. The Brush is the most flexible tool to make pixel-level changes, but also requires more work to get high-quality results.
 
 #### Use cases
 
-- #### expand a label
-  - Select the label you want to pain with as the foreground and "no label" as the background.
+- #### add to a label
+  - Select the label you want to paint with as the foreground and "no label" as the background.
   - Paint over unlabeled areas to expand the selected label.
-- #### make a label smaller
+- #### erase from a label
   - Select "no label" as the foreground and the label you want to shrink as the background.
-  - Paint over the label the label to remove it.
+  - Paint over the label to remove it.
 - #### fix the boundary between labels
   - Select one label as the foreground and the other as the background, and paint to expand the foreground into the background.
   - Press <kbd>X</kbd> to switch the foreground and background and paint in the other direction.
@@ -138,7 +138,7 @@ The Brush lets us correct label borders, or even draw labels from scratch. The B
   - Press <kbd>N</kbd> to select a new, unused label as the foreground, and select "no label" as the background.
   - Paint over unlabeled areas to add the new label to the canvas.
 - #### remove a label
-  - Select the label to remove as the background, adn select "no label" as the foreground.
+  - Select the label to remove as the background, and select "no label" as the foreground.
   - Completely paint over the label to remove it.
 - #### paint quickly with a large brush
   - Press the <kbd> ↑</kbd> to make the brush larger.
@@ -169,7 +169,7 @@ Select the label you want to keep, then select the label you want to replace, th
   - Select "no label" as the foreground and the label you want to replace as the background.
   - Replace to remove the label entirely, including unconnected pieces.
   - Use this to delete labels of debris or other image artifacts.
-- #### fix spilt labelings
+- #### fix split labelings
   - Select the labels you want to combine as the foreground and the background.
   - Replace to give both regions the foreground label.
 
@@ -191,7 +191,7 @@ Select the label you want to keep, then select the label you want to replace, th
 
 ### Autofit tool
 
-Press <kbd>M</kbd> to use the Autofit tool. The Autofit tool adjusts foreground label boundary to hug the nearest edges in the raw image.
+Press <kbd>M</kbd> to use the Autofit tool. The Autofit tool adjusts the foreground label boundary to hug the nearest edges in the raw image.
 
 Click a label once to select it as the foreground label, then click on it again to Autofit the label.
 
@@ -213,7 +213,7 @@ The Grow/Shrink tool expands the foreground label by one pixel or contracts the 
 
 Click on the foreground label to grow its border by one pixel.
 
-Click on the background label with to shrink its border by one pixel.
+Click on the background label to shrink its border by one pixel.
 
 While you using the Grow/Shrink tool, you can click on an unselected label to make it the foreground or <kbd>Shift</kbd> + click on a to make it the background.
 
@@ -250,7 +250,7 @@ Use cases
 
 ### Threshold tool
 
-Press <kbd>T</kbd> to use the Threshold tool. Thresholding adds the foreground label to the brightess pixels within a box. Click and drag to draw a bounding box.
+Press <kbd>T</kbd> to use the Threshold tool. Thresholding adds the foreground label to the brightest pixels within a box. Click and drag to draw a bounding box.
 
 The Threshold tool will not overwrite any labels, and instead only adds labels in areas with no label.
 
@@ -296,12 +296,12 @@ While using the Flood tool, you can simply click on an unselected label to make 
   - Some tools like threshold can leave a hole in the label.
   - Select the label you want to fill the hole with as the foreground, then click on the hole to select it as the background or fill the hole.
 - #### fill in an outline
-  - You can intentionally create holes to quickly create a large label.
+  - You can intentionally leave holes when drawing to quickly create a large label.
   - Paint an outline of a large object with the Brush tool, then fill in the center with the Flood tool.
 
 ## Example: timelapse and 3D files
 
-We do not have an example timelapse file prepared for this workshop. Here are some tools and use cases specific to working with timelapse files.
+We will not be covering timelapse annotations in this workshop. Here are some tools and use cases specific to working with timelapse files.
 
 ### Relevant tools/actions
 
