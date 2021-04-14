@@ -232,7 +232,7 @@ Use cases
 
 ### Download
 
-1. Download the Human Protein Atlas .png image from our [S3 bucket](https://caliban-input.s3.us-east-2.amazonaws.com/janelia_demo/HPA_512_example.png). This image is not paired with any labels.
+1. Download the Human Protein Atlas .png image from our <a download='HPA_512_example.png' href='https://caliban-input.s3.us-east-2.amazonaws.com/janelia_demo/HPA_512_example.png'> S3 bucket</a>. This image is not paired with any labels.
 2. Drag and drop the file onto the dropzone on the <a href="https://label.deepcell.org" target="_blank">DeepCell Label</a> homepage.
 
 ### Relevant tools/actions
