@@ -23,7 +23,9 @@ Each of the models we host has slightly different requirements for input data. P
 
 ### Mesmer segmentation model
 
-The Mesmer model performs whole-cell segmentation of tissue imaging data. The input to the model is two-channel images. The first channel must be a nuclear channel (such as DAPI). The second channel must be a membrane or cytoplasmic channel (such as E-Cadherin).  
+The Mesmer model performs whole-cell segmentation of tissue imaging data. The input to the model is two-channel imaging data. The first channel must be a nuclear channel (such as DAPI). The second channel must be a membrane or cytoplasmic channel (such as E-Cadherin). The Mesmer model was trained on [TissueNet](https://datasets.deepcell.org/), and thus is designed to handle multiplexed imaging data of tissue samples. It will **not** perform well on data from other modalties, such as H&E, IHC, cell culture, etc. 
+
+Note: The DeepCell.org predict page allows users to specify which channel is the nuclear channel and which is the membrane channel, thus supporting data that is not properly formatted. However, all of the other ways to access the Mesmer model (see below) expect the input data to be properly formatted. 
 
 <table width="700" border="1" cellpadding="5">
 
@@ -93,7 +95,7 @@ Generating data from the website is quite easy.
 
 ![image](resources/DeepCell_website_predict.png)
 
-2. This will take you to the image upload interface. The default model is `Mesmer`. Before submitting your image, make sure you understand [the available models and data formatting requirements](#formatting-data-for-pre-trained-models). Upload your image by dragging it into the upload box, or by clicking and then browsing to find your image.  
+2. This will take you to the image upload interface. The default model is `Mesmer`. Before submitting your image, make sure you understand [the available models and data formatting requirements](#formatting-data-for-pre-trained-models). Upload your image by dragging it into the upload box, or by clicking within the box and then browsing to find your image. If you'd like to use our example image, click the 'Download Image' button. 
 
 ![image](resources/DeepCell_website_upload.png)
 
@@ -101,7 +103,7 @@ Generating data from the website is quite easy.
 
 ![image](resources/DeepCell_website_submit.png)
 
-4. Once complete, you can download the results, and then process additional images.  
+4. Once complete, you can either press Download to view the segmentations locally, or press View to open DeepCell Label to view them interactively.  
 
 ![image](resources/DeepCell_website_download.png)
 
