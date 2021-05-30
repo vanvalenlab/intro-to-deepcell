@@ -103,7 +103,7 @@ Generating data from the website is quite easy.
 
 ![image](resources/DeepCell_website_predict.png)
 
-2. This will take you to the image upload interface. The default model is `Mesmer`. Before submitting your image, make sure you understand [the available models and data formatting requirements](#formatting-data-for-pre-trained-models). Upload your image by dragging it into the upload box, or by clicking within the box and then browsing to find your image. If you'd like to use our example image, click the 'Download Image' button. 
+2. This will take you to the image upload interface. The default pipeline is `Mesmer`. Before submitting your image, make sure you understand [the available models and data formatting requirements](#formatting-data-for-pre-trained-models). Upload your image by dragging it into the upload box, or by clicking within the box and then browsing to find your image. If you'd like to use our example image, click the 'Download Image' button. 
 
 ![image](resources/DeepCell_website_upload.png)
 
