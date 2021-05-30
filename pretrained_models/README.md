@@ -23,9 +23,17 @@ Each of the models we host has slightly different requirements for input data. P
 
 ### Mesmer segmentation model
 
-The Mesmer model performs whole-cell segmentation of tissue imaging data. The input to the model is two-channel imaging data. The first channel must be a nuclear channel (such as DAPI). The second channel must be a membrane or cytoplasmic channel (such as E-Cadherin). The Mesmer model was trained on [TissueNet](https://datasets.deepcell.org/), and thus is designed to handle multiplexed imaging data of tissue samples. It will **not** perform well on data from other modalties, such as H&E, IHC, cell culture, etc. 
+The Mesmer model performs whole-cell segmentation of multiplexed tissue imaging data. 
 
-Note: The DeepCell.org predict page allows users to specify which channel is the nuclear channel and which is the membrane channel, thus supporting data that is not properly formatted. However, all of the other ways to access the Mesmer model (see below) expect the input data to be properly formatted. 
+Data format: The Mesmer model expects two channels of imaging data. The first channel must be a nuclear channel (such as DAPI). The second channel must be a membrane or cytoplasmic channel (such as E-Cadherin). If you did not acquire a membrane channel in a particular experiment, you instead supply an empty channel and the model will default to nuclear segmentation for the nuclei in the image. 
+
+Image types: The Mesmer model was trained on [TissueNet](https://datasets.deepcell.org/), and thus is optimized for segmenting multiplexed tissue samples. It will **not** perform well on data from other modalties, such as H&E, IHC, cell culture, etc. 
+
+Image resolution: For optimal results, the supplied data should have a physical size of 0.5um per pixel. 
+
+Outputs: The Mesmer model produces two segmentation masks. The first segmentation mask contains the whole-cell predictions, and the second contains the nuclear predictions. Within the masks, each cell is assigned a unique integer value, with the pixels which belong to each cell being given that value. 
+
+Note: The DeepCell.org predict page allows users to specify which channel is the nuclear channel and which is the membrane channel, thus supporting data that is not properly formatted. However, all of the other ways to access the Mesmer model (see [Running pre-trained models in the cloud](#running-pre-trained-models-in-the-cloud) and [Running pre-trained models locally](#running-pre-trained-models-locally)) expect the input data to be properly formatted. 
 
 <table width="700" border="1" cellpadding="5">
 
