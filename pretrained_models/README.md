@@ -111,7 +111,7 @@ Generating data from the website is quite easy.
 
 ![image](resources/DeepCell_website_submit.png)
 
-4. Once complete, you can either press Download to view the segmentations locally, or press View to open DeepCell Label to view them interactively.  
+4. Once complete, you can either press Download to view the segmentations locally or press View to open DeepCell Label to view them interactively.  
 
 ![image](resources/DeepCell_website_download.png)
 
