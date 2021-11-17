@@ -29,7 +29,7 @@ Data format: The Mesmer model expects two channels of imaging data. The first ch
 
 Image types: The Mesmer model was trained on [TissueNet](https://datasets.deepcell.org/), and thus is optimized for segmenting multiplexed tissue samples. It will **not** perform well on data from other modalties, such as H&E, IHC, cell culture, etc. 
 
-Image resolution: For optimal results, the supplied data should have a physical size of 0.5um per pixel. 
+Image resolution: Specify the image resolution that is closest to the resolution your data was acquired at. 
 
 Outputs: The Mesmer model produces two segmentation masks. The first segmentation mask contains the whole-cell predictions, and the second contains the nuclear predictions. Within the masks, each cell is assigned a unique integer value, with the pixels which belong to each cell being given that value. 
 
@@ -103,7 +103,7 @@ Generating data from the website is quite easy.
 
 ![image](resources/DeepCell_website_predict.png)
 
-2. This will take you to the image upload interface. The default pipeline is `Mesmer`. Before submitting your image, make sure you understand [the available models and data formatting requirements](#formatting-data-for-pre-trained-models). Upload your image by dragging it into the upload box, or by clicking within the box and then browsing to find your image. If you'd like to use our example image, click the 'Download Image' button. 
+2. This will take you to the image upload interface. The default pipeline is `Mesmer`. Before submitting your image, make sure you understand [the available models and data formatting requirements](#formatting-data-for-pre-trained-models). This includes properly specifying the location of the nuclear and cytoplasm channel, as well as the resolution of your data. Upload your image by dragging it into the upload box, or by clicking within the box and then browsing to find your image. If you'd like to use our example image, click the 'Download Image' button. 
 
 ![image](resources/DeepCell_website_upload.png)
 
