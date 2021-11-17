@@ -25,7 +25,7 @@ Each of the models we host has slightly different requirements for input data. P
 
 The Mesmer model performs whole-cell segmentation of multiplexed tissue imaging data. 
 
-Data format: The Mesmer model expects two channels of imaging data. The first channel must be a nuclear channel (such as DAPI). The second channel must be a membrane or cytoplasmic channel (such as E-Cadherin). If you did not acquire a membrane channel in a particular experiment, you instead supply an empty channel and the model will default to nuclear segmentation for the nuclei in the image. 
+Data format: The Mesmer model expects two channels of imaging data. The first channel must be a nuclear channel (such as DAPI). The second channel must be a membrane or cytoplasmic channel (such as E-Cadherin). If you did not acquire a membrane channel in a particular experiment, you can instead supply an empty channel and the model will default to nuclear segmentation for the nuclei in the image. 
 
 Image types: The Mesmer model was trained on [TissueNet](https://datasets.deepcell.org/), and thus is optimized for segmenting multiplexed tissue samples. It will **not** perform well on data from other modalties, such as H&E, IHC, cell culture, etc. 
 
