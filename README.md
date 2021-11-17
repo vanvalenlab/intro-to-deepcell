@@ -39,9 +39,9 @@ This tutorial will provide a gentle introduction to all three areas. Additionall
 
 To learn more about the various systems and software that comprise DeepCell, please refer to the publications below. Relevant links are highlighted below each publication.
 
-[Greenwald, Miller et al. Whole-cell segmentation of tissue images with human-level performance using large-scale data annotation and deep learning](https://www.biorxiv.org/content/10.1101/2021.03.01.431313v2)
+[Greenwald, Miller et al. Whole-cell segmentation of tissue images with human-level performance using large-scale data annotation and deep learning]( https://www.nature.com/articles/s41587-021-01094-0)
 
-* The TissueNet dataset will be released through [deepcell.datasets](https://datasets.deepcell.org) at the time of publication
+* The TissueNet dataset is available at[deepcell.datasets](https://datasets.deepcell.org)
 * The Mesmer pipeline can be run from deepcell.org or via ImageJ/QuPath plugins by reading our documentation on [running pretrained models in the cloud](./pretrained_models#running-pre-trained-models-in-the-cloud)
 * The Mesmer pipeline can be run locally via a jupyter notebook as shown in this [example notebook](https://github.com/vanvalenlab/deepcell-tf/blob/master/notebooks/applications/Mesmer-Application.ipynb), or from the command line using our [application Docker](https://github.com/vanvalenlab/deepcell-applications/blob/master/README.md)
 * The ark-analysis multiplexed image analysis pipeline is at [this github link](https://github.com/angelolab/ark-analysis)
