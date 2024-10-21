@@ -1,3 +1,15 @@
+# NOTE: This material is archived
+
+This material is not actively maintained.
+For up-to-date information on the latest open-source tools for spatial biology,
+please refer to the repositories and/or documentation for the projects themselves,
+e.g.
+
+ - [Deepcell-tf](https://deepcell.readthedocs.io/en/master)
+ - [CellSAM](https://github.com/vanvalenlab/cellSAM)
+ - [Deepcell tracking](https://github.com/vanvalenlab/deepcell-tracking)
+ - [Deepcell spot detection](https://github.com/vanvalenlab/deepcell-spots)
+
 # Introduction to DeepCell
 
 This material is intended to help users become acclimated with the [DeepCell](https://www.deepcell.org/about) ecosystem. DeepCell addresses three key needs for deep learning and biological images:
